@@ -259,7 +259,6 @@ multiple modular subtrees with behaviors
 		if(AI_STATUS_OFF)
 			STOP_PROCESSING(SSai_behaviors, src)
 			SSai_controllers.active_ai_controllers -= src
-			set_movement_target(type, null)
 			CancelActions()
 
 /datum/ai_controller/proc/PauseAi(time)
