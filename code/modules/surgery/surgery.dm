@@ -126,8 +126,8 @@
 	var/obj/item/tool = user.get_active_held_item()
 	if(step.try_op(user, target, user.zone_selected, tool, src, try_to_fail))
 		return TRUE
-	if(tool && tool.item_flags & SURGICAL_TOOL) //Just because you used the wrong tool it doesn't mean you meant to whack the patient with it
-		to_chat(user, span_warning("This step requires a different tool!"))
+	if(tool?.item_flags & SURGICAL_TOOL) //Just because you used the wrong tool it doesn't mean you meant to whack the patient with it
+		target.balloon_alert(user, "wrong tool!")
 		return TRUE
 
 	return FALSE
