@@ -704,7 +704,7 @@
 	eye_icon_state = "snail_eyes"
 	icon_state = "snail_eyeballs"
 
-/obj/item/organ/internal/eyes/jelly
+/obj/item/organ/internal/eyes/slime
 	name = "jelly eyes"
 	desc = "These eyes are made of a soft jelly. Unlike all other eyes, though, there are three of them."
 	eye_icon_state = "jelleyes"

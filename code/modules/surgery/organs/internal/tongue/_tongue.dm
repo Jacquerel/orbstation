@@ -597,7 +597,7 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	disliked_foodtypes = GROSS | CLOTH | RAW
 	organ_traits = list(TRAIT_WOUND_LICKER)
 
-/obj/item/organ/internal/tongue/jelly
+/obj/item/organ/internal/tongue/slime
 	name = "jelly tongue"
 	desc = "Ah... That's not the sound I expected it to make. Sounds like a Space Autumn Bird."
 	say_mod = "chirps"
@@ -605,7 +605,7 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	disliked_foodtypes = GROSS
 	toxic_foodtypes = NONE
 
-/obj/item/organ/internal/tongue/jelly/get_food_taste_reaction(obj/item/food, foodtypes = NONE)
+/obj/item/organ/internal/tongue/slime/get_food_taste_reaction(obj/item/food, foodtypes = NONE)
 	// a silver slime created this? what a delicacy!
 	if(HAS_TRAIT(food, TRAIT_FOOD_SILVER))
 		return FOOD_LIKED
