@@ -254,13 +254,13 @@
 		if(1)
 			if(ishuman(affected_mob))
 				var/mob/living/carbon/human/human = affected_mob
-				if(isjellyperson(human))
+				if(isslimeperson(human))
 					update_stage(5)
 		if(3)
 			if(ishuman(affected_mob))
 				var/mob/living/carbon/human/human = affected_mob
-				if(!ismonkey(human) && !isjellyperson(human))
-					human.set_species(/datum/species/jelly/slime)
+				if(!ismonkey(human) && !isslimeperson(human))
+					human.set_species(/datum/species/slime/amoeboid)
 
 /datum/disease/transformation/slime/do_disease_transformation(mob/living/affected_mob)
 	if(affected_mob.client && ishuman(affected_mob)) // if they are a human who's not a monkey and are sentient, then let them have the old fun

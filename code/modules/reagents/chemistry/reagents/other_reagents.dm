@@ -728,7 +728,7 @@
 	name = "Mutation Toxin"
 	description = "A corruptive toxin."
 	color = "#13BC5E" // rgb: 19, 188, 94
-	race = /datum/species/jelly/slime
+	race = /datum/species/slime/amoeboid
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/mutationtoxin/felinid
@@ -774,14 +774,14 @@
 	name = "Imperfect Mutation Toxin"
 	description = "A jellyfying toxin."
 	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/jelly
+	race = /datum/species/slime
 	taste_description = "grandma's gelatin"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/mutationtoxin/jelly/on_mob_life(mob/living/carbon/human/affected_mob, seconds_per_tick, times_fired)
-	if(isjellyperson(affected_mob))
+	if(isslimeperson(affected_mob))
 		to_chat(affected_mob, span_warning("Your jelly shifts and morphs, turning you into another subspecies!"))
-		var/species_type = pick(subtypesof(/datum/species/jelly))
+		var/species_type = pick(subtypesof(/datum/species/slime))
 		affected_mob.set_species(species_type)
 		holder.del_reagent(type)
 		return UPDATE_MOB_HEALTH

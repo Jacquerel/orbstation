@@ -5,21 +5,20 @@
 ///The blood volume at which slimes begin to start losing nutrition -- so that IV drips can work for blood deficient slimes
 #define BLOOD_VOLUME_LOSE_NUTRITION 550
 
-/datum/species/jelly
-	// Entirely alien beings that seem to be made entirely out of gel. They have three eyes and a skeleton visible within them.
-	name = "\improper Jellyperson"
-	plural_form = "Jellypeople"
-	id = SPECIES_JELLYPERSON
-	examine_limb_id = SPECIES_JELLYPERSON
+/datum/species/slime
+	name = "\improper Slimeperson"
+	plural_form = "Slimepeople"
+	id = SPECIES_SLIMEPERSON
+	examine_limb_id = SPECIES_SLIMEPERSON
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_SLIME
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 		TRAIT_TOXINLOVER,
 		TRAIT_NOBLOOD,
 	)
-	mutanttongue = /obj/item/organ/internal/tongue/jelly
+	mutanttongue = /obj/item/organ/internal/tongue/slime
 	mutantlungs = /obj/item/organ/internal/lungs/slime
-	mutanteyes = /obj/item/organ/internal/eyes/jelly
+	mutanteyes = /obj/item/organ/internal/eyes/slime
 	mutantheart = null
 	meat = /obj/item/food/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
@@ -29,21 +28,21 @@
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	inherent_factions = list(FACTION_SLIME)
-	species_language_holder = /datum/language_holder/jelly
+	species_language_holder = /datum/language_holder/slime
 	hair_color_mode = USE_MUTANT_COLOR
 	hair_alpha = 150
 	facial_hair_alpha = 150
 	bodypart_overrides = list(
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/jelly,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/jelly,
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/jelly,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/jelly,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/jelly,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/jelly,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/slime,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/slime,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/slime,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/slime,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/slime,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/slime,
 	)
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
 
-/datum/species/jelly/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load)
+/datum/species/slime/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load)
 	. = ..()
 	if(ishuman(new_jellyperson))
 		regenerate_limbs = new
@@ -51,14 +50,14 @@
 	new_jellyperson.AddElement(/datum/element/soft_landing)
 	RegisterSignal(new_jellyperson, COMSIG_HUMAN_ON_HANDLE_BLOOD, PROC_REF(slime_blood))
 
-/datum/species/jelly/on_species_loss(mob/living/carbon/former_jellyperson, datum/species/new_species, pref_load)
+/datum/species/slime/on_species_loss(mob/living/carbon/former_jellyperson, datum/species/new_species, pref_load)
 	if(regenerate_limbs)
 		regenerate_limbs.Remove(former_jellyperson)
 	former_jellyperson.RemoveElement(/datum/element/soft_landing)
 	UnregisterSignal(former_jellyperson, COMSIG_HUMAN_ON_HANDLE_BLOOD)
 	return ..()
 
-/datum/species/jelly/proc/slime_blood(mob/living/carbon/human/slime, seconds_per_tick, times_fired)
+/datum/species/slime/proc/slime_blood(mob/living/carbon/human/slime, seconds_per_tick, times_fired)
 	SIGNAL_HANDLER
 
 	if(slime.stat == DEAD)
@@ -85,7 +84,7 @@
 	regenerate_limbs?.build_all_button_icons(UPDATE_BUTTON_STATUS)
 	return HANDLE_BLOOD_NO_NUTRITION_DRAIN|HANDLE_BLOOD_NO_OXYLOSS
 
-/datum/species/jelly/proc/Cannibalize_Body(mob/living/carbon/human/H)
+/datum/species/slime/proc/Cannibalize_Body(mob/living/carbon/human/H)
 	var/list/limbs_to_consume = list(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG) - H.get_missing_limbs()
 	var/obj/item/bodypart/consumed_limb
 	if(!length(limbs_to_consume))
@@ -99,15 +98,15 @@
 	qdel(consumed_limb)
 	H.blood_volume += 20
 
-/datum/species/jelly/get_species_description()
-	return "Jellypeople are a strange and alien species with three eyes, made entirely out of gel."
+/datum/species/slime/get_species_description()
+	return "Slimepeople are a strange and alien species with three eyes, made entirely out of gel."
 
-/datum/species/jelly/get_species_lore()
+/datum/species/slime/get_species_lore()
 	return list(
-		"Jellypeople are actively being experimented on my Nanotrasen scientists, who are trying to unlock the secrets of their unique biology.",
+		"Slimepeople are actively being experimented on my Nanotrasen scientists, who are trying to unlock the secrets of their unique biology.",
 	)
 
-/datum/species/jelly/prepare_human_for_preview(mob/living/carbon/human/human)
+/datum/species/slime/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.dna.features["mcolor"] = COLOR_PINK
 	human.hairstyle = "Bob Hair 2"
 	human.hair_color = COLOR_PINK
@@ -115,7 +114,7 @@
 
 // Slimes have both TRAIT_NOBLOOD and an exotic bloodtype set, so they need to be handled uniquely here.
 // They may not be roundstart but in the unlikely event they become one might as well not leave a glaring issue open.
-/datum/species/jelly/create_pref_blood_perks()
+/datum/species/slime/create_pref_blood_perks()
 	var/list/to_add = list()
 
 	to_add += list(list(
@@ -171,12 +170,12 @@
 
 ////////////////////////////////////////////////////////SLIMEPEOPLE///////////////////////////////////////////////////////////////////
 
-//Slime people are able to split like slimes, retaining a single mind that can swap between bodies at will, even after death.
+// Able to split like slimes, retaining a single mind that can swap between bodies at will, even after death.
 
-/datum/species/jelly/slime
-	name = "\improper Slimeperson"
-	plural_form = "Slimepeople"
-	id = SPECIES_SLIMEPERSON
+/datum/species/slime/amoeboid
+	name = "\improper Ameboid"
+	plural_form = "Ameboids"
+	id = SPECIES_AMEBOID
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	mutanteyes = /obj/item/organ/internal/eyes
 	var/datum/action/innate/split_body/slime_split
@@ -184,20 +183,20 @@
 	var/datum/action/innate/swap_body/swap_body
 
 	bodypart_overrides = list(
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/jelly/slime,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/jelly/slime,
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/jelly/slime,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/jelly/slime,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/jelly/slime,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/jelly/slime,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/slime/amoeboid,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/slime/amoeboid,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/slime/amoeboid,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/slime/amoeboid,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/slime/amoeboid,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/slime/amoeboid,
 	)
 
-/datum/species/jelly/slime/get_physical_attributes()
-	return "Slimepeople have jelly for blood and their vacuoles can extremely quickly convert plasma to it if they're breathing it in.\
+/datum/species/slime/amoeboid/get_physical_attributes()
+	return "Ameboids have jelly for blood and their vacuoles can extremely quickly convert plasma to it if they're breathing it in.\
 		They can then use the excess blood to split off an excess body, which their consciousness can transfer to at will or on death.\
 		Most things that are toxic heal them, but most things that prevent toxicity damage them!"
 
-/datum/species/jelly/slime/on_species_loss(mob/living/carbon/C)
+/datum/species/slime/amoeboid/on_species_loss(mob/living/carbon/C)
 	if(slime_split)
 		slime_split.Remove(C)
 	if(swap_body)
@@ -209,7 +208,7 @@
 	UnregisterSignal(C, COMSIG_LIVING_DEATH)
 	..()
 
-/datum/species/jelly/slime/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+/datum/species/slime/amoeboid/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	if(ishuman(C))
 		slime_split = new
@@ -224,7 +223,7 @@
 
 	RegisterSignal(C, COMSIG_LIVING_DEATH, PROC_REF(on_death_move_body))
 
-/datum/species/jelly/slime/proc/on_death_move_body(mob/living/carbon/human/source, gibbed)
+/datum/species/slime/amoeboid/proc/on_death_move_body(mob/living/carbon/human/source, gibbed)
 	SIGNAL_HANDLER
 
 	if(!slime_split)
@@ -243,10 +242,10 @@
 	swap_body.swap_to_dupe(source.mind, pick(available_bodies))
 
 //If you're cloned you get your body pool back
-/datum/species/jelly/slime/copy_properties_from(datum/species/jelly/slime/old_species)
+/datum/species/slime/amoeboid/copy_properties_from(datum/species/slime/amoeboid/old_species)
 	bodies = old_species.bodies
 
-/datum/species/jelly/slime/spec_life(mob/living/carbon/human/H, seconds_per_tick, times_fired)
+/datum/species/slime/amoeboid/spec_life(mob/living/carbon/human/H, seconds_per_tick, times_fired)
 	. = ..()
 	if(H.blood_volume >= BLOOD_VOLUME_SLIME_SPLIT)
 		if(SPT_PROB(2.5, seconds_per_tick))
@@ -276,7 +275,7 @@
 
 /datum/action/innate/split_body/Activate()
 	var/mob/living/carbon/human/H = owner
-	if(!isslimeperson(H))
+	if(!isameboid(H))
 		return
 	CHECK_DNA_AND_SPECIES(H)
 	H.visible_message(
@@ -315,10 +314,10 @@
 	H.blood_volume *= 0.45
 	REMOVE_TRAIT(H, TRAIT_NO_TRANSFORM, REF(src))
 
-	var/datum/species/jelly/slime/origin_datum = H.dna.species
+	var/datum/species/slime/amoeboid/origin_datum = H.dna.species
 	origin_datum.bodies |= spare
 
-	var/datum/species/jelly/slime/spare_datum = spare.dna.species
+	var/datum/species/slime/amoeboid/spare_datum = spare.dna.species
 	spare_datum.bodies = origin_datum.bodies
 
 	H.transfer_quirk_datums(spare)
@@ -338,7 +337,7 @@
 	overlay_icon_state = "bg_alien_border"
 
 /datum/action/innate/swap_body/Activate()
-	if(!isslimeperson(owner))
+	if(!isameboid(owner))
 		to_chat(owner, span_warning("You are not a slimeperson."))
 		Remove(owner)
 	else
@@ -358,16 +357,16 @@
 
 /datum/action/innate/swap_body/ui_data(mob/user)
 	var/mob/living/carbon/human/H = owner
-	if(!isslimeperson(H))
+	if(!isameboid(H))
 		return
 
-	var/datum/species/jelly/slime/SS = H.dna.species
+	var/datum/species/slime/amoeboid/SS = H.dna.species
 
 	var/list/data = list()
 	data["bodies"] = list()
 	for(var/b in SS.bodies)
 		var/mob/living/carbon/human/body = b
-		if(!body || QDELETED(body) || !isslimeperson(body))
+		if(!body || QDELETED(body) || !isameboid(body))
 			SS.bodies -= b
 			continue
 
@@ -417,13 +416,13 @@
 	if(.)
 		return
 	var/mob/living/carbon/human/H = owner
-	if(!isslimeperson(owner))
+	if(!isameboid(owner))
 		return
 	if(!H.mind || !H.mind.active)
 		return
 	switch(action)
 		if("swap")
-			var/datum/species/jelly/slime/SS = H.dna.species
+			var/datum/species/slime/amoeboid/SS = H.dna.species
 			var/mob/living/carbon/human/selected = locate(params["ref"]) in SS.bodies
 			if(!can_swap(selected))
 				return
@@ -432,15 +431,15 @@
 
 /datum/action/innate/swap_body/proc/can_swap(mob/living/carbon/human/dupe)
 	var/mob/living/carbon/human/H = owner
-	if(!isslimeperson(H))
+	if(!isameboid(H))
 		return FALSE
-	var/datum/species/jelly/slime/SS = H.dna.species
+	var/datum/species/slime/amoeboid/SS = H.dna.species
 
 	if(QDELETED(dupe)) //Is there a body?
 		SS.bodies -= dupe
 		return FALSE
 
-	if(!isslimeperson(dupe)) //Is it a slimeperson?
+	if(!isameboid(dupe)) //Is it a slimeperson?
 		SS.bodies -= dupe
 		return FALSE
 
@@ -478,18 +477,18 @@
 
 //Luminescents are able to consume and use slime extracts, without them decaying.
 
-/datum/species/jelly/luminescent
+/datum/species/slime/luminescent
 	name = "Luminescent"
 	plural_form = null
 	id = SPECIES_LUMINESCENT
 	examine_limb_id = SPECIES_LUMINESCENT
 	bodypart_overrides = list(
-		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/jelly/luminescent,
-		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/jelly/luminescent,
-		BODY_ZONE_HEAD = /obj/item/bodypart/head/jelly/luminescent,
-		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/jelly/luminescent,
-		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/jelly/luminescent,
-		BODY_ZONE_CHEST = /obj/item/bodypart/chest/jelly/luminescent,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/slime/luminescent,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/slime/luminescent,
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/slime/luminescent,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/slime/luminescent,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/slime/luminescent,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/slime/luminescent,
 	)
 	mutanteyes = /obj/item/organ/internal/eyes
 	/// How strong is our glow
@@ -503,18 +502,18 @@
 	/// The cooldown of us using exteracts
 	COOLDOWN_DECLARE(extract_cooldown)
 
-/datum/species/jelly/luminescent/get_physical_attributes()
+/datum/species/slime/luminescent/get_physical_attributes()
 	return "Luminescent are able to integrate slime extracts into themselves for wondrous effects. \
 		Most things that are toxic heal them, but most things that prevent toxicity damage them!"
 
 //Species datums don't normally implement destroy, but JELLIES SUCK ASS OUT OF A STEEL STRAW and have to i guess
-/datum/species/jelly/luminescent/Destroy(force)
+/datum/species/slime/luminescent/Destroy(force)
 	current_extract = null
 	QDEL_NULL(glow)
 	QDEL_LIST(luminescent_actions)
 	return ..()
 
-/datum/species/jelly/luminescent/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species)
+/datum/species/slime/luminescent/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species)
 	. = ..()
 	glow = new_jellyperson.mob_light(light_type = /obj/effect/dummy/lighting_obj/moblight/species)
 	update_glow(new_jellyperson)
@@ -533,7 +532,7 @@
 	extract_major.Grant(new_jellyperson)
 	luminescent_actions += integrate_extract
 
-/datum/species/jelly/luminescent/on_species_loss(mob/living/carbon/C)
+/datum/species/slime/luminescent/on_species_loss(mob/living/carbon/C)
 	. = ..()
 	if(current_extract)
 		current_extract.forceMove(C.drop_location())
@@ -542,7 +541,7 @@
 	QDEL_LIST(luminescent_actions)
 
 /// Updates the glow of our internal glow object
-/datum/species/jelly/luminescent/proc/update_glow(mob/living/carbon/human/glowie, intensity)
+/datum/species/slime/luminescent/proc/update_glow(mob/living/carbon/human/glowie, intensity)
 	if(intensity)
 		glow_intensity = intensity
 	glow.set_light_range_power_color(glow_intensity, glow_intensity, glowie.dna.features["mcolor"])
@@ -562,14 +561,14 @@
 
 /// Callback for /datum/component/action_item_overlay to find the slime extract from within the species
 /datum/action/innate/integrate_extract/proc/locate_extract()
-	var/datum/species/jelly/luminescent/species = target
+	var/datum/species/slime/luminescent/species = target
 	if(!istype(species))
 		return null
 
 	return species.current_extract
 
 /datum/action/innate/integrate_extract/update_button_name(atom/movable/screen/movable/action_button/button, force = FALSE)
-	var/datum/species/jelly/luminescent/species = target
+	var/datum/species/slime/luminescent/species = target
 	if(!istype(species) || !species.current_extract)
 		name = "Integrate Extract"
 		desc = "Eat a slime extract to use its properties."
@@ -580,7 +579,7 @@
 	return ..()
 
 /datum/action/innate/integrate_extract/apply_button_icon(atom/movable/screen/movable/action_button/current_button, force)
-	var/datum/species/jelly/luminescent/species = target
+	var/datum/species/slime/luminescent/species = target
 	if(!istype(species) || !species.current_extract)
 		button_icon_state = "slimeconsume"
 	else
@@ -590,7 +589,7 @@
 
 /datum/action/innate/integrate_extract/Activate()
 	var/mob/living/carbon/human/human_owner = owner
-	var/datum/species/jelly/luminescent/species = target
+	var/datum/species/slime/luminescent/species = target
 	if(!istype(species))
 		return
 
@@ -632,7 +631,7 @@
 
 /// Callback for /datum/component/action_item_overlay to find the slime extract from within the species
 /datum/action/innate/use_extract/proc/locate_extract()
-	var/datum/species/jelly/luminescent/species = target
+	var/datum/species/slime/luminescent/species = target
 	if(!istype(species))
 		return null
 
@@ -643,14 +642,14 @@
 	if(!.)
 		return
 
-	var/datum/species/jelly/luminescent/species = target
+	var/datum/species/slime/luminescent/species = target
 	if(istype(species) && species.current_extract && (COOLDOWN_FINISHED(species, extract_cooldown)))
 		return TRUE
 	return FALSE
 
 /datum/action/innate/use_extract/Activate()
 	var/mob/living/carbon/human/human_owner = owner
-	var/datum/species/jelly/luminescent/species = human_owner.dna?.species
+	var/datum/species/slime/luminescent/species = human_owner.dna?.species
 	if(!istype(species) || !species.current_extract)
 		return
 
@@ -666,21 +665,20 @@
 
 ///////////////////////////////////STARGAZERS//////////////////////////////////////////
 
-//Stargazers are the telepathic branch of jellypeople, able to project psychic messages and to link minds with willing participants.
+//Stargazers are the telepathic branch of slimepeople, able to project psychic messages and to link minds with willing participants.
 
-/datum/species/jelly/stargazer
+/datum/species/slime/stargazer
 	name = "\improper Stargazer"
 	plural_form = null
 	id = SPECIES_STARGAZER
-	examine_limb_id = SPECIES_JELLYPERSON
 	/// Special "project thought" telepathy action for stargazers.
 	var/datum/action/innate/project_thought/project_action
 
-/datum/species/jelly/stargazer/get_physical_attributes()
+/datum/species/slime/stargazer/get_physical_attributes()
 	return "Stargazers can link others' minds with their own, creating a private communication channel. \
 		Most things that are toxic heal them, but most things that prevent toxicity damage them!"
 
-/datum/species/jelly/stargazer/on_species_gain(mob/living/carbon/grant_to, datum/species/old_species)
+/datum/species/slime/stargazer/on_species_gain(mob/living/carbon/grant_to, datum/species/old_species)
 	. = ..()
 	project_action = new(src)
 	project_action.Grant(grant_to)
@@ -693,11 +691,11 @@
 	)
 
 //Species datums don't normally implement destroy, but JELLIES SUCK ASS OUT OF A STEEL STRAW
-/datum/species/jelly/stargazer/Destroy()
+/datum/species/slime/stargazer/Destroy()
 	QDEL_NULL(project_action)
 	return ..()
 
-/datum/species/jelly/stargazer/on_species_loss(mob/living/carbon/remove_from)
+/datum/species/slime/stargazer/on_species_loss(mob/living/carbon/remove_from)
 	QDEL_NULL(project_action)
 	return ..()
 
@@ -713,7 +711,7 @@
 	var/mob/living/carbon/human/telepath = owner
 	if(telepath.stat == DEAD)
 		return
-	if(!is_species(telepath, /datum/species/jelly/stargazer))
+	if(!is_species(telepath, /datum/species/slime/stargazer))
 		return
 	var/list/recipient_options = list()
 	for(var/mob/living/recipient in oview(telepath))
@@ -722,10 +720,10 @@
 		to_chat(telepath, span_warning("You don't see anyone to send your thought to."))
 		return
 	var/mob/living/recipient = tgui_input_list(telepath, "Choose a telepathic message recipient", "Telepathy", sort_names(recipient_options))
-	if(isnull(recipient) || telepath.stat == DEAD || !is_species(telepath, /datum/species/jelly/stargazer))
+	if(isnull(recipient) || telepath.stat == DEAD || !is_species(telepath, /datum/species/slime/stargazer))
 		return
 	var/msg = tgui_input_text(telepath, title = "Telepathy")
-	if(isnull(msg) || telepath.stat == DEAD || !is_species(telepath, /datum/species/jelly/stargazer))
+	if(isnull(msg) || telepath.stat == DEAD || !is_species(telepath, /datum/species/slime/stargazer))
 		return
 	if(!(recipient in oview(telepath)))
 		to_chat(telepath, span_warning("You can't see [recipient] anymore!"))
@@ -751,7 +749,7 @@
 	background_icon_state = "bg_alien"
 	overlay_icon_state = "bg_alien_border"
 	/// The species required to use this ability. Typepath.
-	var/req_species = /datum/species/jelly/stargazer
+	var/req_species = /datum/species/slime/stargazer
 	/// Whether we're currently linking to someone.
 	var/currently_linking = FALSE
 

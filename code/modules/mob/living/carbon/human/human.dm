@@ -1039,17 +1039,17 @@
 /mob/living/carbon/human/species/golem
 	race = /datum/species/golem
 
-/mob/living/carbon/human/species/jelly
-	race = /datum/species/jelly
+/mob/living/carbon/human/species/slime
+	race = /datum/species/slime
 
-/mob/living/carbon/human/species/jelly/slime
-	race = /datum/species/jelly/slime
+/mob/living/carbon/human/species/slime/ameboid
+	race = /datum/species/slime/amoeboid
 
-/mob/living/carbon/human/species/jelly/stargazer
-	race = /datum/species/jelly/stargazer
+/mob/living/carbon/human/species/slime/stargazer
+	race = /datum/species/slime/stargazer
 
-/mob/living/carbon/human/species/jelly/luminescent
-	race = /datum/species/jelly/luminescent
+/mob/living/carbon/human/species/slime/luminescent
+	race = /datum/species/slime/luminescent
 
 /mob/living/carbon/human/species/lizard
 	race = /datum/species/lizard

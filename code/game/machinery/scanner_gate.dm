@@ -13,7 +13,7 @@
 #define SCANGATE_FLY "fly"
 #define SCANGATE_PLASMAMAN "plasma"
 #define SCANGATE_MOTH "moth"
-#define SCANGATE_JELLY "jelly"
+#define SCANGATE_SLIME "slime"
 #define SCANGATE_POD "pod"
 #define SCANGATE_GOLEM "golem"
 #define SCANGATE_ZOMBIE "zombie"
@@ -220,9 +220,9 @@
 					if(SCANGATE_MOTH)
 						detected_thing = "Mothperson"
 						scan_species = /datum/species/moth
-					if(SCANGATE_JELLY)
-						detected_thing = "Jellyperson"
-						scan_species = /datum/species/jelly
+					if(SCANGATE_SLIME)
+						detected_thing = "Slimeperson"
+						scan_species = /datum/species/slime
 					if(SCANGATE_POD)
 						detected_thing = "Podperson"
 						scan_species = /datum/species/pod
@@ -391,7 +391,7 @@
 #undef SCANGATE_FLY
 #undef SCANGATE_PLASMAMAN
 #undef SCANGATE_MOTH
-#undef SCANGATE_JELLY
+#undef SCANGATE_SLIME
 #undef SCANGATE_POD
 #undef SCANGATE_GOLEM
 #undef SCANGATE_ZOMBIE

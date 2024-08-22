@@ -79,7 +79,7 @@
 				cost *= 4
 			else if(isgolem(human_target) || iszombie(human_target))
 				cost *= 3
-			else if(isjellyperson(human_target) || ispodperson(human_target))
+			else if(isslimeperson(human_target) || ispodperson(human_target))
 				cost *= 2
 	else if(isalienroyal(target))
 		cost *= 10

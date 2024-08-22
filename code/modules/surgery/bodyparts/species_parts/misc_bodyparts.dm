@@ -81,88 +81,88 @@
 	limb_id = SPECIES_ABDUCTOR
 	should_draw_greyscale = FALSE
 
-///JELLY
-/obj/item/bodypart/head/jelly
+///slime
+/obj/item/bodypart/head/slime
 	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_JELLYPERSON
+	limb_id = SPECIES_SLIMEPERSON
 	is_dimorphic = TRUE
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 	head_flags = HEAD_EYECOLOR | HEAD_EYESPRITES | HEAD_HAIR | HEAD_FACIAL_HAIR
 
-/obj/item/bodypart/chest/jelly
+/obj/item/bodypart/chest/slime
 	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_JELLYPERSON
+	limb_id = SPECIES_SLIMEPERSON
 	is_dimorphic = TRUE
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 	wing_types = list(/obj/item/organ/external/wings/functional/slime)
 
-/obj/item/bodypart/chest/jelly/get_butt_sprite()
+/obj/item/bodypart/chest/slime/get_butt_sprite()
 	return icon('icons/mob/butts.dmi', BUTT_SPRITE_SLIME)
 
-/obj/item/bodypart/arm/left/jelly
+/obj/item/bodypart/arm/left/slime
 	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_JELLYPERSON
+	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
-/obj/item/bodypart/arm/right/jelly
+/obj/item/bodypart/arm/right/slime
 	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_JELLYPERSON
+	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
-/obj/item/bodypart/leg/left/jelly
+/obj/item/bodypart/leg/left/slime
 	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_JELLYPERSON
+	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
-/obj/item/bodypart/leg/right/jelly
+/obj/item/bodypart/leg/right/slime
 	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_JELLYPERSON
+	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
 ///SLIME
-/obj/item/bodypart/head/jelly/slime
-	limb_id = SPECIES_SLIMEPERSON
+/obj/item/bodypart/head/slime/amoeboid
+	limb_id = SPECIES_AMEBOID
 	is_dimorphic = FALSE
 
-/obj/item/bodypart/chest/jelly/slime
-	limb_id = SPECIES_SLIMEPERSON
+/obj/item/bodypart/chest/slime/amoeboid
+	limb_id = SPECIES_AMEBOID
 
-/obj/item/bodypart/arm/left/jelly/slime
-	limb_id = SPECIES_SLIMEPERSON
+/obj/item/bodypart/arm/left/slime/amoeboid
+	limb_id = SPECIES_AMEBOID
 
-/obj/item/bodypart/arm/right/jelly/slime
-	limb_id = SPECIES_SLIMEPERSON
+/obj/item/bodypart/arm/right/slime/amoeboid
+	limb_id = SPECIES_AMEBOID
 
-/obj/item/bodypart/leg/left/jelly/slime
-	limb_id = SPECIES_SLIMEPERSON
+/obj/item/bodypart/leg/left/slime/amoeboid
+	limb_id = SPECIES_AMEBOID
 
-/obj/item/bodypart/leg/right/jelly/slime
-	limb_id = SPECIES_SLIMEPERSON
+/obj/item/bodypart/leg/right/slime/amoeboid
+	limb_id = SPECIES_AMEBOID
 
 ///LUMINESCENT
-/obj/item/bodypart/head/jelly/luminescent
+/obj/item/bodypart/head/slime/luminescent
 	limb_id = SPECIES_LUMINESCENT
 	teeth_count = 0
 
-/obj/item/bodypart/chest/jelly/luminescent
+/obj/item/bodypart/chest/slime/luminescent
 	limb_id = SPECIES_LUMINESCENT
 
-/obj/item/bodypart/arm/left/jelly/luminescent
+/obj/item/bodypart/arm/left/slime/luminescent
 	limb_id = SPECIES_LUMINESCENT
 
-/obj/item/bodypart/arm/right/jelly/luminescent
+/obj/item/bodypart/arm/right/slime/luminescent
 	limb_id = SPECIES_LUMINESCENT
 
-/obj/item/bodypart/leg/left/jelly/luminescent
+/obj/item/bodypart/leg/left/slime/luminescent
 	limb_id = SPECIES_LUMINESCENT
 
-/obj/item/bodypart/leg/right/jelly/luminescent
+/obj/item/bodypart/leg/right/slime/luminescent
 	limb_id = SPECIES_LUMINESCENT
 
 ///ZOMBIE

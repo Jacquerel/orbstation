@@ -333,14 +333,14 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/teslium/energized_jelly/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
-	if(!isjellyperson(affected_mob)) //everyone but jellypeople get shocked as normal.
+	if(!isslimeperson(affected_mob)) //everyone but jellypeople get shocked as normal.
 		return ..()
 	affected_mob.AdjustAllImmobility(-40  *REM * seconds_per_tick)
 	if(affected_mob.adjustStaminaLoss(-10 * REM * seconds_per_tick, updating_stamina = FALSE))
 		. = UPDATE_MOB_HEALTH
-	if(is_species(affected_mob, /datum/species/jelly/luminescent))
+	if(is_species(affected_mob, /datum/species/slime/luminescent))
 		var/mob/living/carbon/human/affected_human = affected_mob
-		var/datum/species/jelly/luminescent/slime_species = affected_human.dna.species
+		var/datum/species/slime/luminescent/slime_species = affected_human.dna.species
 		slime_species.extract_cooldown = max(slime_species.extract_cooldown - (2 SECONDS * REM * seconds_per_tick), 0)
 
 /datum/reagent/firefighting_foam

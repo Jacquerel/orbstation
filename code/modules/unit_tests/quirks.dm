@@ -48,7 +48,7 @@
 		/datum/species/lizard = /obj/item/reagent_containers/blood/lizard,
 		/datum/species/ethereal = /obj/item/reagent_containers/blood/ethereal,
 		/datum/species/skeleton = null, // Anyone with noblood should not get a blood bag
-		/datum/species/jelly = /obj/item/reagent_containers/blood/toxin,
+		/datum/species/slime = /obj/item/reagent_containers/blood/toxin,
 		/datum/species/human = /obj/item/reagent_containers/blood/o_minus,
 	)
 

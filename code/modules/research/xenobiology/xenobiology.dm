@@ -269,7 +269,7 @@
 				to_chat(user, span_warning("Your glow is already enhanced!"))
 				return
 			species.update_glow(user, 5)
-			addtimer(CALLBACK(species, TYPE_PROC_REF(/datum/species/jelly/luminescent, update_glow), user, LUMINESCENT_DEFAULT_GLOW), 1 MINUTES)
+			addtimer(CALLBACK(species, TYPE_PROC_REF(/datum/species/slime/luminescent, update_glow), user, LUMINESCENT_DEFAULT_GLOW), 1 MINUTES)
 			to_chat(user, span_notice("You start glowing brighter."))
 
 		if(SLIME_ACTIVATE_MAJOR)
@@ -389,7 +389,7 @@
 			to_chat(user, span_warning("You feel yourself radically changing your slime type..."))
 			if(do_after(user, 12 SECONDS, target = user))
 				to_chat(user, span_warning("You feel different!"))
-				user.set_species(pick(/datum/species/jelly/slime, /datum/species/jelly/stargazer))
+				user.set_species(pick(/datum/species/slime/amoeboid, /datum/species/slime/stargazer))
 				return
 			to_chat(user, span_notice("You stop the transformation."))
 
