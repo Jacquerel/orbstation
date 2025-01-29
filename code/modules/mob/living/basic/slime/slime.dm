@@ -4,7 +4,6 @@
 #define SLIME_SHOCK_PERCENTAGE_PER_LEVEL 7
 
 /mob/living/basic/slime
-	SET_BASE_VISUAL_PIXEL(0, 4)
 	name = "grey baby slime (123)"
 	icon = 'icons/mob/simple/slimes.dmi'
 	icon_state = "grey-baby"
@@ -14,9 +13,8 @@
 
 	icon_living = "grey-baby"
 	icon_dead = "grey-baby-dead"
-	shadow_offset_y = 8
 
-	attack_sound = 'sound/weapons/bite.ogg'
+	attack_sound = 'sound/items/weapons/bite.ogg'
 
 	//Base physiology
 
@@ -68,6 +66,9 @@
 	///Our slime's current mood
 	var/current_mood = SLIME_MOOD_NONE
 
+	///If the slime is currently overcrowded and unable to reproduce.
+	var/overcrowded = FALSE
+
 	///The number of /obj/item/slime_extract's the slime has left inside
 	var/cores = 1
 	///Chance of mutating, should be between 25 and 35
@@ -99,7 +100,7 @@
 		/datum/pet_command/idle,
 		/datum/pet_command/free,
 		/datum/pet_command/follow,
-		/datum/pet_command/point_targeting/attack/slime,
+		/datum/pet_command/attack/slime,
 	)
 
 	/// Our evolve action
@@ -188,20 +189,20 @@
 	return ..()
 
 /mob/living/basic/slime/regenerate_icons()
+	cut_overlays()
 	if(slime_type.transparent)
 		alpha = SLIME_TRANSPARENCY_ALPHA
 
 	icon_dead = !cores ? "[slime_type.colour]-cut" : "[slime_type.colour]-[life_stage]-dead"
-	icon_state = (stat == DEAD) ? icon_dead : "[slime_type.colour]-[life_stage]"
+
+	if(stat != DEAD)
+		icon_state = "[slime_type.colour]-[life_stage]"
+		if(current_mood && current_mood != SLIME_MOOD_NONE && !stat)
+			add_overlay("aslime-[current_mood]")
+	else
+		icon_state = icon_dead
 
 	return ..()
-
-/mob/living/basic/slime/update_overlays()
-	. = ..()
-	if (stat == DEAD)
-		return
-	if (current_mood && current_mood != SLIME_MOOD_NONE)
-		. += "aslime-[current_mood]"
 
 /mob/living/basic/slime/get_status_tab_items()
 	. = ..()
@@ -245,6 +246,8 @@
 
 		if(SLIME_MAX_POWER)
 			. += span_boldwarning("It is radiating with massive levels of electrical activity!")
+	if(overcrowded)
+		. += span_warning("It seems too overcroweded to properly reproduce!")
 
 ///Changes the slime's current life state
 /mob/living/basic/slime/proc/set_life_stage(new_life_stage = SLIME_LIFE_STAGE_BABY)
@@ -288,7 +291,7 @@
 /mob/living/basic/slime/proc/on_slime_pre_attack(mob/living/basic/slime/our_slime, atom/target, proximity, modifiers)
 	SIGNAL_HANDLER
 
-	if(LAZYACCESS(modifiers, RIGHT_CLICK) && isliving(target) && target != src && usr == src)
+	if(LAZYACCESS(modifiers, RIGHT_CLICK) && isliving(target) && target != src)
 		if(our_slime.can_feed_on(target))
 			our_slime.start_feeding(target)
 		return COMPONENT_HOSTILE_NO_ATTACK
@@ -355,7 +358,7 @@
 /mob/living/basic/slime/proc/spawn_corecross()
 	var/static/list/crossbreeds = subtypesof(/obj/item/slimecross)
 	visible_message(span_danger("[src] shudders, its mutated core consuming the rest of its body!"))
-	playsound(src, 'sound/magic/smoke.ogg', 50, TRUE)
+	playsound(src, 'sound/effects/magic/smoke.ogg', 50, TRUE)
 	var/selected_crossbreed_path
 	for(var/crossbreed_path in crossbreeds)
 		var/obj/item/slimecross/cross_item = crossbreed_path

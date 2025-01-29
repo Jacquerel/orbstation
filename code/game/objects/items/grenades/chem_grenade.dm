@@ -234,7 +234,7 @@
 
 	active = TRUE
 	update_icon_state()
-	playsound(src, 'sound/weapons/armbomb.ogg', volume, TRUE)
+	playsound(src, 'sound/items/weapons/armbomb.ogg', volume, TRUE)
 	if(landminemode)
 		landminemode.activate()
 		return
@@ -629,7 +629,7 @@
 
 /obj/item/grenade/chem_grenade/bioterrorfoam
 	name = "Bio terror foam grenade"
-	desc = "Tiger Cooperative chemical foam grenade. Causes temporary irration, blindness, confusion, mutism, and mutations to carbon based life forms. Contains additional spore toxin."
+	desc = "Tiger Cooperative chemical foam grenade. Causes temporary irritation, blindness, confusion, mutism, and mutations to carbon based life forms. Contains additional spore toxin."
 	stage = GRENADE_READY
 
 /obj/item/grenade/chem_grenade/bioterrorfoam/Initialize(mapload)

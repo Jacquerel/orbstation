@@ -16,9 +16,9 @@
 		TRAIT_TOXINLOVER,
 		TRAIT_NOBLOOD,
 	)
-	mutanttongue = /obj/item/organ/internal/tongue/slime
-	mutantlungs = /obj/item/organ/internal/lungs/slime
-	mutanteyes = /obj/item/organ/internal/eyes/slime
+	mutanttongue = /obj/item/organ/tongue/slime
+	mutantlungs = /obj/item/organ/lungs/slime
+	mutanteyes = /obj/item/organ/eyes/slime
 	mutantheart = null
 	meat = /obj/item/food/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
@@ -42,7 +42,7 @@
 	)
 	var/datum/action/innate/regenerate_limbs/regenerate_limbs
 
-/datum/species/slime/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load)
+/datum/species/slime/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	if(ishuman(new_jellyperson))
 		regenerate_limbs = new
@@ -177,7 +177,7 @@
 	plural_form = "Ameboids"
 	id = SPECIES_AMEBOID
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
-	mutanteyes = /obj/item/organ/internal/eyes
+	mutanteyes = /obj/item/organ/eyes
 	var/datum/action/innate/split_body/slime_split
 	var/list/mob/living/carbon/bodies
 	var/datum/action/innate/swap_body/swap_body
@@ -208,7 +208,7 @@
 	UnregisterSignal(C, COMSIG_LIVING_DEATH)
 	..()
 
-/datum/species/slime/amoeboid/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+/datum/species/slime/amoeboid/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load, regenerate_icons)
 	..()
 	if(ishuman(C))
 		slime_split = new
@@ -461,16 +461,13 @@
 	if(!can_swap(dupe)) //sanity check
 		return
 	if(M.current.stat == CONSCIOUS)
-		M.current.visible_message("<span class='notice'>[M.current] \
-			stops moving and starts staring vacantly into space.</span>",
+		M.current.visible_message(span_notice("[M.current] stops moving and starts staring vacantly into space."),
 			span_notice("You stop moving this body..."))
 	else
 		to_chat(M.current, span_notice("You abandon this body..."))
 	M.current.transfer_quirk_datums(dupe)
 	M.transfer_to(dupe)
-	dupe.visible_message("<span class='notice'>[dupe] blinks and looks \
-		around.</span>",
-		span_notice("...and move this one instead."))
+	dupe.visible_message(span_notice("[dupe] blinks and looks around."), span_notice("...and move this one instead."))
 
 
 ///////////////////////////////////LUMINESCENTS//////////////////////////////////////////
@@ -490,7 +487,7 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/slime/luminescent,
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/slime/luminescent,
 	)
-	mutanteyes = /obj/item/organ/internal/eyes
+	mutanteyes = /obj/item/organ/eyes
 	/// How strong is our glow
 	var/glow_intensity = LUMINESCENT_DEFAULT_GLOW
 	/// Internal dummy used to glow (very cool)
@@ -513,7 +510,7 @@
 	QDEL_LIST(luminescent_actions)
 	return ..()
 
-/datum/species/slime/luminescent/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species)
+/datum/species/slime/luminescent/on_species_gain(mob/living/carbon/new_jellyperson, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	glow = new_jellyperson.mob_light(light_type = /obj/effect/dummy/lighting_obj/moblight/species)
 	update_glow(new_jellyperson)
@@ -530,7 +527,7 @@
 
 	var/datum/action/innate/use_extract/major/extract_major = new(src)
 	extract_major.Grant(new_jellyperson)
-	luminescent_actions += integrate_extract
+	luminescent_actions += extract_major
 
 /datum/species/slime/luminescent/on_species_loss(mob/living/carbon/C)
 	. = ..()
@@ -678,7 +675,7 @@
 	return "Stargazers can link others' minds with their own, creating a private communication channel. \
 		Most things that are toxic heal them, but most things that prevent toxicity damage them!"
 
-/datum/species/slime/stargazer/on_species_gain(mob/living/carbon/grant_to, datum/species/old_species)
+/datum/species/slime/stargazer/on_species_gain(mob/living/carbon/grant_to, datum/species/old_species, pref_load, regenerate_icons)
 	. = ..()
 	project_action = new(src)
 	project_action.Grant(grant_to)
@@ -722,7 +719,7 @@
 	var/mob/living/recipient = tgui_input_list(telepath, "Choose a telepathic message recipient", "Telepathy", sort_names(recipient_options))
 	if(isnull(recipient) || telepath.stat == DEAD || !is_species(telepath, /datum/species/slime/stargazer))
 		return
-	var/msg = tgui_input_text(telepath, title = "Telepathy")
+	var/msg = tgui_input_text(telepath, title = "Telepathy", max_length = MAX_MESSAGE_LEN)
 	if(isnull(msg) || telepath.stat == DEAD || !is_species(telepath, /datum/species/slime/stargazer))
 		return
 	if(!(recipient in oview(telepath)))

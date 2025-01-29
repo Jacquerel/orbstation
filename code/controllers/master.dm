@@ -84,6 +84,9 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	var/rolling_usage_length = 5 SECONDS
 
 /datum/controller/master/New()
+	// Ensure usr is null, to prevent any potential weirdness resulting from the MC having a usr if it's manually restarted.
+	usr = null
+
 	if(!config)
 		config = new
 	// Highlander-style: there can only be one! Kill off the old and replace it with the new.
@@ -324,7 +327,7 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 	init_stage_completed = 0
 	var/mc_started = FALSE
 
-	to_chat(world, span_boldannounce("Initializing subsystems..."))
+	to_chat(world, span_boldannounce("Initializing subsystems..."), MESSAGE_TYPE_DEBUG)
 
 	var/list/stage_sorted_subsystems = new(INITSTAGE_MAX)
 	for (var/i in 1 to INITSTAGE_MAX)
@@ -364,7 +367,7 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 
 
 	var/msg = "Initializations complete within [time] second[time == 1 ? "" : "s"]!"
-	to_chat(world, span_boldannounce("[msg]"))
+	to_chat(world, span_boldannounce("[msg]"), MESSAGE_TYPE_DEBUG)
 	log_world(msg)
 
 
@@ -458,7 +461,7 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 	var/chat_message = chat_warning ? span_boldwarning(message) : span_boldannounce(message)
 
 	if(result != SS_INIT_NO_MESSAGE)
-		to_chat(world, chat_message)
+		to_chat(world, chat_message, MESSAGE_TYPE_DEBUG)
 	log_world(message)
 
 /datum/controller/master/proc/SetRunLevel(new_runlevel)
@@ -575,7 +578,7 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 
 		//Anti-tick-contention heuristics:
 		if (init_stage == INITSTAGE_MAX)
-			//if there are mutiple sleeping procs running before us hogging the cpu, we have to run later.
+			//if there are multiple sleeping procs running before us hogging the cpu, we have to run later.
 			// (because sleeps are processed in the order received, longer sleeps are more likely to run first)
 			if (starting_tick_usage > TICK_LIMIT_MC) //if there isn't enough time to bother doing anything this tick, sleep a bit.
 				sleep_delta *= 2
