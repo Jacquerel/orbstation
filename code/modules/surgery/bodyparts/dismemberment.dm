@@ -240,12 +240,15 @@
 	return ..()
 
 ///Try to attach this bodypart to a mob, while replacing one if it exists, does nothing if it fails.
-/obj/item/bodypart/proc/replace_limb(mob/living/carbon/limb_owner, special)
+/obj/item/bodypart/proc/replace_limb(mob/living/carbon/limb_owner, special, delete_replaced = FALSE)
 	if(!istype(limb_owner))
 		return
 	var/obj/item/bodypart/old_limb = limb_owner.get_bodypart(body_zone)
 	if(old_limb)
-		old_limb.drop_limb(TRUE)
+		if (delete_replaced)
+			qdel(old_limb)
+		else
+			old_limb.drop_limb(TRUE)
 
 	. = try_attach_limb(limb_owner, special)
 	if(!.) //If it failed to replace, re-attach their old limb as if nothing happened.
@@ -276,7 +279,6 @@
 		return FALSE
 
 	SEND_SIGNAL(new_limb_owner, COMSIG_CARBON_ATTACH_LIMB, src, special)
-	SEND_SIGNAL(src, COMSIG_BODYPART_ATTACHED, new_limb_owner, special)
 	new_limb_owner.add_bodypart(src)
 
 	LAZYREMOVE(new_limb_owner.body_zone_dismembered_by, body_zone)
@@ -322,6 +324,7 @@
 	new_limb_owner.update_damage_overlays()
 	if(!special)
 		new_limb_owner.hud_used?.update_locked_slots()
+	SEND_SIGNAL(src, COMSIG_BODYPART_ATTACHED, new_limb_owner, special)
 	SEND_SIGNAL(new_limb_owner, COMSIG_CARBON_POST_ATTACH_LIMB, src, special)
 	return TRUE
 

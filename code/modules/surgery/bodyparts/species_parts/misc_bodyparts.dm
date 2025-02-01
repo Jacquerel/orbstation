@@ -83,7 +83,7 @@
 
 ///slime
 /obj/item/bodypart/head/slime
-	biological_state = (BIO_FLESH|BIO_BLOODED)
+	biological_state = BIO_SLIME
 	limb_id = SPECIES_SLIMEPERSON
 	is_dimorphic = TRUE
 	dmg_overlay_type = null
@@ -91,7 +91,7 @@
 	head_flags = HEAD_EYECOLOR | HEAD_EYESPRITES | HEAD_HAIR | HEAD_FACIAL_HAIR
 
 /obj/item/bodypart/chest/slime
-	biological_state = (BIO_FLESH|BIO_BLOODED)
+	biological_state = BIO_SLIME
 	limb_id = SPECIES_SLIMEPERSON
 	is_dimorphic = TRUE
 	dmg_overlay_type = null
@@ -110,25 +110,25 @@
 	return icon('icons/mob/butts.dmi', BUTT_SPRITE_SLIME)
 
 /obj/item/bodypart/arm/left/slime
-	biological_state = (BIO_FLESH|BIO_BLOODED)
+	biological_state = BIO_SLIME
 	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
 /obj/item/bodypart/arm/right/slime
-	biological_state = (BIO_FLESH|BIO_BLOODED)
+	biological_state = BIO_SLIME
 	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
 /obj/item/bodypart/leg/left/slime
-	biological_state = (BIO_FLESH|BIO_BLOODED)
+	biological_state = BIO_SLIME
 	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 
 /obj/item/bodypart/leg/right/slime
-	biological_state = (BIO_FLESH|BIO_BLOODED)
+	biological_state = BIO_SLIME
 	limb_id = SPECIES_SLIMEPERSON
 	dmg_overlay_type = null
 	burn_modifier = 0.5 // = 1/2x generic burn damage

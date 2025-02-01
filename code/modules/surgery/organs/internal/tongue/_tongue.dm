@@ -606,14 +606,12 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	disliked_foodtypes = DAIRY | GROSS
 	toxic_foodtypes = NONE
 
+/obj/item/organ/tongue/jelly/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/inherit_mutantcolour)
+
 /obj/item/organ/tongue/jelly/get_possible_languages()
 	return ..() + /datum/language/slime
-
-/obj/item/organ/tongue/jelly/on_mob_remove(mob/living/carbon/organ_owner, special, movement_flags)
-	. = ..()
-	if (!HAS_TRAIT(organ_owner, TRAIT_MUTANT_COLORS) || !organ_owner.has_dna())
-		return
-	color = rgb2num(organ_owner.dna.features["mcolor"]) // I think you can't see it while it's in someone so it's probably fine to wait until now
 
 /obj/item/organ/tongue/jelly/slime
 	name = "slime tongue"
