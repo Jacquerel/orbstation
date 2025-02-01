@@ -16,7 +16,7 @@
 		TRAIT_TOXINLOVER,
 		TRAIT_NOBLOOD,
 	)
-	mutanttongue = /obj/item/organ/tongue/slime
+	mutanttongue = /obj/item/organ/tongue/jelly/slime
 	mutantlungs = /obj/item/organ/lungs/slime
 	mutanteyes = /obj/item/organ/eyes/slime
 	mutantheart = null
@@ -28,7 +28,7 @@
 	payday_modifier = 1.0
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	inherent_factions = list(FACTION_SLIME)
-	species_language_holder = /datum/language_holder/slime
+	species_language_holder = /datum/language_holder/jelly
 	hair_color_mode = USE_MUTANT_COLOR
 	hair_alpha = 150
 	facial_hair_alpha = 150
@@ -47,13 +47,11 @@
 	if(ishuman(new_jellyperson))
 		regenerate_limbs = new
 		regenerate_limbs.Grant(new_jellyperson)
-	new_jellyperson.AddElement(/datum/element/soft_landing)
 	RegisterSignal(new_jellyperson, COMSIG_HUMAN_ON_HANDLE_BLOOD, PROC_REF(slime_blood))
 
 /datum/species/slime/on_species_loss(mob/living/carbon/former_jellyperson, datum/species/new_species, pref_load)
 	if(regenerate_limbs)
 		regenerate_limbs.Remove(former_jellyperson)
-	former_jellyperson.RemoveElement(/datum/element/soft_landing)
 	UnregisterSignal(former_jellyperson, COMSIG_HUMAN_ON_HANDLE_BLOOD)
 	return ..()
 

@@ -1122,6 +1122,9 @@
 /mob/living/carbon/human/species/golem
 	race = /datum/species/golem
 
+/mob/living/carbon/human/species/jelly
+	race = /datum/species/jelly
+
 /mob/living/carbon/human/species/slime
 	race = /datum/species/slime
 

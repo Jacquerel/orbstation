@@ -597,13 +597,30 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	disliked_foodtypes = GROSS | CLOTH | RAW
 	organ_traits = list(TRAIT_WOUND_LICKER, TRAIT_FISH_EATER)
 
-/obj/item/organ/tongue/slime
+/obj/item/organ/tongue/jelly
 	name = "jelly tongue"
+	desc = "It's quite hard to differentiate the tongue in a mouth made of liquid, but this sort of looks like one."
+	icon_state = "tongue_goo"
+	say_mod = "bubbles"
+	liked_foodtypes = MEAT | BUGS | SEAFOOD | GORE
+	disliked_foodtypes = DAIRY | GROSS
+	toxic_foodtypes = NONE
+
+/obj/item/organ/tongue/jelly/get_possible_languages()
+	return ..() + /datum/language/slime
+
+/obj/item/organ/tongue/jelly/on_mob_remove(mob/living/carbon/organ_owner, special, movement_flags)
+	. = ..()
+	if (!HAS_TRAIT(organ_owner, TRAIT_MUTANT_COLORS) || !organ_owner.has_dna())
+		return
+	color = rgb2num(organ_owner.dna.features["mcolor"]) // I think you can't see it while it's in someone so it's probably fine to wait until now
+
+/obj/item/organ/tongue/jelly/slime
+	name = "slime tongue"
 	desc = "Ah... That's not the sound I expected it to make. Sounds like a Space Autumn Bird."
 	say_mod = "chirps"
 	liked_foodtypes = MEAT | BUGS
 	disliked_foodtypes = GROSS
-	toxic_foodtypes = NONE
 
 /obj/item/organ/tongue/slime/get_food_taste_reaction(obj/item/food, foodtypes = NONE)
 	// a silver slime created this? what a delicacy!

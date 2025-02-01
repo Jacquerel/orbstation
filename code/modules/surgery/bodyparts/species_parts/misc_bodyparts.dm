@@ -98,6 +98,14 @@
 	burn_modifier = 0.5 // = 1/2x generic burn damage
 	wing_types = list(/obj/item/organ/wings/functional/slime)
 
+/obj/item/bodypart/chest/slime/apply_ownership(mob/living/carbon/new_owner)
+	. = ..()
+	new_owner.AddElement(/datum/element/soft_landing)
+
+/obj/item/bodypart/chest/slime/clear_ownership(mob/living/carbon/old_owner)
+	. = ..()
+	old_owner.RemoveElement(/datum/element/soft_landing)
+
 /obj/item/bodypart/chest/slime/get_butt_sprite()
 	return icon('icons/mob/butts.dmi', BUTT_SPRITE_SLIME)
 
