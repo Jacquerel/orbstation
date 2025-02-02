@@ -16,7 +16,7 @@
 	))
 
 	AddElement(/datum/element/inherit_mutantcolour)
-	AddElement(/datum/element/bodypart_infectious, biotypes_immune = BIO_OOZE, biotypes_hostile = BIO_METAL, target_zones = target_zone_list)
+	AddComponent(/datum/component/bodypart_infectious, biotypes_immune = BIO_OOZE, biotypes_hostile = BIO_METAL, target_zones = target_zone_list)
 
 /obj/item/bodypart/chest/jelly
 	icon_greyscale = 'icons/mob/human/species/jelly/bodyparts.dmi'
@@ -41,7 +41,7 @@
 	))
 
 	AddElement(/datum/element/inherit_mutantcolour)
-	AddElement(/datum/element/bodypart_infectious, biotypes_immune = BIO_OOZE, biotypes_hostile = BIO_METAL, target_zones = target_zone_list)
+	AddComponent(/datum/component/bodypart_infectious, biotypes_immune = BIO_OOZE, biotypes_hostile = BIO_METAL, target_zones = target_zone_list)
 
 /obj/item/bodypart/chest/jelly/get_butt_sprite()
 	return icon('icons/mob/butts.dmi', BUTT_SPRITE_SLIME)
@@ -69,6 +69,7 @@
 /obj/item/bodypart/arm/left/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)
 
 /obj/item/bodypart/arm/right/jelly
 	icon_greyscale = 'icons/mob/human/species/jelly/bodyparts.dmi'
@@ -81,6 +82,7 @@
 /obj/item/bodypart/arm/right/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)
 
 /obj/item/bodypart/leg/left/jelly
 	icon_greyscale = 'icons/mob/human/species/jelly/bodyparts.dmi'
@@ -93,6 +95,7 @@
 /obj/item/bodypart/leg/left/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)
 
 /obj/item/bodypart/leg/right/jelly
 	icon_greyscale = 'icons/mob/human/species/jelly/bodyparts.dmi'
@@ -105,3 +108,4 @@
 /obj/item/bodypart/leg/right/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)

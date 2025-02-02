@@ -84,8 +84,8 @@
 
 	return null
 
-///Gets every status effect of an ID and returns all of them in a list, rather than the individual 'has_status_effect'
-/mob/living/proc/get_all_status_effect_of_id(datum/status_effect/checked_effect)
+///Gets every status effect of a type and returns all of them in a list, rather than the individual 'has_status_effect'
+/mob/living/proc/get_all_status_effect_of_type(datum/status_effect/checked_effect)
 	RETURN_TYPE(/list/datum/status_effect)
 
 	var/list/all_effects_of_type = list()

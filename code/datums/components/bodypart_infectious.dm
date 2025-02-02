@@ -1,7 +1,5 @@
 /// Bodypart which transforms other bodyparts on the host
-/datum/element/bodypart_infectious
-	element_flags = ELEMENT_BESPOKE
-	argument_hash_start_idx = 2
+/datum/component/bodypart_infectious
 	/// Biotypes that are not converted
 	var/biotypes_immune
 	/// Biotypes that are damaged until destroyed
@@ -9,43 +7,50 @@
 	/// Other body zones that this one will try to convert, mapped to outcome typepath
 	var/list/target_zones
 
-/datum/element/bodypart_infectious/Attach(datum/target, biotypes_immune, biotypes_hostile, list/target_zones)
+/datum/component/bodypart_infectious/Initialize(biotypes_immune, biotypes_hostile, list/target_zones)
 	. = ..()
-	if (!isbodypart(target))
-		return ELEMENT_INCOMPATIBLE
+	if (!isbodypart(parent))
+		return COMPONENT_INCOMPATIBLE
 
 	src.biotypes_immune = biotypes_immune
 	src.biotypes_hostile = biotypes_hostile
 	src.target_zones = target_zones
 
-	RegisterSignal(target, COMSIG_BODYPART_ATTACHED, PROC_REF(on_parent_attached))
-	RegisterSignal(target, COMSIG_BODYPART_REMOVED, PROC_REF(on_parent_removed))
+/datum/component/bodypart_infectious/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_BODYPART_ATTACHED, PROC_REF(on_parent_attached))
+	RegisterSignal(parent, COMSIG_BODYPART_REMOVED, PROC_REF(on_parent_removed))
 
-/datum/element/bodypart_infectious/Detach(obj/item/bodypart/source)
-	UnregisterSignal(source, list(COMSIG_BODYPART_ATTACHED, COMSIG_BODYPART_REMOVED))
-	if (source.owner)
-		on_parent_removed(source, source.owner)
-	return ..()
+/datum/component/bodypart_infectious/UnregisterFromParent()
+	var/obj/item/bodypart/part_parent = parent
+	UnregisterSignal(parent, list(COMSIG_BODYPART_ATTACHED, COMSIG_BODYPART_REMOVED))
+	if (part_parent.owner)
+		on_parent_removed(parent, part_parent.owner)
 
 /// When put into a mob, check its other parts and wait for more parts to attach
-/datum/element/bodypart_infectious/proc/on_parent_attached(obj/item/bodypart/part, mob/living/carbon/new_owner)
+/datum/component/bodypart_infectious/proc/on_parent_attached(obj/item/bodypart/part, mob/living/carbon/new_owner)
 	SIGNAL_HANDLER
 	RegisterSignal(new_owner, COMSIG_CARBON_POST_ATTACH_LIMB, PROC_REF(on_new_part))
 	for (var/obj/item/bodypart/other_part in new_owner.bodyparts) // Not as anything just in case they're still typepaths for some reason
 		on_new_part(new_owner, other_part)
 
 /// When removed from a mob, stop listening to shit
-/datum/element/bodypart_infectious/proc/on_parent_removed(obj/item/bodypart/part, mob/living/carbon/former_owner)
+/datum/component/bodypart_infectious/proc/on_parent_removed(obj/item/bodypart/part, mob/living/carbon/former_owner)
 	SIGNAL_HANDLER
 	UnregisterSignal(former_owner, COMSIG_CARBON_POST_ATTACH_LIMB)
+	for (var/part_zone as anything in target_zones)
+		var/obj/item/bodypart/part_path = target_zones[part_zone]
+		former_owner.remove_status_effect(/datum/status_effect/corrode_limb, part_zone, part_path::plaintext_zone)
+		former_owner.remove_status_effect(/datum/status_effect/corrode_limb/transform, part_zone, part_path::plaintext_zone, part_path)
 
 /// When a bodypart is attached, check if we hate it
-/datum/element/bodypart_infectious/proc/on_new_part(mob/living/carbon/limb_haver, obj/item/bodypart/new_part, special)
+/datum/component/bodypart_infectious/proc/on_new_part(mob/living/carbon/limb_haver, obj/item/bodypart/new_part, special)
 	SIGNAL_HANDLER
 	var/transform_result = target_zones[new_part.body_zone]
 	if (!transform_result)
 		return // We don't care about this body zone
 	if (new_part.biological_state & biotypes_immune)
+		limb_haver.remove_status_effect(/datum/status_effect/corrode_limb, new_part.body_zone, new_part.plaintext_zone)
+		limb_haver.remove_status_effect(/datum/status_effect/corrode_limb, new_part.body_zone, new_part.plaintext_zone, transform_result)
 		return
 
 	if (new_part.biological_state & biotypes_hostile)
@@ -53,12 +58,11 @@
 	else
 		limb_haver.apply_status_effect(/datum/status_effect/corrode_limb/transform, new_part.body_zone, new_part.plaintext_zone, transform_result)
 
-
 /// Just repeatedly damage a limb
 /datum/status_effect/corrode_limb
 	id = "corrode_limb"
-	status_type = STATUS_EFFECT_MULTIPLE
 	alert_type = null // You can have it effect several limbs at once, don't want to spam the alert area
+	status_type = STATUS_EFFECT_MULTIPLE
 	/// What body zone are we targeting?
 	var/target_zone
 	/// Body zone string used for output
@@ -111,7 +115,6 @@
 /datum/status_effect/corrode_limb/transform
 	id = "transform_limb"
 	duration = 2 MINUTES
-	status_type = STATUS_EFFECT_MULTIPLE
 	damage_chance = 5
 	apply_string = "tingles at the joints as your body begins integrating it."
 	harm_string = "itches painfully."
@@ -131,7 +134,7 @@
 		return
 	// We timed out
 	var/obj/item/bodypart/new_bodypart = new replace_type()
-	if (new_bodypart.replace_limb(owner, special = TRUE))
-		to_chat(owner, span_warning("Your [plaintext_zone] completes its transformation into a \the [new_bodypart]!"))
+	if (new_bodypart.replace_limb(owner, special = TRUE, delete_replaced = TRUE))
+		to_chat(owner, span_warning("Your [plaintext_zone] completes its transformation into a [new_bodypart]!"))
 	else
 		qdel(new_bodypart)
