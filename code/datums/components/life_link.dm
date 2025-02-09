@@ -23,6 +23,7 @@
 
 /datum/component/life_link/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_CARBON_LIMB_DAMAGED, PROC_REF(on_limb_damage))
+	RegisterSignal(parent, COMSIG_CARBON_LIMB_HEALED, PROC_REF(on_limb_heal))
 	RegisterSignals(parent, COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES, PROC_REF(on_damage_adjusted))
 	RegisterSignal(parent, COMSIG_LIVING_HEALTH_UPDATE, PROC_REF(on_health_updated))
 	RegisterSignal(parent, COMSIG_MOB_GET_STATUS_TAB_ITEMS, PROC_REF(on_status_tab_updated))
@@ -32,7 +33,7 @@
 
 /datum/component/life_link/UnregisterFromParent()
 	unregister_host()
-	UnregisterSignal(parent, list(COMSIG_CARBON_LIMB_DAMAGED, COMSIG_LIVING_HEALTH_UPDATE, COMSIG_MOB_GET_STATUS_TAB_ITEMS) + COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES)
+	UnregisterSignal(parent, list(COMSIG_CARBON_LIMB_DAMAGED, COMSIG_CARBON_LIMB_HEALED, COMSIG_LIVING_HEALTH_UPDATE, COMSIG_MOB_GET_STATUS_TAB_ITEMS) + COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES)
 
 /datum/component/life_link/InheritComponent(datum/component/new_comp, i_am_original, mob/living/host, datum/callback/on_passed_damage, datum/callback/on_linked_death)
 	register_host(host)
@@ -87,6 +88,11 @@
 		host.updatehealth()
 	on_passed_damage?.Invoke(our_mob, host, brute + burn)
 	return COMPONENT_PREVENT_LIMB_DAMAGE
+
+/// Called when someone heals one of our limbs, bypassing normal damage adjustment
+/datum/component/life_link/proc/on_limb_heal(mob/living/our_mob, limb, brute, burn)
+	SIGNAL_HANDLER
+	return on_limb_damage(our_mob, limb, -brute, -burn)
 
 /// Called when either the host or parent's health tries to update, update our displayed health
 /datum/component/life_link/proc/on_health_updated()

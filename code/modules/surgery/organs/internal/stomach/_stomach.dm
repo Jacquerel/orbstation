@@ -50,7 +50,11 @@
 	if(ishuman(owner))
 		var/mob/living/carbon/human/humi = owner
 		if(!(organ_flags & ORGAN_FAILING))
+			var/start_nutrition = humi.nutrition
 			handle_hunger(humi, seconds_per_tick, times_fired)
+			var/nutrition_adjustment = start_nutrition - humi.nutrition
+			if (nutrition_adjustment != 0)
+				SEND_SIGNAL(owner, COMSIG_HUMAN_NUTRITION_ADJUSTED, nutrition_adjustment)
 
 	var/mob/living/carbon/body = owner
 

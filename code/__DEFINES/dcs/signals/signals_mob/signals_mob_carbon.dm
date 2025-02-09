@@ -32,6 +32,13 @@
 ///from /obj/item/bodypart/proc/receive_damage, sent from the limb owner (limb, brute, burn)
 #define COMSIG_CARBON_LIMB_DAMAGED "carbon_limb_damaged"
 	#define COMPONENT_PREVENT_LIMB_DAMAGE (1 << 0)
+///from /obj/item/bodypart/proc/receive_damage after damage is actually applied, sent from the limb owner (limb, brute, burn)
+#define COMSIG_CARBON_LIMB_POST_DAMAGED "carbon_limb_post_damaged"
+///from /obj/item/bodypart/proc/heal_damage, sent from the limb owner (limb, brute, burn)
+#define COMSIG_CARBON_LIMB_HEALED "carbon_limb_healed"
+	#define COMPONENT_PREVENT_LIMB_HEAL (1 << 0)
+///from /obj/item/bodypart/proc/heal_damage after damage is actually removed, sent from the limb owner (limb, brute, burn)
+#define COMSIG_CARBON_LIMB_POST_HEALED "carbon_limb_post_healed"
 /// from /obj/item/bodypart/proc/apply_gauze(/obj/item/stack/gauze): (/obj/item/stack/medical/gauze/applied_gauze, /obj/item/stack/medical/gauze/stack_used)
 #define COMSIG_BODYPART_GAUZED "bodypart_gauzed"
 /// from /obj/item/stack/medical/gauze/Destroy(): (/obj/item/stack/medical/gauze/removed_gauze)
@@ -169,3 +176,6 @@
 #define COMSIG_MUTATION_GAINED "mutation_gained"
 ///Called from on_losing(mob/living/carbon/human/owner)
 #define COMSIG_MUTATION_LOST "mutation_lost"
+
+///Called from /obj/item/organ/stomach/on_life if nutrition has been updated (nutrition_adjustment)
+#define COMSIG_HUMAN_NUTRITION_ADJUSTED "human_nutrition_adjusted"

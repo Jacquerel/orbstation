@@ -284,6 +284,7 @@
 	. -= bruteloss
 	if(!.) // no change, no need to update
 		return 0
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_BRUTE_DAMAGE, BRUTE, ., forced)
 	if(updating_health)
 		updatehealth()
 
@@ -327,6 +328,7 @@
 	. -= oxyloss
 	if(!.) // no change, no need to update
 		return FALSE
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_OXY_DAMAGE, OXY, ., forced)
 	if(updating_health)
 		updatehealth()
 
@@ -384,6 +386,7 @@
 	if(!.) // no change, no need to update
 		return FALSE
 
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_TOX_DAMAGE, TOX, ., forced)
 	if(updating_health)
 		updatehealth()
 
@@ -430,6 +433,7 @@
 	. -= fireloss
 	if(. == 0) // no change, no need to update
 		return 0
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_BURN_DAMAGE, BURN, ., forced)
 	if(updating_health)
 		updatehealth()
 
@@ -479,6 +483,7 @@
 		received_stamina_damage(staminaloss, -1 * delta, amount)
 	if(delta == 0) // no change, no need to update
 		return 0
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_STAMINA_DAMAGE, STAMINA, delta, forced)
 	if(updating_stamina)
 		updatehealth()
 	return delta

@@ -52,6 +52,7 @@
 		RegisterSignals(parent, COMSIG_LIVING_ADJUST_STANDARD_DAMAGE_TYPES, PROC_REF(on_adjust_damage))
 		RegisterSignal(parent, COMSIG_LIVING_ADJUST_STAMINA_DAMAGE, PROC_REF(on_adjust_stamina))
 		RegisterSignal(parent, COMSIG_CARBON_LIMB_DAMAGED, PROC_REF(on_limb_damage))
+		RegisterSignal(parent, COMSIG_CARBON_LIMB_HEALED, PROC_REF(on_limb_heal))
 
 	var/datum/action/cooldown/worm_contract/shrink = new(parent)
 	shrink.Grant(parent)
@@ -61,6 +62,7 @@
 		COMSIG_ATOM_CAN_BE_PULLED,
 		COMSIG_ATOM_UPDATE_ICON_STATE,
 		COMSIG_CARBON_LIMB_DAMAGED,
+		COMSIG_CARBON_LIMB_HEALED,
 		COMSIG_LIVING_ADJUST_BRUTE_DAMAGE,
 		COMSIG_LIVING_ADJUST_BURN_DAMAGE,
 		COMSIG_LIVING_DEATH,
@@ -201,6 +203,11 @@
 	if (brute != 0 || burn != 0)
 		back.updatehealth()
 	return COMPONENT_PREVENT_LIMB_DAMAGE
+
+/// Special handling for if healing is delegated to a mob's limbs instead of its overall damage
+/datum/component/mob_chain/proc/on_limb_heal(mob/living/our_mob, limb, brute, burn)
+	SIGNAL_HANDLER
+	return on_limb_damage(our_mob, limb, -brute, -burn)
 
 /**
  * Shrink the chain of mobs into one tile.

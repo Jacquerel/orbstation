@@ -567,6 +567,7 @@
 		set_burn_dam(burn_dam + burn)
 
 	if(owner)
+		SEND_SIGNAL(owner, COMSIG_CARBON_LIMB_POST_DAMAGED, src, brute, burn)
 		if(can_be_disabled)
 			update_disabled()
 		if(updating_health)
@@ -659,12 +660,22 @@
 	if(!forced && required_bodytype && !(bodytype & required_bodytype)) //So we can only heal certain kinds of limbs, ie robotic vs organic.
 		return
 
+	var/healed_brute = brute > brute_dam ? brute_dam : brute
+	var/healed_burn = burn > burn_dam ? burn_dam : burn
+
+	if (healed_burn == 0 && healed_brute == 0)
+		return
+
+	if (owner && SEND_SIGNAL(owner, COMSIG_CARBON_LIMB_HEALED, src, healed_brute, healed_burn) & COMPONENT_PREVENT_LIMB_HEAL)
+		return
+
 	if(brute)
-		set_brute_dam(round(max(brute_dam - brute, 0), DAMAGE_PRECISION))
+		set_brute_dam(round(brute_dam - healed_brute, DAMAGE_PRECISION))
 	if(burn)
-		set_burn_dam(round(max(burn_dam - burn, 0), DAMAGE_PRECISION))
+		set_burn_dam(round(burn_dam - healed_burn, DAMAGE_PRECISION))
 
 	if(owner)
+		SEND_SIGNAL(owner, COMSIG_CARBON_LIMB_POST_HEALED, src, healed_brute, healed_burn)
 		if(can_be_disabled)
 			update_disabled()
 		if(updating_health)

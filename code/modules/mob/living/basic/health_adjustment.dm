@@ -30,6 +30,7 @@
 		. = adjust_health(amount * CONFIG_GET(number/damage_multiplier), updating_health, forced)
 	else if(damage_coeff[BRUTE])
 		. = adjust_health(amount * damage_coeff[BRUTE] * CONFIG_GET(number/damage_multiplier), updating_health, forced)
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_BRUTE_DAMAGE, BRUTE, ., forced)
 
 /mob/living/basic/adjustFireLoss(amount, updating_health = TRUE, forced = FALSE, required_bodytype)
 	if(!can_adjust_fire_loss(amount, forced, required_bodytype))
@@ -38,6 +39,7 @@
 		. = adjust_health(amount * CONFIG_GET(number/damage_multiplier), updating_health, forced)
 	else if(damage_coeff[BURN])
 		. = adjust_health(amount * damage_coeff[BURN] * CONFIG_GET(number/damage_multiplier), updating_health, forced)
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_BURN_DAMAGE, BURN, ., forced)
 
 /mob/living/basic/adjustOxyLoss(amount, updating_health = TRUE, forced = FALSE, required_biotype, required_respiration_type)
 	if(!can_adjust_oxy_loss(amount, forced, required_biotype, required_respiration_type))
@@ -46,6 +48,7 @@
 		. = adjust_health(amount * CONFIG_GET(number/damage_multiplier), updating_health, forced)
 	else if(damage_coeff[OXY])
 		. = adjust_health(amount * damage_coeff[OXY] * CONFIG_GET(number/damage_multiplier), updating_health, forced)
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_OXY_DAMAGE, OXY, ., forced)
 
 /mob/living/basic/adjustToxLoss(amount, updating_health = TRUE, forced = FALSE, required_biotype)
 	if(!can_adjust_tox_loss(amount, forced, required_biotype))
@@ -54,6 +57,7 @@
 		. = adjust_health(amount * CONFIG_GET(number/damage_multiplier), updating_health, forced)
 	else if(damage_coeff[TOX])
 		. = adjust_health(amount * damage_coeff[TOX] * CONFIG_GET(number/damage_multiplier), updating_health, forced)
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_TOX_DAMAGE, TOX, ., forced)
 
 /mob/living/basic/adjustStaminaLoss(amount, updating_stamina = TRUE, forced = FALSE, required_biotype)
 	if(!can_adjust_stamina_loss(amount, forced, required_biotype))
@@ -66,6 +70,7 @@
 	if(updating_stamina)
 		update_stamina()
 	. -= staminaloss
+	SEND_SIGNAL(src, COMSIG_LIVING_POST_ADJUST_TOX_DAMAGE, STAMINA, ., forced)
 
 /mob/living/basic/received_stamina_damage(current_level, amount_actual, amount)
 	return

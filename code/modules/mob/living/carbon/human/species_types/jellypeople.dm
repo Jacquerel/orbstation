@@ -11,6 +11,7 @@
 		TRAIT_NOBLOOD,
 		TRAIT_AGENDER,
 	)
+	mutantbrain = /obj/item/organ/brain/jelly
 	mutanttongue = /obj/item/organ/tongue/jelly
 	mutantlungs = /obj/item/organ/lungs/slime
 	mutanteyes = /obj/item/organ/eyes/slime
