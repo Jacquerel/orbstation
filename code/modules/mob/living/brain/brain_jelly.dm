@@ -110,8 +110,6 @@
 	if (full_heal_flags & HEAL_BLOOD)
 		increment_ooze(100 - ooze_amount)
 
-
-
 #undef MAX_OOZE
 #undef OOZE_AMOUNT_SLUG
 #undef OOZE_AMOUNT_BLOATED
