@@ -441,6 +441,17 @@
 	organ_flags = ORGAN_MINERAL
 	organ_traits = list(TRAIT_ADVANCEDTOOLUSER, TRAIT_LITERATE, TRAIT_CAN_STRIP, TRAIT_ROCK_METAMORPHIC)
 
+/obj/item/organ/brain/jelly
+	name = "nucleus"
+	desc = "A seemingly primitive cluster of neurons which powers a Jelly's ability to think and reason."
+	icon_state = "adamantine_resonator"
+	can_smoothen_out = FALSE
+	organ_flags = ORGAN_ORGANIC
+
+/obj/item/organ/brain/jelly/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/jelly_ooze_manager)
+
 /obj/item/organ/brain/lustrous
 	name = "lustrous brain"
 	desc = "This is your brain on bluespace dust. Not even once."

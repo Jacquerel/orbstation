@@ -6,4 +6,4 @@
 	screen_loc = ui_jellyoozedisplay
 
 /atom/movable/screen/jelly_ooze/proc/update_display(new_value)
-	maptext = ("<div align='center' valign='middle' style='position:relative; top:0px; left:-20px'><font color='#dd66dd'>[round(new_value, 1)] %</font></div>")
+	maptext = ("<div align='center' valign='middle' style='position:relative; top:0px; right:12px'><font color='#dd66dd'>[round(new_value, 1)]%</font></div>")
