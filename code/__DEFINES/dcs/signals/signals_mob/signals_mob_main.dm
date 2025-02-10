@@ -274,3 +274,6 @@
 
 ///from /obj/item/crusher_trophy/on_mark_activate(): (trophy, user)
 #define COMSIG_MOB_TROPHY_ACTIVATED(identifier) "COMSIG_MOB_TROPHY_ACTIVATED[identifier]"
+
+/// from /mob/proc/set_bodytemperature() : (new_temperature)
+#define COMSIG_MOB_BODYTEMP_CHANGED "mob_bodytemp_changed"

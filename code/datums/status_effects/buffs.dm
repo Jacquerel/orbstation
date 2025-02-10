@@ -373,7 +373,7 @@
 	owner.adjustBruteLoss(-25)
 	owner.adjustFireLoss(-25)
 	owner.fully_heal(HEAL_CC_STATUS)
-	owner.bodytemperature = owner.get_body_temp_normal()
+	owner.set_bodytemperature(owner.get_body_temp_normal())
 	if(ishuman(owner))
 		var/mob/living/carbon/human/humi = owner
 		humi.set_coretemperature(humi.get_body_temp_normal())

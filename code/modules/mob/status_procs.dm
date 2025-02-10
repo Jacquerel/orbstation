@@ -9,10 +9,19 @@
 	return
 
 ///Adjust the body temperature of a mob, with min/max settings
-/mob/proc/adjust_bodytemperature(amount,min_temp=0,max_temp=INFINITY)
-	if(bodytemperature >= min_temp && bodytemperature <= max_temp)
-		bodytemperature = clamp(bodytemperature + amount,min_temp,max_temp)
+/mob/proc/adjust_bodytemperature(amount, min_temp = 0, max_temp = INFINITY)
+	return set_bodytemperature(bodytemperature + amount, min_temp, max_temp)
+
+/// Directly set body temperature to a new value
+/mob/proc/set_bodytemperature(new_amount, min_temp = 0, max_temp = INFINITY)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	var/prev_temperature = bodytemperature
+	bodytemperature = clamp(new_amount, min_temp, max_temp)
+
+	if (prev_temperature != bodytemperature)
+		SEND_SIGNAL(src, COMSIG_MOB_BODYTEMP_CHANGED, bodytemperature)
 		return TRUE
+	return FALSE
 
 /// Sight here is the mob.sight var, which tells byond what to actually show to our client
 /// See [code\__DEFINES\sight.dm] for more details

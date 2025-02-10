@@ -69,6 +69,7 @@
 /obj/item/bodypart/arm/left/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/freezable_limb)
 	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)
 
 /obj/item/bodypart/arm/right/jelly
@@ -82,6 +83,7 @@
 /obj/item/bodypart/arm/right/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/freezable_limb)
 	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)
 
 /obj/item/bodypart/leg/left/jelly
@@ -95,6 +97,7 @@
 /obj/item/bodypart/leg/left/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/freezable_limb)
 	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)
 
 /obj/item/bodypart/leg/right/jelly
@@ -108,4 +111,5 @@
 /obj/item/bodypart/leg/right/jelly/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/inherit_mutantcolour)
+	AddComponent(/datum/component/freezable_limb)
 	AddComponent(/datum/component/bodypart_dependent, biotypes_required = BIO_OOZE, target_zone = BODY_ZONE_CHEST)

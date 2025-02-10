@@ -107,6 +107,8 @@
 #define STATUE_MUTE "statue"
 #define CHANGELING_DRAIN "drain"
 
+#define FROZEN_LIMB_TRAIT "frozen_limb"
+
 #define STASIS_MUTE "stasis"
 #define GENETICS_SPELL "genetics_spell"
 #define EYES_COVERED "eyes_covered"

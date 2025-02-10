@@ -35,7 +35,7 @@ Burning extracts:
 	var/mob/living/basic/slime/new_slime = new(get_turf(user),/datum/slime_type/grey)
 	new_slime.visible_message(span_danger("A baby slime emerges from [src], and it nuzzles [user] before burbling hungrily!"))
 	new_slime.befriend(user) //Gas, gas, gas
-	new_slime.bodytemperature = T0C + 400 //We gonna step on the gas.
+	new_slime.set_bodytemperature(T0C + 400) //We gonna step on the gas.
 	new_slime.set_nutrition(SLIME_HUNGER_NUTRITION) //Tonight, we fight!
 	..()
 
@@ -72,7 +72,7 @@ Burning extracts:
 		T.MakeSlippery(TURF_WET_PERMAFROST, min_wet_time = 10, wet_time_to_add = 5)
 	for(var/mob/living/carbon/M in range(5, get_turf(user)))
 		if(M != user)
-			M.bodytemperature = BODYTEMP_COLD_DAMAGE_LIMIT + 10 //Not quite cold enough to hurt.
+			M.set_bodytemperature(BODYTEMP_COLD_DAMAGE_LIMIT + 10) //Not quite cold enough to hurt.
 			to_chat(M, span_danger("You feel a chill run down your spine, and the floor feels a bit slippery with frost..."))
 	..()
 

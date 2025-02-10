@@ -965,7 +965,7 @@
 	cure_husk()
 
 	if(heal_flags & HEAL_TEMP)
-		bodytemperature = get_body_temp_normal(apply_change = FALSE)
+		set_bodytemperature(get_body_temp_normal(apply_change = FALSE))
 	if(heal_flags & HEAL_BLOOD)
 		restore_blood()
 	if(reagents && (heal_flags & HEAL_ALL_REAGENTS))

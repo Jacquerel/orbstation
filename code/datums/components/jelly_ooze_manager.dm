@@ -12,12 +12,14 @@
 #define OOZE_AMOUNT_BLOB 30
 /// We gain more ooze from eating than we do from starving, just feels better
 #define OOZE_NUTRITION_GAIN_MODIFIER 2
-/// Regular modifier of damage -> ooze, it halves it so that you go from 100 -> 0 in a similar time it takes to go from full health to dead
-#define OOZE_DAMAGE_MODIFIER 0.5
+/// Regular modifier of damage -> ooze, in case we need to tune this
+#define OOZE_DAMAGE_MODIFIER 1
 /// Gaining and losing toxins has increased effect on your ooze
-#define OOZE_TOX_MODIFIER 0.75
+#define OOZE_TOX_MODIFIER 1.5
 /// When we're wet we lose ooze to physical damage twice as fast
-#define OOZE_WET_MODIFIER 1
+#define OOZE_WET_MODIFIER 2
+/// We usually heal less ooze than we take as damage, except via toxins
+#define OOZE_HEAL_MODIFIER 0.5
 /// All of these damage signals lead into the same proc, toxin signal has different timing so it fires even if you have no toxin damage
 #define OOZE_NORMAL_DAMAGE_SIGNALS list(COMSIG_LIVING_POST_ADJUST_BRUTE_DAMAGE, COMSIG_LIVING_POST_ADJUST_BURN_DAMAGE, COMSIG_LIVING_POST_ADJUST_OXY_DAMAGE, COMSIG_LIVING_POST_ADJUST_STAMINA_DAMAGE, COMSIG_LIVING_ADJUST_TOX_DAMAGE)
 
@@ -30,7 +32,7 @@
 
 	var/mob/living/carbon/inserted_mob
 
-/datum/component/jelly_ooze_manager/Initialize(...)
+/datum/component/jelly_ooze_manager/Initialize()
 	. = ..()
 	if (!isorgan(parent)) // We put this on a brain and want the amount to persist between insertions into things
 		return COMPONENT_INCOMPATIBLE
@@ -114,14 +116,17 @@
 /// Called when we take some kind of damage
 /datum/component/jelly_ooze_manager/proc/on_adjust_damage(mob/living/our_mob, type, amount, forced)
 	SIGNAL_HANDLER
-	if (type == STAMINA && amount < 0)
-		return // Stamina healing doesn't restore ooze
+	if (amount < 0 && (type == STAMINA || type == OXY))
+		return // Stamina & Oxygen healing doesn't restore ooze
 
 	var/modifier = OOZE_DAMAGE_MODIFIER
 	if (type == TOX)
 		modifier = OOZE_TOX_MODIFIER
-	else if (type != OXY && amount > 0 && HAS_TRAIT(inserted_mob, TRAIT_IS_WET))
-		modifier = OOZE_WET_MODIFIER
+	else if (type != OXY)
+		if (amount > 0 && HAS_TRAIT(inserted_mob, TRAIT_IS_WET))
+			modifier = OOZE_WET_MODIFIER
+		else if (amount < 0)
+			modifier = OOZE_HEAL_MODIFIER
 
 	increment_ooze(amount * -modifier)
 
@@ -138,7 +143,7 @@
 	SIGNAL_HANDLER
 	if (!(limb.biological_state & BIO_OOZE))
 		return // We only care about oozey parts
-	increment_ooze((brute + burn) * OOZE_DAMAGE_MODIFIER)
+	increment_ooze((brute + burn) * OOZE_HEAL_MODIFIER)
 
 /// If we get fully healed from an effect which usually resets blood level, restore ooze
 /datum/component/jelly_ooze_manager/proc/on_full_heal(mob/living/our_mob, full_heal_flags)

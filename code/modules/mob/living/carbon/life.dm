@@ -678,8 +678,7 @@
 		if(capped)
 			amount = (amount > 0) ? min(amount, BODYTEMP_HEATING_MAX) : max(amount, BODYTEMP_COOLING_MAX)
 
-	if(bodytemperature >= min_temp && bodytemperature <= max_temp)
-		bodytemperature = clamp(bodytemperature + amount, min_temp, max_temp)
+	set_bodytemperature(bodytemperature + amount)
 
 
 ///////////

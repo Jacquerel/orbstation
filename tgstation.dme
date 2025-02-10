@@ -1141,6 +1141,7 @@
 #include "code\datums\components\food_storage.dm"
 #include "code\datums\components\force_move.dm"
 #include "code\datums\components\fov_handler.dm"
+#include "code\datums\components\freezable_limb.dm"
 #include "code\datums\components\fullauto.dm"
 #include "code\datums\components\gas_leaker.dm"
 #include "code\datums\components\geiger_sound.dm"

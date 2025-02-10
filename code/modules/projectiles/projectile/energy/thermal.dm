@@ -12,18 +12,15 @@
 
 /obj/projectile/energy/inferno/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()
-	if(!ishuman(target))
-		return
-
 	if(HAS_TRAIT(target, TRAIT_RESISTCOLD))
 		return
 
-	var/mob/living/carbon/cold_target = target
+	var/mob/living/cold_target = target
 	var/how_cold_is_target = cold_target.bodytemperature
-	var/danger_zone = cold_target.dna.species.bodytemp_cold_damage_limit - 150
+	var/danger_zone = cold_target.get_body_temp_cold_damage_limit() - 150
 	if(how_cold_is_target < danger_zone)
 		explosion(cold_target, devastation_range = -1, heavy_impact_range = -1, light_impact_range = 2, flame_range = 3) //maybe stand back a bit
-		cold_target.bodytemperature = cold_target.dna.species.bodytemp_normal //avoids repeat explosions, maybe could be used to heat up again?
+		cold_target.set_bodytemperature(cold_target.get_body_temp_normal(apply_change = FALSE)) //avoids repeat explosions, maybe could be used to heat up again?
 		playsound(cold_target, 'sound/items/weapons/sear.ogg', 30, TRUE, -1)
 
 /obj/projectile/energy/cryo
@@ -40,17 +37,14 @@
 
 /obj/projectile/energy/cryo/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()
-	if(!ishuman(target))
-		return
-
 	if(HAS_TRAIT(target, TRAIT_RESISTHEAT))
 		return
 
-	var/mob/living/carbon/hot_target = target
+	var/mob/living/hot_target = target
 	var/how_hot_is_target = hot_target.bodytemperature
-	var/danger_zone = hot_target.dna.species.bodytemp_heat_damage_limit + 300
+	var/danger_zone = hot_target.get_body_temp_heat_damage_limit() + 300
 	if(how_hot_is_target > danger_zone)
 		hot_target.Knockdown(100)
 		hot_target.apply_damage(20, BURN)
-		hot_target.bodytemperature = hot_target.dna.species.bodytemp_normal //avoids repeat knockdowns, maybe could be used to cool down again?
+		hot_target.set_bodytemperature(hot_target.get_body_temp_normal(apply_change = FALSE)) //avoids repeat knockdowns, maybe could be used to cool down again?
 		playsound(hot_target, 'sound/items/weapons/sonic_jackhammer.ogg', 30, TRUE, -1)
