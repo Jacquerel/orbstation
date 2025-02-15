@@ -450,7 +450,7 @@
 
 /obj/item/organ/brain/jelly/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/jelly_ooze_manager)
+	AddComponent(/datum/component/jelly_ooze)
 
 /obj/item/organ/brain/lustrous
 	name = "lustrous brain"

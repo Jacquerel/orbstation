@@ -24,7 +24,7 @@
 #define OOZE_NORMAL_DAMAGE_SIGNALS list(COMSIG_LIVING_POST_ADJUST_BRUTE_DAMAGE, COMSIG_LIVING_POST_ADJUST_BURN_DAMAGE, COMSIG_LIVING_POST_ADJUST_OXY_DAMAGE, COMSIG_LIVING_POST_ADJUST_STAMINA_DAMAGE, COMSIG_LIVING_ADJUST_TOX_DAMAGE)
 
 /// Handles the jellyperson ooze mechanic
-/datum/component/jelly_ooze_manager
+/datum/component/jelly_ooze
 	/// Our current ooze level
 	var/ooze_amount = 100
 	/// UI displaying our ooze level
@@ -32,14 +32,14 @@
 
 	var/mob/living/carbon/inserted_mob
 
-/datum/component/jelly_ooze_manager/Initialize()
+/datum/component/jelly_ooze/Initialize()
 	. = ..()
 	if (!isorgan(parent)) // We put this on a brain and want the amount to persist between insertions into things
 		return COMPONENT_INCOMPATIBLE
 
 	ooze_amount = rand (90, 110) // Lose about 3 per minute from nutrition, 20 minutes minimum before you lose all of your limbs
 
-/datum/component/jelly_ooze_manager/RegisterWithParent()
+/datum/component/jelly_ooze/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_ORGAN_IMPLANTED, PROC_REF(register_with_carbon))
 	RegisterSignal(parent, COMSIG_ORGAN_REMOVED, PROC_REF(remove_from_carbon))
 
@@ -47,14 +47,14 @@
 	if (brain_item.owner)
 		register_with_carbon(brain_item, brain_item.owner)
 
-/datum/component/jelly_ooze_manager/UnregisterFromParent()
+/datum/component/jelly_ooze/UnregisterFromParent()
 	var/obj/item/organ/brain_item = parent
 	UnregisterSignal(parent, list(COMSIG_ORGAN_IMPLANTED, COMSIG_ORGAN_REMOVED))
 	if (brain_item.owner)
 		remove_from_carbon(brain_item, brain_item.owner)
 
 /// Most of our work is actually done on a mob with the brain in it
-/datum/component/jelly_ooze_manager/proc/register_with_carbon(obj/item/organ/source, mob/living/new_guy)
+/datum/component/jelly_ooze/proc/register_with_carbon(obj/item/organ/source, mob/living/new_guy)
 	SIGNAL_HANDLER
 
 	inserted_mob = new_guy
@@ -71,7 +71,7 @@
 		RegisterSignal(inserted_mob, COMSIG_MOB_HUD_CREATED, PROC_REF(setup_hud))
 
 /// Stop tracking shit when we're not in a mob
-/datum/component/jelly_ooze_manager/proc/remove_from_carbon(obj/item/organ/source, mob/living/old_guy)
+/datum/component/jelly_ooze/proc/remove_from_carbon(obj/item/organ/source, mob/living/old_guy)
 	SIGNAL_HANDLER
 
 	inserted_mob = null
@@ -86,7 +86,7 @@
 	old_guy.hud_used?.infodisplay -= ooze_display
 
 /// Add our ooze tracker
-/datum/component/jelly_ooze_manager/proc/setup_hud()
+/datum/component/jelly_ooze/proc/setup_hud()
 	SIGNAL_HANDLER
 	UnregisterSignal(inserted_mob, COMSIG_MOB_HUD_CREATED)
 	var/datum/hud/hud_used = inserted_mob.hud_used
@@ -102,19 +102,19 @@
 	ooze_display.update_display(ooze_amount)
 
 /// Add or subtract some ooze
-/datum/component/jelly_ooze_manager/proc/increment_ooze(increment_value)
+/datum/component/jelly_ooze/proc/increment_ooze(increment_value)
 	ooze_amount = clamp(ooze_amount + round(increment_value, DAMAGE_PRECISION), 0, MAX_OOZE)
 	ooze_display?.update_display(ooze_amount)
 
 /// Called when nutrition updates
-/datum/component/jelly_ooze_manager/proc/on_hunger_changed(mob/living/carbon/our_mob, hunger_adjustment)
+/datum/component/jelly_ooze/proc/on_hunger_changed(mob/living/carbon/our_mob, hunger_adjustment)
 	SIGNAL_HANDLER
 	if (hunger_adjustment > 0)
 		hunger_adjustment *= OOZE_NUTRITION_GAIN_MODIFIER
 	increment_ooze(hunger_adjustment)
 
 /// Called when we take some kind of damage
-/datum/component/jelly_ooze_manager/proc/on_adjust_damage(mob/living/our_mob, type, amount, forced)
+/datum/component/jelly_ooze/proc/on_adjust_damage(mob/living/our_mob, type, amount, forced)
 	SIGNAL_HANDLER
 	if (amount < 0 && (type == STAMINA || type == OXY))
 		return // Stamina & Oxygen healing doesn't restore ooze
@@ -131,7 +131,7 @@
 	increment_ooze(amount * -modifier)
 
 /// Called when a limb takes damage
-/datum/component/jelly_ooze_manager/proc/on_limb_damage(mob/living/our_mob, obj/item/bodypart/limb, brute, burn)
+/datum/component/jelly_ooze/proc/on_limb_damage(mob/living/our_mob, obj/item/bodypart/limb, brute, burn)
 	SIGNAL_HANDLER
 	if (!(limb.biological_state & BIO_OOZE))
 		return // We only care about oozey parts
@@ -139,20 +139,20 @@
 	increment_ooze((brute + burn) * -modifier)
 
 /// Called when a limb heals damage
-/datum/component/jelly_ooze_manager/proc/on_limb_healed(mob/living/our_mob, obj/item/bodypart/limb, brute, burn)
+/datum/component/jelly_ooze/proc/on_limb_healed(mob/living/our_mob, obj/item/bodypart/limb, brute, burn)
 	SIGNAL_HANDLER
 	if (!(limb.biological_state & BIO_OOZE))
 		return // We only care about oozey parts
 	increment_ooze((brute + burn) * OOZE_HEAL_MODIFIER)
 
 /// If we get fully healed from an effect which usually resets blood level, restore ooze
-/datum/component/jelly_ooze_manager/proc/on_full_heal(mob/living/our_mob, full_heal_flags)
+/datum/component/jelly_ooze/proc/on_full_heal(mob/living/our_mob, full_heal_flags)
 	SIGNAL_HANDLER
 	if (full_heal_flags & HEAL_BLOOD)
 		increment_ooze(100 - ooze_amount)
 
 /// If mob is deleted but we are still listening to it then clear our refs
-/datum/component/jelly_ooze_manager/proc/on_mob_deleted(mob/living/our_mob)
+/datum/component/jelly_ooze/proc/on_mob_deleted(mob/living/our_mob)
 	SIGNAL_HANDLER
 	remove_from_carbon(parent, our_mob)
 

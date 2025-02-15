@@ -1171,7 +1171,7 @@
 #include "code\datums\components\item_killsound.dm"
 #include "code\datums\components\itembound.dm"
 #include "code\datums\components\itempicky.dm"
-#include "code\datums\components\jelly_ooze_manager.dm"
+#include "code\datums\components\jelly_ooze.dm"
 #include "code\datums\components\jetpack.dm"
 #include "code\datums\components\joint_damage.dm"
 #include "code\datums\components\jousting.dm"
