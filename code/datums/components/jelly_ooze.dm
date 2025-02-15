@@ -63,6 +63,7 @@
 	RegisterSignal(inserted_mob, COMSIG_CARBON_LIMB_POST_HEALED, PROC_REF(on_limb_healed))
 	RegisterSignals(inserted_mob, OOZE_NORMAL_DAMAGE_SIGNALS, PROC_REF(on_adjust_damage))
 	RegisterSignal(inserted_mob, COMSIG_LIVING_REVIVE, PROC_REF(on_full_heal))
+	RegisterSignal(inserted_mob, COMSIG_LIVING_LIFE, PROC_REF(on_life))
 	RegisterSignal(inserted_mob, COMSIG_QDELETING, PROC_REF(on_mob_deleted))
 
 	if (inserted_mob.hud_used)
@@ -78,12 +79,29 @@
 	UnregisterSignal(old_guy, list(
 		COMSIG_MOB_HUD_CREATED,
 		COMSIG_LIVING_REVIVE,
+		COMSIG_LIVING_LIFE,
 		COMSIG_HUMAN_NUTRITION_ADJUSTED,
 		COMSIG_CARBON_LIMB_POST_DAMAGED,
 		COMSIG_CARBON_LIMB_POST_HEALED,
 		COMSIG_QDELETING,
 	) + OOZE_NORMAL_DAMAGE_SIGNALS)
 	old_guy.hud_used?.infodisplay -= ooze_display
+
+/// Called every life tick
+/datum/component/jelly_ooze/proc/on_life(mob/living/source, seconds_per_tick, times_fired)
+	SIGNAL_HANDLER
+	if (source.stat == DEAD)
+		return
+
+	var/static/list/heal_organs = list(
+		ORGAN_SLOT_BRAIN,
+		ORGAN_SLOT_HEART,
+		ORGAN_SLOT_LUNGS,
+		ORGAN_SLOT_LIVER,
+		ORGAN_SLOT_STOMACH,
+	)
+	for (var/organ_slot as anything in heal_organs)
+		source.adjustOrganLoss(organ_slot, amount = -1 * seconds_per_tick, required_organ_flag = ORGAN_ORGANIC)
 
 /// Add our ooze tracker
 /datum/component/jelly_ooze/proc/setup_hud()

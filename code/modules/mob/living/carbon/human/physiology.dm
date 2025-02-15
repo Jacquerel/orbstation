@@ -15,8 +15,10 @@
 	/// Multiplier to brain damage received
 	var/brain_mod = 1
 
-	/// Multiplier to damage taken from high / low pressure exposure, stacking with the brute modifier
-	var/pressure_mod = 1
+	/// Multiplier to damage taken from high pressure exposure, stacking with the brute modifier
+	var/high_pressure_mod = 1
+	/// Multiplier to damage taken from low pressure exposure, stacking with the brute modifier
+	var/low_pressure_mod = 1
 	/// Multiplier to damage taken from high temperature exposure, stacking with the burn modifier
 	var/heat_mod = 1
 	/// Multiplier to damage taken from low temperature exposure, stacking with the toxin modifier

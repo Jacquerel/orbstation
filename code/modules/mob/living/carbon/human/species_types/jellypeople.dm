@@ -20,6 +20,8 @@
 	meat = /obj/item/food/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
 	heatmod = 0.5
+	high_pressure_mod = 0.75 // Stacks with bodyparts being resistant to brute damage
+	low_pressure_mod = 2.5 // Cancels out bodyparts being resistant to brute damage and adds a bit more
 	bodytemp_heat_damage_limit = BODYTEMP_HEAT_LAVALAND_SAFE // Note that their slime will start evaporating earlier than this
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/jelly

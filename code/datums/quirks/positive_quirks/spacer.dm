@@ -47,7 +47,7 @@
 
 	var/mob/living/carbon/human/human_quirker = quirk_holder
 	human_quirker.set_mob_height(modded_height)
-	human_quirker.physiology.pressure_mod *= 0.8
+	human_quirker.physiology.low_pressure_mod *= 0.8
 	human_quirker.physiology.cold_mod *= 0.8
 
 /datum/quirk/spacer_born/post_add()
@@ -80,7 +80,7 @@
 
 	var/mob/living/carbon/human/human_quirker = quirk_holder
 	human_quirker.set_mob_height(HUMAN_HEIGHT_MEDIUM)
-	human_quirker.physiology.pressure_mod /= 0.8
+	human_quirker.physiology.low_pressure_mod /= 0.8
 	human_quirker.physiology.cold_mod /= 0.8
 
 /// Check on Z change whether we should start or stop timers
