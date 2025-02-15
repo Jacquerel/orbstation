@@ -273,6 +273,10 @@
 	toxification_probability = 0
 	emp_vulnerability = 20
 
+/obj/item/organ/heart/jelly
+	name = "macrochondria"
+	desc = "The powerhouse of the cell."
+
 /obj/item/organ/heart/cybernetic/surplus
 	name = "surplus prosthetic heart"
 	desc = "A fragile mockery of a human heart that resembles a water pump more than an actual heart. \

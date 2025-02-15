@@ -276,6 +276,12 @@
 	metabolism_efficiency = 0.06
 	organ_traits = null
 
+/obj/item/organ/stomach/jelly
+	name = "lysosome"
+	desc = "An organelle that's very efficient at converting nutrients into goo."
+	icon_state = "stomach-x"
+	organ_traits = list(TRAIT_NOFAT, TRAIT_OOZE_DIGESTION)
+
 /obj/item/organ/stomach/cybernetic
 	name = "basic cybernetic stomach"
 	desc = "A basic device designed to mimic the functions of a human stomach"
