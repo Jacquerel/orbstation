@@ -877,7 +877,6 @@
 	name = "jelly vacuole"
 	desc = "A large organelle designed to store oxygen and other important gasses."
 
-
 /obj/item/organ/lungs/slime
 	name = "vacuole"
 	desc = "A large organelle designed to store oxygen and other important gasses."
