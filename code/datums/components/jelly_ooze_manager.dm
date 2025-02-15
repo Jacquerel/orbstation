@@ -109,7 +109,7 @@
 /// Called when nutrition updates
 /datum/component/jelly_ooze_manager/proc/on_hunger_changed(mob/living/carbon/our_mob, hunger_adjustment)
 	SIGNAL_HANDLER
-	if (hunger_adjustment > 0)
+	if (hunger_adjustment > 0 && HAS_TRAIT(our_mob, TRAIT_OOZE_DIGESTION))
 		hunger_adjustment *= OOZE_NUTRITION_GAIN_MODIFIER
 	increment_ooze(hunger_adjustment)
 

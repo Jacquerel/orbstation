@@ -873,10 +873,14 @@
 	maxHealth = SMOKER_ORGAN_HEALTH
 	healing_factor = SMOKER_LUNG_HEALING
 
+/obj/item/organ/lungs/jelly
+	name = "jelly vacuole"
+	desc = "A large organelle designed to store oxygen and other important gasses."
+
+
 /obj/item/organ/lungs/slime
 	name = "vacuole"
 	desc = "A large organelle designed to store oxygen and other important gasses."
-
 	safe_plasma_max = 0 //We breathe this to gain POWER.
 
 /obj/item/organ/lungs/slime/check_breath(datum/gas_mixture/breath, mob/living/carbon/human/breather_slime)

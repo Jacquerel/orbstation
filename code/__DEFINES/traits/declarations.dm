@@ -520,6 +520,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Trait which prevents you from becoming overweight
 #define TRAIT_NOFAT "cant_get_fat"
+/// Trait which makes you good at converting food into goo
+#define TRAIT_OOZE_DIGESTION "ooze_digestion"
 
 /// Trait which allows you to eat rocks
 #define TRAIT_ROCK_EATER "rock_eater"

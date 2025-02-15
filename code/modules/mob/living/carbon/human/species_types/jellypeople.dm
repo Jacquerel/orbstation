@@ -13,9 +13,10 @@
 	)
 	mutantbrain = /obj/item/organ/brain/jelly
 	mutanttongue = /obj/item/organ/tongue/jelly
-	mutantlungs = /obj/item/organ/lungs/slime
+	mutantlungs = /obj/item/organ/lungs/jelly
 	mutanteyes = /obj/item/organ/eyes/slime
-	mutantheart = null
+	mutantstomach = /obj/item/organ/stomach/jelly
+	mutantheart = /obj/item/organ/heart/jelly
 	meat = /obj/item/food/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
 	heatmod = 0.5
