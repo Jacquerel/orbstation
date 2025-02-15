@@ -275,7 +275,7 @@
 
 /obj/item/organ/heart/jelly
 	name = "macrochondria"
-	desc = "The powerhouse of the cell."
+	desc = "A huge organelle approximating the function of a heart. It's the powerhouse of the cell."
 
 /obj/item/organ/heart/cybernetic/surplus
 	name = "surplus prosthetic heart"

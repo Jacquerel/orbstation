@@ -7,7 +7,6 @@
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_SLIME
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
-		TRAIT_TOXINLOVER,
 		TRAIT_NOBLOOD,
 		TRAIT_AGENDER,
 	)
@@ -17,6 +16,7 @@
 	mutanteyes = /obj/item/organ/eyes/slime
 	mutantstomach = /obj/item/organ/stomach/jelly
 	mutantheart = /obj/item/organ/heart/jelly
+	mutantliver = /obj/item/organ/liver/jelly
 	meat = /obj/item/food/meat/slab/human/mutant/slime
 	exotic_blood = /datum/reagent/toxin/slimejelly
 	heatmod = 0.5

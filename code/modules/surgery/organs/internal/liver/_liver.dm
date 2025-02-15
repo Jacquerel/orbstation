@@ -215,6 +215,11 @@
 	liver_resistance = 0.333 * LIVER_DEFAULT_TOX_RESISTANCE // -66%
 	toxTolerance = 15 // complete toxin immunity like xenos have would be too powerful
 
+/obj/item/organ/liver/alien/jelly
+	name = "lysosome"
+	desc = "A massive organelle adapted for an unknown ecosystem, loves most toxic chemicals but hates medicine that treats them."
+	organ_traits = list(TRAIT_TOXINLOVER)
+
 /obj/item/organ/liver/cybernetic
 	name = "basic cybernetic liver"
 	desc = "A very basic device designed to mimic the functions of a human liver. Handles toxins slightly worse than an organic liver."

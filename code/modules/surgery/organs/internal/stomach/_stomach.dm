@@ -277,8 +277,8 @@
 	organ_traits = null
 
 /obj/item/organ/stomach/jelly
-	name = "lysosome"
-	desc = "An organelle that's very efficient at converting nutrients into goo."
+	name = "cytosol"
+	desc = "An oversized organelle that stores nutrients in order that they can be efficiently converted into goo."
 	icon_state = "stomach-x"
 	organ_traits = list(TRAIT_NOFAT, TRAIT_OOZE_DIGESTION)
 
