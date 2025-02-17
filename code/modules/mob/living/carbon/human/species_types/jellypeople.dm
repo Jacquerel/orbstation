@@ -68,13 +68,13 @@
 	var/list/to_add = list()
 
 	to_add += list(
-		list(list(
+		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 			SPECIES_PERK_ICON = "syringe",
 			SPECIES_PERK_NAME = "Toxins Lover",
 			SPECIES_PERK_DESC = "Toxins damage dealt to [plural_form] are reversed - healing toxins will instead cause harm, and \
 				causing toxins will instead cause healing. Be careful around purging chemicals!",
-		)), // This is on our liver not our species so it doesn't automatically detect it
+		), // This is on our liver not our species so it doesn't automatically detect it
 		list(
 			SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 			SPECIES_PERK_ICON = FA_ICON_SKULL,

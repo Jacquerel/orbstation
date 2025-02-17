@@ -23,13 +23,22 @@
 /// All of these damage signals lead into the same proc, toxin signal has different timing so it fires even if you have no toxin damage
 #define OOZE_NORMAL_DAMAGE_SIGNALS list(COMSIG_LIVING_POST_ADJUST_BRUTE_DAMAGE, COMSIG_LIVING_POST_ADJUST_BURN_DAMAGE, COMSIG_LIVING_POST_ADJUST_OXY_DAMAGE, COMSIG_LIVING_POST_ADJUST_STAMINA_DAMAGE, COMSIG_LIVING_ADJUST_TOX_DAMAGE)
 
+#define OOZE_STAGE_DEAD "dead"
+#define OOZE_STAGE_BLOB "blob"
+#define OOZE_STAGE_STARVING "starving"
+#define OOZE_STAGE_NORMAL "normal"
+#define OOZE_STAGE_BLOATED "bloated"
+#define OOZE_STAGE_SLUG "slug"
+
 /// Handles the jellyperson ooze mechanic
 /datum/component/jelly_ooze
 	/// Our current ooze level
 	var/ooze_amount = 100
 	/// UI displaying our ooze level
 	var/atom/movable/screen/jelly_ooze/ooze_display
-
+	/// What state are we in right now?
+	var/current_state = OOZE_STAGE_NORMAL
+	/// Who are we affecting?
 	var/mob/living/carbon/inserted_mob
 
 /datum/component/jelly_ooze/Initialize()
@@ -121,8 +130,63 @@
 
 /// Add or subtract some ooze
 /datum/component/jelly_ooze/proc/increment_ooze(increment_value)
+	var/old_value = ooze_amount
 	ooze_amount = clamp(ooze_amount + round(increment_value, DAMAGE_PRECISION), 0, MAX_OOZE)
+	if (old_value == ooze_amount || !inserted_mob)
+		return
+
 	ooze_display?.update_display(ooze_amount)
+
+	var/old_state = current_state
+	current_state = get_current_state()
+	if (old_state == current_state)
+		return
+
+	exit_state(old_state)
+	enter_state(current_state)
+
+/// Returns the state we should be in right now
+/datum/component/jelly_ooze/proc/get_current_state()
+	switch (ooze_amount)
+		if (0 to 0.5)
+			return OOZE_STAGE_DEAD
+		if (0.5 to OOZE_AMOUNT_BLOB)
+			return OOZE_STAGE_BLOB
+		if (OOZE_AMOUNT_BLOB to OOZE_AMOUNT_DISMEMBER)
+			return OOZE_STAGE_STARVING
+		if (OOZE_AMOUNT_DISMEMBER to OOZE_AMOUNT_NORMAL)
+			return OOZE_STAGE_NORMAL
+		if (OOZE_AMOUNT_NORMAL to OOZE_AMOUNT_BLOATED)
+			return current_state == OOZE_AMOUNT_NORMAL ? OOZE_STAGE_NORMAL : OOZE_STAGE_BLOATED
+		if (OOZE_AMOUNT_BLOATED to OOZE_AMOUNT_SLUG)
+			return OOZE_STAGE_BLOATED
+	return OOZE_STAGE_SLUG
+
+/// Called when you have entered a new slime state
+/datum/component/jelly_ooze/proc/enter_state(new_state)
+	switch (new_state)
+		if (OOZE_STAGE_DEAD)
+			inserted_mob.death() // If only they were all this simple
+			return
+		if (OOZE_STAGE_BLOATED)
+			inserted_mob.add_movespeed_modifier(/datum/movespeed_modifier/slime_bloat)
+			return
+		if (OOZE_STAGE_SLUG)
+			inserted_mob.add_movespeed_modifier(/datum/movespeed_modifier/slime_slug)
+			return
+
+/// Called when you are leaving an old slime state
+/datum/component/jelly_ooze/proc/exit_state(old_state)
+	switch (old_state)
+		if (OOZE_STAGE_DEAD)
+			return
+		if (OOZE_STAGE_BLOATED)
+			inserted_mob.remove_movespeed_modifier(/datum/movespeed_modifier/slime_bloat)
+			return
+		if (OOZE_STAGE_SLUG)
+			inserted_mob.remove_movespeed_modifier(/datum/movespeed_modifier/slime_slug)
+			return
+
 
 /// Called when nutrition updates
 /datum/component/jelly_ooze/proc/on_hunger_changed(mob/living/carbon/our_mob, hunger_adjustment)
@@ -183,3 +247,10 @@
 #undef OOZE_NUTRITION_GAIN_MODIFIER
 #undef OOZE_TOX_MODIFIER
 #undef OOZE_NORMAL_DAMAGE_SIGNALS
+
+#undef OOZE_STAGE_DEAD
+#undef OOZE_STAGE_BLOB
+#undef OOZE_STAGE_STARVING
+#undef OOZE_STAGE_NORMAL
+#undef OOZE_STAGE_BLOATED
+#undef OOZE_STAGE_SLUG

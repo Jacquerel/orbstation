@@ -180,3 +180,9 @@
 /datum/movespeed_modifier/fish_on_water
 	blacklisted_movetypes = MOVETYPES_NOT_TOUCHING_GROUND
 	multiplicative_slowdown = - /turf/open/water::slowdown
+
+/datum/movespeed_modifier/slime_bloat
+	multiplicative_slowdown = 1.5
+
+/datum/movespeed_modifier/slime_slug
+	multiplicative_slowdown = 3
