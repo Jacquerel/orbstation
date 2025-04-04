@@ -689,7 +689,7 @@
 	default = ""
 
 /datum/config_entry/string/urgent_ahelp_user_prompt
-	default = "There are no admins currently on. Do not press the button below if your ahelp is a joke, a request or a question. Use it only for cases of obvious grief."
+	default = "There are no admins currently on. Press the button below to report rule breaks to admins on Discord. Do not press the button below if your ahelp is a joke, a request or a question."
 
 /datum/config_entry/string/urgent_adminhelp_webhook_url
 
