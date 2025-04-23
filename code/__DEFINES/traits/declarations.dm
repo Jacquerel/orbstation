@@ -201,6 +201,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_EASILY_WOUNDED "easy_limb_wound"
 #define TRAIT_HARDLY_WOUNDED "hard_limb_wound"
 #define TRAIT_NEVER_WOUNDED "never_wounded"
+/// The mob can stick other limbs onto themselves just whenever
+#define TRAIT_MALLEABLE_BODY "limb_hotswap"
 /// Species with this trait have 50% extra chance of bleeding from piercing and slashing wounds
 #define TRAIT_EASYBLEED "easybleed"
 #define TRAIT_TOXINLOVER "toxinlover"

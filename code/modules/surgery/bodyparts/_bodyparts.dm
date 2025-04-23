@@ -398,25 +398,48 @@
 /obj/item/bodypart/attack(mob/living/carbon/victim, mob/user)
 	SHOULD_CALL_PARENT(TRUE)
 
-	if(ishuman(victim))
-		var/mob/living/carbon/human/human_victim = victim
-		if(HAS_TRAIT(victim, TRAIT_LIMBATTACHMENT) || HAS_TRAIT(src, TRAIT_EASY_ATTACH))
-			if(!human_victim.get_bodypart(body_zone))
-				user.temporarilyRemoveItemFromInventory(src, TRUE)
-				if(!try_attach_limb(victim))
-					to_chat(user, span_warning("[human_victim]'s body rejects [src]!"))
-					forceMove(human_victim.loc)
-					return
-				if(check_for_frankenstein(victim))
-					bodypart_flags |= BODYPART_IMPLANTED
-				if(human_victim == user)
-					human_victim.visible_message(span_warning("[human_victim] jams [src] into [human_victim.p_their()] empty socket!"),\
-					span_notice("You force [src] into your empty socket, and it locks into place!"))
-				else
-					human_victim.visible_message(span_warning("[user] jams [src] into [human_victim]'s empty socket!"),\
-					span_notice("[user] forces [src] into your empty socket, and it locks into place!"))
-				return
-	return ..()
+	if(!ishuman(victim))
+		return ..()
+
+	if(!can_attach_limb(victim))
+		return ..()
+
+	var/mob/living/carbon/human/human_victim = victim
+	var/obj/item/bodypart/existed_limb = !!human_victim.get_bodypart(body_zone)
+
+	var/hotswap_self = victim == user && HAS_TRAIT(user, TRAIT_MALLEABLE_BODY) && bodytype & BODYTYPE_ORGANIC
+	var/can_replace_self = hotswap_self && !istype(src, /obj/item/bodypart/head) // Can't replace head without killing yourself
+	var/replace_by_anyone = !existed_limb && (hotswap_self || HAS_TRAIT(victim, TRAIT_LIMBATTACHMENT) || HAS_TRAIT(src, TRAIT_EASY_ATTACH))
+	if(!can_replace_self && !replace_by_anyone)
+		return ..()
+
+	if(existed_limb)
+		if (DOING_INTERACTION(user, DOAFTER_SOURCE_LIMB_REPLACEMENT))
+			return
+		human_victim.visible_message(span_notice("[human_victim] presses [src] against [human_victim.p_their()] [plaintext_zone]..."),\
+			span_notice("You press [src] against your [plaintext_zone]."))
+		if(!do_after(human_victim, 2 SECONDS, target = src, timed_action_flags = IGNORE_USER_LOC_CHANGE))
+			return
+		existed_limb.drop_organs()
+
+	user.temporarilyRemoveItemFromInventory(src, TRUE)
+	if(!replace_limb(victim, special = existed_limb))
+		to_chat(user, span_warning("[human_victim]'s body rejects [src]!"))
+		forceMove(human_victim.drop_location())
+		return
+
+	if(check_for_frankenstein(victim))
+		bodypart_flags |= BODYPART_IMPLANTED
+
+	if(existed_limb)
+		human_victim.visible_message(span_warning("[human_victim]'s [plaintext_zone] falls to the ground, replaced by [src]!"),\
+		span_notice("You successfully replace your [plaintext_zone] with [src]!"))
+	else if(human_victim == user)
+		human_victim.visible_message(span_warning("[human_victim] jams [src] into [human_victim.p_their()] empty socket!"),\
+		span_notice("You force [src] into your empty socket, and it locks into place!"))
+	else
+		human_victim.visible_message(span_warning("[user] jams [src] into [human_victim]'s empty socket!"),\
+		span_notice("[user] forces [src] into your empty socket, and it locks into place!"))
 
 /obj/item/bodypart/attackby(obj/item/weapon, mob/user, params)
 	SHOULD_CALL_PARENT(TRUE)
