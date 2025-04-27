@@ -62,13 +62,13 @@
 		return HANDLE_BLOOD_HANDLED
 
 	if(slime.blood_volume <= 0)
-		slime.blood_volume += JELLY_REGEN_RATE_EMPTY * H.physiology.blood_regen_mod * seconds_per_tick
+		slime.blood_volume += JELLY_REGEN_RATE_EMPTY * slime.physiology.blood_regen_mod * seconds_per_tick
 		slime.adjustBruteLoss(2.5 * seconds_per_tick)
 		to_chat(slime, span_danger("You feel empty!"))
 
 	if(slime.blood_volume < BLOOD_VOLUME_NORMAL)
 		if(slime.nutrition >= NUTRITION_LEVEL_STARVING)
-			slime.blood_volume += JELLY_REGEN_RATE * H.physiology.blood_regen_mod * seconds_per_tick
+			slime.blood_volume += JELLY_REGEN_RATE * slime.physiology.blood_regen_mod * seconds_per_tick
 			if(slime.blood_volume <= BLOOD_VOLUME_LOSE_NUTRITION) // don't lose nutrition if we are above a certain threshold, otherwise slimes on IV drips will still lose nutrition
 				slime.adjust_nutrition(-1.25 * seconds_per_tick)
 
