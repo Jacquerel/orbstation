@@ -189,10 +189,10 @@
 
 
 /// Called when nutrition updates
-/datum/component/jelly_ooze/proc/on_hunger_changed(mob/living/carbon/our_mob, hunger_adjustment)
+/datum/component/jelly_ooze/proc/on_hunger_changed(mob/living/carbon/human/our_mob, hunger_adjustment)
 	SIGNAL_HANDLER
 	if (hunger_adjustment > 0 && HAS_TRAIT(our_mob, TRAIT_OOZE_DIGESTION))
-		hunger_adjustment *= OOZE_NUTRITION_GAIN_MODIFIER
+		hunger_adjustment *= OOZE_NUTRITION_GAIN_MODIFIER * our_mob.physiology?.blood_regen_mod
 	increment_ooze(hunger_adjustment)
 
 /// Called when we take some kind of damage
