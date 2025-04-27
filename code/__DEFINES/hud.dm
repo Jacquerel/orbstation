@@ -43,6 +43,7 @@
 //Middle left indicators
 #define ui_lingchemdisplay "WEST,CENTER-1:15"
 #define ui_lingstingdisplay "WEST:6,CENTER-3:11"
+#define ui_blooddisplay "WEST:6,CENTER:-2"
 
 //
 #define ui_jellyoozedisplay "WEST:6,CENTER:15"

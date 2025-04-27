@@ -397,7 +397,7 @@
 /mob/living/carbon/human/try_inject(mob/user, target_zone, injection_flags)
 	. = ..()
 	if(!. && (injection_flags & INJECT_TRY_SHOW_ERROR_MESSAGE) && user)
-		balloon_alert(user, "no exposed skin on [target_zone || check_zone(user.zone_selected)]!")
+		balloon_alert(user, "no exposed skin on [parse_zone(target_zone || check_zone(user.zone_selected))]!")
 
 /mob/living/carbon/human/get_butt_sprite()
 	var/obj/item/bodypart/chest/chest = get_bodypart(BODY_ZONE_CHEST)
@@ -437,7 +437,7 @@
 
 	//Check for ID
 	var/obj/item/card/id/idcard = get_idcard(FALSE)
-	threatcount += idcard?.trim.threat_modifier || 0
+	threatcount += idcard?.trim?.threat_modifier || 0
 	if((judgement_criteria & JUDGE_IDCHECK) && isnull(idcard) && name == "Unknown")
 		threatcount += 4
 

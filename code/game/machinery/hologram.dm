@@ -226,10 +226,16 @@ Possible to do for anyone motivated enough:
 
 /obj/machinery/holopad/examine(mob/user)
 	. = ..()
-	if(isAI(user))
-		. += span_notice("The status display reads: Current projection range: <b>[holo_range]</b> units. Use :h to speak through the projection. Right-click to project or cancel a projection. Alt-click to hangup all active and incomming calls. Ctrl-click to end projection without jumping to your last location.")
-	else if(in_range(user, src) || isobserver(user))
+	if(isAI(user) || in_range(user, src) || isobserver(user))
 		. += span_notice("The status display reads: Current projection range: <b>[holo_range]</b> units.")
+
+	if(!isAI(user))
+		return
+
+	. += span_info("Use :[/datum/saymode/holopad::key] to speak through the projection.")
+	. += span_info("Right-click to project or cancel a projection.")
+	. += span_info("Alt-click to hangup all active and incomming calls.")
+	. += span_info("Ctrl-click to end projection without jumping to your last location.")
 
 /obj/machinery/holopad/wrench_act(mob/living/user, obj/item/tool)
 	. = ..()
@@ -252,24 +258,24 @@ Possible to do for anyone motivated enough:
 	if(record_mode)
 		record_stop()
 
-/obj/machinery/holopad/attackby(obj/item/P, mob/user, params)
-	if(default_deconstruction_screwdriver(user, "holopad_open", "holopad0", P))
+/obj/machinery/holopad/attackby(obj/item/item, mob/user, list/modifiers)
+	if(default_deconstruction_screwdriver(user, "holopad_open", "holopad0", item))
 		return
 
-	if(default_pry_open(P, close_after_pry = TRUE, closed_density = FALSE))
+	if(default_pry_open(item, close_after_pry = TRUE, closed_density = FALSE))
 		return
 
-	if(default_deconstruction_crowbar(P))
+	if(default_deconstruction_crowbar(item))
 		return
 
-	if(istype(P,/obj/item/disk/holodisk))
+	if(istype(item, /obj/item/disk/holodisk))
 		if(disk)
 			to_chat(user,span_warning("There's already a disk inside [src]!"))
 			return
-		if (!user.transferItemToLoc(P,src))
+		if (!user.transferItemToLoc(item, src))
 			return
-		to_chat(user,span_notice("You insert [P] into [src]."))
-		disk = P
+		to_chat(user,span_notice("You insert [item] into [src]."))
+		disk = item
 		return
 
 	return ..()
@@ -622,9 +628,6 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	return TRUE
 
 /obj/machinery/holopad/proc/clear_holo(datum/owner)
-	if(!disk || !disk.record)
-		return FALSE
-
 	qdel(masters[owner])
 	unset_holo(owner)
 	return TRUE
@@ -867,6 +870,10 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	initial_language_holder = /datum/language_holder/universal
 	var/mob/living/Impersonation
 	var/datum/holocall/HC
+
+/obj/effect/overlay/holo_pad_hologram/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/holographic_nature)
 
 /obj/effect/overlay/holo_pad_hologram/Destroy()
 	Impersonation = null
