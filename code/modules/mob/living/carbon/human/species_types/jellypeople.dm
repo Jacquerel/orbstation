@@ -7,8 +7,8 @@
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_SLIME
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
-		TRAIT_NOBLOOD,
 		TRAIT_AGENDER,
+		TRAIT_TOXINLOVER,
 	)
 	mutantbrain = /obj/item/organ/brain/jelly
 	mutanttongue = /obj/item/organ/tongue/jelly
@@ -18,7 +18,7 @@
 	mutantheart = /obj/item/organ/heart/jelly
 	mutantliver = /obj/item/organ/liver/jelly
 	meat = /obj/item/food/meat/slab/human/mutant/slime
-	exotic_blood = /datum/reagent/toxin/slimejelly
+	exotic_blood = BLOOD_TYPE_TOX
 	heatmod = 0.5
 	high_pressure_mod = 0.75 // Stacks with bodyparts being resistant to brute damage
 	low_pressure_mod = 2.5 // Cancels out bodyparts being resistant to brute damage and adds a bit more
@@ -104,14 +104,22 @@
 
 	return to_add
 
+/datum/species/jelly/prepare_human_for_preview(mob/living/carbon/human/human)
+	human.dna.features[FEATURE_MUTANT_COLOR] = COLOR_PINK
+	human.hairstyle = "Bob Hair 2"
+	human.hair_color = COLOR_PINK
+	human.update_body(is_creating = TRUE)
+
+// Unique handling for slime blood here, it's got some unique properties that warrant a more detailed desc.
 /datum/species/jelly/create_pref_blood_perks()
 	var/list/to_add = list()
+	var/datum/blood_type/blood_type = get_blood_type(exotic_bloodtype)
 
 	to_add += list(list(
 		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
 		SPECIES_PERK_ICON = "tint",
 		SPECIES_PERK_NAME = "Jelly Blood",
-		SPECIES_PERK_DESC = "[plural_form] don't have blood, but instead are composed almost entirely of [initial(exotic_blood.name)]! \
+		SPECIES_PERK_DESC = "[plural_form] don't have blood, but instead are composed almost entirely of [initial(blood_type.reagent_type.name)]! \
 			This goo is extremely important, as losing it will cause you to lose limbs and eventually regress into the form of a simple blob. \
 			Having too MUCH goo causes you to bloat up, slow down, and grow additional pseudopods that can hold things.",
 	))
