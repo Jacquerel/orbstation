@@ -56,6 +56,7 @@
 	. = ..()
 	if(movable.set_currently_z_moving(CURRENTLY_Z_FALLING))
 		zFall(movable, falling_from_move = TRUE)
+
 /**
  * Drops movables spawned on this turf after they are successfully initialized.
  * so that spawned movables that should fall to gravity, will fall.

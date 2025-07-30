@@ -12,7 +12,7 @@
 	if(SPT_PROB(actual_chance, seconds_per_tick) && (living_pawn.mobility_flags & MOBILITY_MOVE) && isturf(living_pawn.loc) && !living_pawn.pulledby)
 		var/move_dir = pick(GLOB.alldirs)
 		var/turf/destination_turf = get_step(living_pawn, move_dir)
-		if(!destination_turf?.can_cross_safely(living_pawn))
+		if(!destination_turf || !can_step_towards_safely(living_pawn, destination_turf))
 			return FALSE
 		living_pawn.Move(destination_turf, move_dir)
 	return TRUE

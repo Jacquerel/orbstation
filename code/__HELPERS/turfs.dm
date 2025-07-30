@@ -551,3 +551,45 @@ Turf and target are separate in case you want to teleport some distance from a t
 		if(turf_adjacent.planetary_atmos)
 			return TRUE
 	return FALSE
+
+/// Returns true if the passed atom can take a step towards the passed target without failing turf/can_cross_safely
+/proc/can_step_towards_safely(atom/movable/moving, atom/target)
+	var/turf/target_turf = get_step_to(moving, target)
+	var/move_dir = get_dir(moving, target_turf)
+
+	if(!target_turf?.can_cross_safely(moving))
+		return FALSE
+
+	if (!(move_dir & (move_dir - 1))) // Cardinal move
+		return TRUE
+
+	if (move_dir & NORTH)
+		var/turf/north_turf = get_step(moving, NORTH)
+		if (!north_turf.is_blocked_turf(exclude_mobs = TRUE, source_atom = moving)) // North first
+			if (!north_turf?.can_cross_safely(moving))
+				return FALSE
+		else
+			if (move_dir & EAST)
+				var/turf/east_turf = get_step(moving, EAST)
+				if (!east_turf?.can_cross_safely(moving))
+					return FALSE
+			else
+				var/turf/west_turf = get_step(moving, WEST)
+				if (!west_turf?.can_cross_safely(moving))
+					return FALSE
+	else
+		var/turf/south_turf = get_step(moving, SOUTH)
+		if (!south_turf.is_blocked_turf(exclude_mobs = TRUE, source_atom = moving)) // South first
+			if (!south_turf?.can_cross_safely(moving))
+				return FALSE
+		else
+			if (move_dir & EAST)
+				var/turf/east_turf = get_step(moving, EAST)
+				if (!east_turf?.can_cross_safely(moving))
+					return FALSE
+			else
+				var/turf/west_turf = get_step(moving, WEST)
+				if (!west_turf?.can_cross_safely(moving))
+					return FALSE
+
+	return TRUE

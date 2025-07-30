@@ -14,9 +14,9 @@
 	RegisterSignal(loop, COMSIG_MOVELOOP_POSTPROCESS, PROC_REF(post_move))
 
 /datum/ai_movement/basic_avoidance/allowed_to_move(datum/move_loop/has_target/dist_bound/source)
-	var/turf/target_turf = get_step_towards(source.moving, source.target)
-	if(!target_turf?.can_cross_safely(source.moving))
+	if (!can_step_towards_safely(source.moving, source.target))
 		return FALSE
+
 	return ..()
 
 /// Move immediately and don't update our facing
