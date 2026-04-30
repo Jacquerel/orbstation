@@ -521,7 +521,7 @@ Striking a noncultist, however, will tear their flesh."}
 	if(!IS_CULTIST(user) && !free_use)
 		to_chat(user, span_cult_large("\"I wouldn't advise that.\""))
 
-/datum/action/innate/dash/cult
+/datum/action/cooldown/item_dash/cult
 	name = "Rend the Veil"
 	desc = "Use the sword to shear open the flimsy fabric of this reality and teleport to your target."
 	button_icon = 'icons/mob/actions/actions_cult.dmi'
@@ -532,7 +532,7 @@ Striking a noncultist, however, will tear their flesh."}
 	phasein = /obj/effect/temp_visual/dir_setting/cult/phase
 	phaseout = /obj/effect/temp_visual/dir_setting/cult/phase/out
 
-/datum/action/innate/dash/cult/IsAvailable(feedback = FALSE)
+/datum/action/cooldown/item_dash/cult/IsAvailable(feedback = FALSE)
 	if(IS_CULTIST(owner) && current_charges)
 		return TRUE
 	else

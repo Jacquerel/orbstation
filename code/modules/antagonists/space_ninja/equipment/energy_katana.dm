@@ -37,7 +37,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	item_flags = NEEDS_PERMIT
 	var/datum/effect_system/basic/spark_spread/spark_system
-	var/datum/action/innate/dash/ninja/jaunt
+	var/datum/action/cooldown/item_dash/ninja/jaunt
 
 /obj/item/energy_katana/Initialize(mapload)
 	. = ..()
@@ -68,21 +68,21 @@
 	QDEL_NULL(jaunt)
 	return ..()
 
-/datum/action/innate/dash/ninja
+/datum/action/cooldown/item_dash/ninja
 	current_charges = 3
 	max_charges = 3
 	charge_rate = 200
 	beam_length = 1 SECONDS
 	recharge_sound = null
 
-/datum/action/innate/dash/ninja/GiveAction(mob/viewer) //this action should be invisible, as its handled by right-click
+/datum/action/cooldown/item_dash/ninja/GiveAction(mob/viewer) //this action should be invisible, as its handled by right-click
 	return
 
-/datum/action/innate/dash/ninja/HideFrom(mob/viewer)
+/datum/action/cooldown/item_dash/ninja/HideFrom(mob/viewer)
 	return
 
 /// Teleports to a tile adjacent to a mob, then attacks it
-/datum/action/innate/dash/ninja/proc/attack_teleport(mob/living/user, mob/living/stabbing)
+/datum/action/cooldown/item_dash/ninja/proc/attack_teleport(mob/living/user, mob/living/stabbing)
 	var/list/turf/line = get_line(user, stabbing)
 	var/obj/item/sword = target
 	if(length(line) <= 1 || !teleport(user, line[length(line) - 1])) // teleports to the second last turf, should be adjacent to the target

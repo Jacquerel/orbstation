@@ -25,7 +25,7 @@
 	/// TRUE if currently doing a teleport to the beacon, FALSE otherwise.
 	var/teleporting = FALSE
 	/// Action enabling the blink-dash functionality.
-	var/datum/action/innate/dash/hierophant/blink
+	var/datum/action/cooldown/item_dash/hierophant/blink
 	/// Whether the blink ability is activated. IF TRUE, left clicking a location will blink to it. If FALSE, this is disabled.
 	var/blink_activated = TRUE
 
@@ -244,7 +244,7 @@
 #define HIEROPHANT_BLINK_RANGE 5
 #define HIEROPHANT_BLINK_COOLDOWN (15 SECONDS)
 
-/datum/action/innate/dash/hierophant
+/datum/action/cooldown/item_dash/hierophant
 	button_icon_state = "vortex_dash"
 	current_charges = 1
 	max_charges = 1
@@ -255,7 +255,7 @@
 	// It's a simple purple beam, works well enough for the purple hiero effects.
 	beam_effect = "plasmabeam"
 
-/datum/action/innate/dash/hierophant/teleport(mob/user, atom/target)
+/datum/action/cooldown/item_dash/hierophant/teleport(mob/user, atom/target)
 	var/dist = get_dist(user, target)
 	if(dist > HIEROPHANT_BLINK_RANGE)
 		user.balloon_alert(user, "too far!")
@@ -263,7 +263,7 @@
 
 	return ..()
 
-/datum/action/innate/dash/hierophant/charge()
+/datum/action/cooldown/item_dash/hierophant/charge()
 	. = ..()
 	var/obj/item/hierophant_club/club = target
 	if(istype(club))

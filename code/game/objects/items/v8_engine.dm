@@ -71,8 +71,6 @@
 	var/fire_charges = 0
 	///Sound played when wielded.
 	var/active_hitsound = 'sound/items/house_edge_hit.ogg'
-	///Datum that tracks weapon dashing for the fire_charge system
-	var/datum/action/innate/dash/charge
 	COOLDOWN_DECLARE(fire_charge_cooldown)
 
 /obj/item/house_edge/Initialize(mapload)

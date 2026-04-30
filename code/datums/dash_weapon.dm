@@ -1,9 +1,10 @@
 /// Actions that you can use to dash (teleport) to places in view.
-/datum/action/innate/dash
+/datum/action/cooldown/item_dash
 	name = "Dash"
-	desc = "Teleport to the targeted location."
+	desc = "Teleport to the target location. Click to toggle whether you teleport on click."
 	button_icon = 'icons/mob/actions/actions_items.dmi'
 	button_icon_state = "jetboot"
+	cooldown_time = 0.5 SECONDS
 	/// How many dash charges do we have?
 	var/current_charges = 1
 	/// How many dash charges can we hold?
@@ -22,8 +23,10 @@
 	var/phasein = /obj/effect/temp_visual/dir_setting/ninja/phase
 	/// What effect should we play when we phase out (at the source turf)
 	var/phaseout = /obj/effect/temp_visual/dir_setting/ninja/phase/out
+	/// When will we get our next charge?
+	var/next_charge_time
 
-/datum/action/innate/dash/IsAvailable(feedback = FALSE)
+/datum/action/cooldown/item_dash/IsAvailable(feedback = FALSE)
 	. = ..()
 	if (!.)
 		return FALSE
@@ -33,15 +36,15 @@
 		return FALSE
 	return TRUE
 
-/datum/action/innate/dash/Activate()
-	var/obj/item/dashing_item = target
-	if(!istype(dashing_item))
-		return
-
-	dashing_item.attack_self(owner) //Used to toggle dash behavior in the dashing item
+/datum/action/cooldown/item_dash/Trigger(mob/clicker, trigger_flags, atom/target)
+	var/obj/item/dashing_item = src.target // The thing we're attached to, not to be confused with ability target
+	if(istype(dashing_item))
+		dashing_item.attack_self(owner) // This is kind of stupid but we actually just want to use the item in-hand when you click on the button
+		return FALSE
+	return ..()
 
 /// Teleports user to target using do_teleport. Returns TRUE if teleport successful, FALSE otherwise.
-/datum/action/innate/dash/proc/teleport(mob/user, atom/target)
+/datum/action/cooldown/item_dash/proc/teleport(mob/user, atom/target)
 	if(!IsAvailable(feedback = TRUE))
 		return FALSE
 
@@ -65,17 +68,27 @@
 	var/obj/spot_two = new phasein(target_turf, user.dir)
 	spot_one.Beam(spot_two, beam_effect, time = beam_length)
 	playsound(target_turf, dash_sound, 25, TRUE)
+
+	if (current_charges == max_charges)
+		next_charge_time = world.time + charge_rate
+
 	current_charges--
 	addtimer(CALLBACK(src, PROC_REF(charge)), charge_rate)
 	owner?.update_mob_action_buttons()
 	SEND_SIGNAL(src, COMSIG_DASH_ACTION_DASHED)
 
+	if (current_charges > 0)
+		StartCooldown()
+	else
+		StartCooldown(next_charge_time - world.time)
+
 	return TRUE
 
 /// Callback for [/proc/teleport] to increment our charges after  use.
-/datum/action/innate/dash/proc/charge()
+/datum/action/cooldown/item_dash/proc/charge()
 	current_charges = clamp(current_charges + 1, 0, max_charges)
 	SEND_SIGNAL(src, COMSIG_DASH_ACTION_CHARGED)
+	StartCooldown(0)
 
 	var/obj/item/dashing_item = target
 	if(!istype(dashing_item))
@@ -87,4 +100,5 @@
 	if(!owner)
 		return
 	owner.update_mob_action_buttons()
-	dashing_item.balloon_alert(owner, "[current_charges]/[max_charges] dash charges")
+	if (max_charges > 1)
+		dashing_item.balloon_alert(owner, "[current_charges]/[max_charges] dash charges")
