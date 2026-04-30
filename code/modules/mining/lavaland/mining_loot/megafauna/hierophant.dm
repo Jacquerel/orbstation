@@ -245,6 +245,7 @@
 #define HIEROPHANT_BLINK_COOLDOWN (15 SECONDS)
 
 /datum/action/innate/dash/hierophant
+	button_icon_state = "vortex_dash"
 	current_charges = 1
 	max_charges = 1
 	charge_rate = HIEROPHANT_BLINK_COOLDOWN
