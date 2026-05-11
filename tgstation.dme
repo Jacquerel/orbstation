@@ -4532,6 +4532,7 @@
 #include "code\modules\fishing\sources\subtypes\surgery.dm"
 #include "code\modules\fishing\sources\subtypes\turfs.dm"
 #include "code\modules\flufftext\dreaming.dm"
+#include "code\modules\flufftext\nightmare.dm"
 #include "code\modules\food_and_drinks\pizzabox.dm"
 #include "code\modules\food_and_drinks\equipment\kitchen_utensils.dm"
 #include "code\modules\food_and_drinks\equipment\plate.dm"

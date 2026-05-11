@@ -18,6 +18,15 @@
 	. = ..()
 	RegisterSignal(src, COMSIG_RAT_INTERACT, PROC_REF(on_rat_eat))
 
+/obj/item/food/popsicle/make_edible()
+	. = ..()
+	AddComponentFrom(SOURCE_EDIBLE_INNATE, /datum/component/edible, after_eat = CALLBACK(src, PROC_REF(after_bite)))
+
+/// Give people bad dreams if they eat cheese
+/obj/item/food/cheese/proc/after_bite(mob/living/eater, mob/living/feeder, bitecount)
+	SIGNAL_HANDLER
+
+
 /obj/item/food/cheese/proc/on_rat_eat(datum/source, mob/living/basic/regal_rat/king)
 	SIGNAL_HANDLER
 

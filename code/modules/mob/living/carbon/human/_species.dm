@@ -139,6 +139,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/inherent_respiration_type = RESPIRATION_OXYGEN
 	///List of factions the mob gain upon gaining this species.
 	var/list/inherent_factions
+	///What's the worst thing you can imagine?
+	var/list/nightmares = list()
 
 	///What gas does this species breathe? Used by suffocation screen alerts, most of actual gas breathing is handled by mutantlungs. See [life.dm][code/modules/mob/living/carbon/human/life.dm]
 	var/breathid = GAS_O2

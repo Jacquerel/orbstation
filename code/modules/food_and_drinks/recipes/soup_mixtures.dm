@@ -1550,6 +1550,10 @@
 	data = list("cheese" = 1, "cream" = 1, "sweet potato" = 1)
 	color = "#F3CE3A"
 
+/datum/reagent/consumable/nutriment/soup/cheese/on_mob_add(mob/living/living_mob)
+	. = ..()
+
+
 /datum/glass_style/has_foodtype/soup/cheese
 	required_drink_type = /datum/reagent/consumable/nutriment/soup/cheese
 	name = "ælosterrmæsch"
