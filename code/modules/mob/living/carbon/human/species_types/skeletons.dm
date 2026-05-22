@@ -45,6 +45,11 @@
 		BODY_ZONE_CHEST = /obj/item/bodypart/chest/skeleton,
 	)
 
+	nightmares = list(
+		list("a terrible baying rings in the air", "you can smell the terrible breath from their slavering jaws", "the dogs are coming"),
+		list("you feel uncomfortably warm and damp", "your reflection in a window catches your... eye?", "you don't recognise your face under the disgusting layer of skin"),
+	)
+
 /datum/species/skeleton/check_roundstart_eligible()
 	if(check_holidays(HALLOWEEN))
 		return TRUE

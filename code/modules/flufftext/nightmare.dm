@@ -8,7 +8,6 @@
 	. += span_warning("you are struck by a terrible sense of [pick("apprehension", "anxiety", "dread", "nervousness", "paranoia", "trepidation", "unease")]")
 
 	var/list/nightmares = list(
-		list("a rat is biting you", "many rats are biting you", "there is nothing to see or feel except rats biting you"),
 		list(
 			"a siren jolts you out of bed, the emergency lights are blinking red",
 			"Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.",
@@ -25,7 +24,8 @@
 		list("you are falling from a great height", "the wind screams past, there is nothing to slow you down", "you are about to hit the ground"),
 		list("you are in a maze of twisting passages, all alike", "distantly, there is the sound of panting breath", "you cannot find the way out"),
 		list("you are looking in the mirror", "your reflection points behind you", "you can't bring yourself to turn around"),
-		list("you are walking the halls of an unfamiliar station", "it is dark, silent, and nobody responds to your calls", "you can feel eyes upon your back")
+		list("you are tied to a bed, unable to move", "rats begin to creep out of the darkness, their teeth gleaming", "soon there will be nothing left of you"),
+		list("you are walking the halls of an unfamiliar station", "it is dark, silent, and nobody responds to your calls", "you know you are not alone"),
 	)
 
 	var/obj/item/bodypart/head/head = dreamer.get_bodypart(BODY_ZONE_HEAD)

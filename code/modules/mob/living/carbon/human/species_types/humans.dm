@@ -8,7 +8,7 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	payday_modifier = 1.1
 	nightmares = list(
-		list("you're behind the wheel of a car, rushing down a hill at breakneck speed", "you swerve as a child steps into the road", "no matter how hard you push the brakes, nothing seems to happen"),
+		list("you're behind the wheel of a car, rushing down a hill at breakneck speed", "you swerve as a cat steps into the road", "no matter how hard you push the brakes, nothing seems to happen"),
 		list("you're in an unfamiliar boardroom, you just know that if you lose this job you're going to lose the house too", "many important-looking people are staring at you expectantly", "somebody coughs"),
 		list("you're late for school", "you search frantically for your schedule but can't find what room you're meant to be in", "and you're not even wearing pants"),
 	)
