@@ -67,6 +67,10 @@
 		/datum/outfit/syndicate/full/loneop = /datum/outfit/syndicate/full/plasmaman/loneop,
 	)
 
+	nightmares = list(
+		list("there's an unfamiliar face in the mirror", "you swerve as a cat steps into the road", "no matter how hard you push the brakes, nothing seems to happen"),
+	)
+
 /datum/species/plasmaman/pre_equip_species_outfit(datum/job/job, mob/living/carbon/human/equipping, visuals_only = FALSE)
 	if(job?.plasmaman_outfit)
 		equipping.equipOutfit(job.plasmaman_outfit, visuals_only)
