@@ -3908,7 +3908,7 @@
 /obj/structure/table/wood,
 /obj/item/food/grown/melonlike/watermelon{
 	pixel_y = 8;
-	pixel_x = 6
+	spixel_x = 6
 	},
 /obj/item/food/watermelonslice,
 /turf/open/misc/beach/sand,
