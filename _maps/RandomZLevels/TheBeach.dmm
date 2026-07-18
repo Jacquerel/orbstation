@@ -8,7 +8,7 @@
 /obj/structure/flora/tree/palm{
 	pixel_y = 8
 	},
-/turf/open/misc/beach/sand,
+gg/turf/open/misc/beach/sand,
 /area/awaymission/beach)
 "ai" = (
 /obj/structure/table/wood,
