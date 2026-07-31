@@ -668,6 +668,10 @@
 	toxic_foodtypes = NONE
 	languages_native = list(/datum/language/slime)
 
+/obj/item/organ/tongue/jelly/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/inherit_body_colour)
+
 /obj/item/organ/tongue/jelly/get_food_taste_reaction(obj/item/food, foodtypes = NONE)
 	// a silver slime created this? what a delicacy!
 	if(HAS_TRAIT(food, TRAIT_FOOD_SILVER))
