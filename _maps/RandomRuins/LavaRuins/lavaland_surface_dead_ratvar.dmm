@@ -3,33 +3,33 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/ratvar)
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/template_noop)
 "c" = (
 /obj/structure/fluff/clockwork/alloy_shards/small,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "d" = (
 /obj/structure/girder/bronze,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "e" = (
 /obj/item/stack/sheet/bronze,
 /turf/open/floor/bronze/filled/lavaland,
 /area/ruin/unpowered/ratvar)
 "f" = (
-/turf/closed/mineral/volcanic/lava_land_surface,
-/area/ruin/unpowered/ratvar)
+/turf/closed/mineral/volcanic/lava_land_surface/biome_replace,
+/area/template_noop)
 "g" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium_gearbit,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "h" = (
 /turf/open/floor/bronze/filled/lavaland,
 /area/ruin/unpowered/ratvar)
 "i" = (
 /obj/structure/grille/broken,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "j" = (
 /turf/closed/wall/mineral/bronze,
@@ -43,15 +43,15 @@
 /area/ruin/unpowered/ratvar)
 "m" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "n" = (
 /obj/structure/fluff/clockwork/blind_eye,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "o" = (
 /obj/structure/fluff/clockwork/alloy_shards/large,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "p" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium,
@@ -59,7 +59,7 @@
 /area/ruin/unpowered/ratvar)
 "r" = (
 /obj/structure/lattice,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "s" = (
 /obj/structure/fluff/clockwork/alloy_shards/large,
@@ -67,7 +67,7 @@
 /area/ruin/unpowered/ratvar)
 "t" = (
 /obj/item/stack/sheet/bronze,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "u" = (
 /obj/structure/grille,
@@ -76,7 +76,7 @@
 "v" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium,
 /obj/structure/lattice,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "w" = (
 /obj/structure/grille/broken,
@@ -109,11 +109,11 @@
 /area/ruin/unpowered/ratvar)
 "D" = (
 /obj/structure/grille,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "E" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
 "F" = (
 /obj/structure/dead_ratvar,
@@ -121,8 +121,22 @@
 /area/ruin/unpowered/ratvar)
 "G" = (
 /obj/item/stack/sheet/bronze/thirty,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/ratvar)
+"H" = (
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/ruin/unpowered/ratvar)
+"P" = (
+/obj/structure/fluff/clockwork/alloy_shards/large,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/template_noop)
+"U" = (
+/turf/closed/mineral/volcanic/lava_land_surface/biome_replace,
+/area/ruin/unpowered/ratvar)
+"Y" = (
+/obj/structure/fluff/clockwork/alloy_shards/small,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -158,17 +172,17 @@ a
 a
 a
 a
-o
+P
 b
 a
 h
-b
+H
 r
 c
 j
 x
-b
-b
+H
+H
 g
 a
 a
@@ -186,9 +200,9 @@ a
 f
 b
 l
-b
+H
 v
-b
+H
 p
 w
 j
@@ -213,8 +227,8 @@ f
 l
 l
 r
-b
-b
+H
+H
 l
 j
 j
@@ -234,7 +248,7 @@ a
 a
 a
 a
-b
+H
 l
 l
 p
@@ -245,7 +259,7 @@ l
 l
 j
 l
-b
+H
 l
 l
 D
@@ -283,15 +297,15 @@ a
 (7,1,1) = {"
 a
 a
-b
-b
-b
+H
+H
+H
 l
 l
 l
 l
 h
-b
+H
 l
 l
 l
@@ -312,7 +326,7 @@ h
 h
 g
 c
-b
+H
 l
 l
 l
@@ -322,7 +336,7 @@ h
 r
 l
 l
-b
+H
 l
 l
 l
@@ -334,21 +348,21 @@ a
 "}
 (9,1,1) = {"
 a
-b
+H
 c
-b
-b
+H
+H
 l
 l
 l
 l
 t
 h
-b
+H
 h
 w
 p
-b
+H
 g
 l
 l
@@ -359,7 +373,7 @@ b
 a
 "}
 (10,1,1) = {"
-b
+H
 h
 l
 l
@@ -367,15 +381,15 @@ l
 l
 l
 l
-b
-b
+H
+H
 p
 r
 F
-b
+H
 h
 A
-b
+H
 l
 l
 l
@@ -394,7 +408,7 @@ l
 l
 l
 l
-b
+H
 h
 k
 h
@@ -418,7 +432,7 @@ j
 h
 l
 l
-b
+H
 l
 l
 r
@@ -428,10 +442,10 @@ h
 c
 l
 l
-b
+H
 l
 l
-b
+H
 h
 o
 a
@@ -439,12 +453,12 @@ a
 (13,1,1) = {"
 e
 k
-b
+H
 l
 l
 l
-b
-p
+H
+m
 s
 r
 h
@@ -458,8 +472,8 @@ l
 l
 l
 l
-b
-b
+H
+H
 a
 "}
 (14,1,1) = {"
@@ -470,7 +484,7 @@ m
 l
 l
 l
-b
+H
 h
 h
 k
@@ -480,11 +494,11 @@ h
 h
 h
 c
-b
+H
 l
 l
-b
-b
+H
+H
 h
 b
 "}
@@ -523,7 +537,7 @@ l
 l
 l
 l
-b
+H
 h
 h
 h
@@ -531,7 +545,7 @@ h
 h
 h
 s
-b
+H
 l
 l
 l
@@ -547,7 +561,7 @@ b
 l
 l
 l
-b
+H
 l
 l
 r
@@ -556,7 +570,7 @@ h
 h
 h
 h
-b
+H
 s
 r
 l
@@ -567,15 +581,15 @@ b
 a
 "}
 (18,1,1) = {"
-b
+H
 h
 l
 l
 l
-b
-b
+H
+H
 h
-b
+H
 h
 h
 h
@@ -583,24 +597,24 @@ h
 h
 r
 k
-b
+H
 C
 r
 h
-b
-b
+H
+H
 m
 b
 "}
 (19,1,1) = {"
-b
-b
+H
+H
 l
 l
 l
 l
 h
-b
+H
 h
 h
 h
@@ -615,17 +629,17 @@ c
 h
 r
 h
-b
+H
 b
 "}
 (20,1,1) = {"
-b
+H
 l
 l
 l
 l
-b
-b
+H
+H
 p
 h
 c
@@ -634,11 +648,11 @@ k
 h
 h
 o
-b
+H
 l
 l
 l
-b
+H
 E
 r
 G
@@ -646,7 +660,7 @@ o
 "}
 (21,1,1) = {"
 g
-b
+H
 l
 l
 l
@@ -673,21 +687,21 @@ r
 (22,1,1) = {"
 c
 c
-b
+H
 l
 l
-b
+H
 h
 h
 t
-b
+H
 h
 h
 h
 h
 h
 m
-b
+H
 l
 l
 l
@@ -697,11 +711,11 @@ j
 j
 "}
 (23,1,1) = {"
-b
+H
 h
 m
 n
-b
+H
 h
 l
 o
@@ -712,7 +726,7 @@ p
 h
 r
 h
-b
+H
 l
 l
 l
@@ -720,7 +734,7 @@ b
 b
 w
 r
-b
+H
 "}
 (24,1,1) = {"
 a
@@ -742,10 +756,10 @@ j
 j
 l
 l
-c
+Y
 l
 l
-b
+H
 a
 "}
 (25,1,1) = {"
@@ -759,7 +773,7 @@ l
 j
 l
 l
-b
+H
 h
 r
 x
@@ -779,7 +793,7 @@ a
 a
 b
 c
-b
+H
 l
 l
 l
@@ -788,7 +802,7 @@ l
 l
 g
 l
-b
+H
 h
 l
 l
@@ -804,9 +818,9 @@ a
 a
 a
 a
-b
+H
 h
-b
+H
 l
 l
 l
@@ -820,7 +834,7 @@ l
 l
 l
 l
-b
+H
 a
 a
 a
@@ -832,18 +846,18 @@ a
 a
 a
 c
-b
+H
 l
-b
-l
-l
+H
 l
 l
 l
 l
 l
 l
-b
+l
+l
+H
 l
 f
 a
@@ -857,11 +871,11 @@ a
 a
 a
 a
-b
-b
-f
+H
+H
+U
 c
-b
+H
 l
 c
 l
@@ -886,13 +900,13 @@ a
 a
 g
 c
-b
+H
 l
 l
-b
+H
 m
 l
-b
+H
 l
 f
 b
@@ -912,11 +926,11 @@ a
 a
 a
 a
-b
+H
 l
-b
+H
 a
-b
+H
 l
 c
 f

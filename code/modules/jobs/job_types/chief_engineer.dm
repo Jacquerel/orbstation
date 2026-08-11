@@ -68,8 +68,6 @@
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic/silver = 1,
 		/obj/item/construction/rcd/ce = 1,
-		/obj/item/extinguisher/mini = 1,
-		/obj/item/analyzer = 1,
 	)
 	belt = /obj/item/storage/belt/utility/chief/full
 	ears = /obj/item/radio/headset/heads/ce
@@ -87,6 +85,8 @@
 	chameleon_extras = /obj/item/stamp/head/ce
 	skillchips = list(/obj/item/skillchip/job/engineer)
 	pda_slot = ITEM_SLOT_LPOCKET
+
+	wintercoat = /obj/item/clothing/suit/hooded/wintercoat/engineering/ce
 
 /datum/outfit/job/ce/mod
 	name = "Chief Engineer (MODsuit)"

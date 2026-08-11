@@ -9,26 +9,20 @@
 	complexity = 1
 	incompatible_modules = list(/obj/item/mod/module/storage, /obj/item/mod/module/plate_compression)
 	required_slots = list(ITEM_SLOT_BACK)
-	/// Max weight class of items in the storage.
-	var/max_w_class = WEIGHT_CLASS_NORMAL
-	/// Max combined weight of all items in the storage.
-	var/max_combined_w_class = 15
-	/// Max amount of items in the storage.
-	var/max_items = 7
-	/// Is nesting same-size storage items allowed?
-	var/big_nesting = FALSE
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.25, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5)
+	/// The storage type to create for the module
+	var/datum/storage/storage_type = /datum/storage/mod_storage
 
 /obj/item/mod/module/storage/Initialize(mapload)
 	. = ..()
-	create_storage(max_specific_storage = max_w_class, max_total_storage = max_combined_w_class, max_slots = max_items)
-	atom_storage.allow_big_nesting = TRUE
-	atom_storage.set_locked(STORAGE_FULLY_LOCKED)
+	if(storage_type)
+		create_storage(storage_type = storage_type)
+		atom_storage.set_locked(STORAGE_FULLY_LOCKED)
 
 /obj/item/mod/module/storage/on_install()
 	. = ..()
-	var/datum/storage/modstorage = mod.create_storage(max_specific_storage = max_w_class, max_total_storage = max_combined_w_class, max_slots = max_items)
+	var/datum/storage/modstorage = mod.create_storage(storage_type = storage_type)
 	modstorage.set_real_location(src)
-	modstorage.allow_big_nesting = big_nesting
 	atom_storage.set_locked(STORAGE_NOT_LOCKED)
 	var/obj/item/clothing/suit = mod.get_part_from_slot(ITEM_SLOT_OCLOTHING)
 	if(istype(suit))
@@ -45,7 +39,7 @@
 		UnregisterSignal(suit, COMSIG_ITEM_PRE_UNEQUIP)
 
 /obj/item/mod/module/storage/proc/on_suit_unequip(obj/item/source, force, atom/newloc, no_move, invdrop, silent)
-	if(QDELETED(source) || !mod.wearer || newloc == mod.wearer || !mod.wearer.s_store)
+	if(QDELETED(source) || !invdrop || !mod.wearer || newloc == mod.wearer || !mod.wearer.s_store)
 		return
 	if(!atom_storage?.attempt_insert(mod.wearer.s_store, mod.wearer, override = TRUE))
 		balloon_alert(mod.wearer, "storage failed!")
@@ -61,18 +55,17 @@
 		whether smuggling, or simply hauling."
 	complexity = 3
 	icon_state = "storage_large"
-	max_combined_w_class = 21
-	max_items = 14
+	storage_type = /datum/storage/mod_storage/expanded
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 2.5, /datum/material/uranium = SHEET_MATERIAL_AMOUNT)
 
 /obj/item/mod/module/storage/syndicate
 	name = "MOD syndicate storage module"
 	desc = "A storage system using nanotechnology developed by Cybersun Industries, these compartments use \
 		esoteric technology to compress the physical matter of items put inside of them, \
 		essentially shrinking items for much easier and more portable storage."
-	icon_state = "storage_syndi"
 	complexity = 3
-	max_combined_w_class = 30
-	max_items = 21
+	icon_state = "storage_syndi"
+	storage_type = /datum/storage/mod_storage/syndicate
 
 /obj/item/mod/module/storage/belt
 	name = "MOD case storage module"
@@ -81,10 +74,8 @@
 		If you find this equipped to a standard modular suit, then someone has almost certainly shortchanged you on a proper storage module."
 	icon_state = "storage_case"
 	complexity = 0
-	max_w_class = WEIGHT_CLASS_SMALL
-	max_combined_w_class = 21
-	max_items = 7
 	required_slots = list(ITEM_SLOT_BELT)
+	storage_type = /datum/storage/mod_storage/belt
 
 /obj/item/mod/module/storage/bluespace
 	name = "MOD bluespace storage module"
@@ -92,10 +83,7 @@
 		miniaturized bluespace pockets for the ultimate in storage technology; regardless of the weight of objects put inside."
 	complexity = 3
 	icon_state = "storage_large"
-	max_w_class = WEIGHT_CLASS_GIGANTIC
-	max_combined_w_class = 60
-	max_items = 21
-	big_nesting = TRUE
+	storage_type = /datum/storage/mod_storage/bluespace
 
 ///Ion Jetpack - Lets the user fly freely through space using battery charge.
 /obj/item/mod/module/jetpack
@@ -112,14 +100,13 @@
 	overlay_state_inactive = "module_jetpack"
 	overlay_state_active = "module_jetpack_on"
 	required_slots = list(ITEM_SLOT_BACK)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 7.5, /datum/material/plasma = SMALL_MATERIAL_AMOUNT * 5)
 	/// Do we have stabilizers? If yes the user won't move from inertia.
 	var/stabilize = TRUE
 	/// Callback to see if we can thrust the user.
 	var/thrust_callback
 	/// How much force this module can apply per tick
 	var/drift_force = 1.5 NEWTONS
-	/// How much force this module's stabilizier can put out
-	var/stabilizer_force = 1.2 NEWTONS
 
 /obj/item/mod/module/jetpack/Initialize(mapload)
 	. = ..()
@@ -143,7 +130,6 @@
 		/datum/component/jetpack, \
 		src.stabilize, \
 		drift_force, \
-		stabilizer_force, \
 		COMSIG_MODULE_TRIGGERED, \
 		COMSIG_MODULE_DEACTIVATED, \
 		MOD_ABORT_USE, \
@@ -191,7 +177,6 @@
 	overlay_state_inactive = "module_jetpackadv"
 	overlay_state_active = "module_jetpackadv_on"
 	drift_force = 2 NEWTONS
-	stabilizer_force = 2 NEWTONS
 
 /// Cooldown to use if we didn't actually launch a jump jet
 #define FAILED_ACTIVATION_COOLDOWN 3 SECONDS
@@ -246,6 +231,7 @@
 	incompatible_modules = list(/obj/item/mod/module/status_readout)
 	tgui_id = "status_readout"
 	required_slots = list(ITEM_SLOT_BACK)
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5, /datum/material/titanium = SMALL_MATERIAL_AMOUNT * 2)
 	/// Does this show damage types, body temp, satiety?
 	var/display_detailed_vitals = TRUE
 	/// Does this show DNA data?
@@ -262,7 +248,7 @@
 /obj/item/mod/module/status_readout/add_ui_data()
 	. = ..()
 	.["display_time"] = display_time
-	.["shift_time"] = station_time_timestamp()
+	.["shift_time"] = round_timestamp()
 	.["shift_id"] = GLOB.round_id
 	.["health"] = mod.wearer?.health || 0
 	.["health_max"] = mod.wearer?.getMaxHealth() || 0
@@ -337,6 +323,7 @@
 	complexity = 1
 	incompatible_modules = list(/obj/item/mod/module/mouthhole)
 	required_slots = list(ITEM_SLOT_HEAD|ITEM_SLOT_MASK)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 7.5)
 	/// Former flags of the helmet.
 	var/former_helmet_flags = NONE
 	/// Former visor flags of the helmet.
@@ -394,14 +381,23 @@
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
 	incompatible_modules = list(/obj/item/mod/module/emp_shield)
 	required_slots = list(ITEM_SLOT_BACK|ITEM_SLOT_BELT)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 5, /datum/material/plasma = SMALL_MATERIAL_AMOUNT * 5)
+	/// How much emp protection this module grants to its wearer when fully extended.
+	var/protection_factor = EMP_PROTECTION_MODERATE
 
 /obj/item/mod/module/emp_shield/on_install()
 	. = ..()
 	mod.AddElement(/datum/element/empprotection, EMP_PROTECT_ALL)
+	var/list/all_parts = mod.get_parts()
+	for(var/obj/item/clothing/mod_part as anything in all_parts)
+		mod_part.emp_protection += protection_factor/all_parts.len
 
 /obj/item/mod/module/emp_shield/on_uninstall(deleting = FALSE)
 	. = ..()
 	mod.RemoveElement(/datum/element/empprotection, EMP_PROTECT_ALL)
+	var/list/all_parts = mod.get_parts()
+	for(var/obj/item/clothing/mod_part as anything in all_parts)
+		mod_part.emp_protection -= protection_factor/all_parts.len
 
 /obj/item/mod/module/emp_shield/advanced
 	name = "MOD advanced EMP shield module"
@@ -434,6 +430,7 @@
 	light_power = 1
 	light_on = FALSE
 	required_slots = list(ITEM_SLOT_HEAD|ITEM_SLOT_MASK)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5)
 	/// Charge drain per range amount.
 	var/base_power = DEFAULT_CHARGE_DRAIN * 0.1
 	/// Minimum range we can set.
@@ -544,6 +541,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 5
 	incompatible_modules = list(/obj/item/mod/module/longfall)
 	required_slots = list(ITEM_SLOT_FEET)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 5)
 
 /obj/item/mod/module/longfall/on_part_activation()
 	RegisterSignal(mod.wearer, COMSIG_LIVING_Z_IMPACT, PROC_REF(z_impact_react))
@@ -582,6 +580,7 @@
 	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
 	incompatible_modules = list(/obj/item/mod/module/thermal_regulator)
 	required_slots = list(ITEM_SLOT_BACK|ITEM_SLOT_BELT)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5)
 	/// The temperature we are regulating to.
 	var/temperature_setting = BODYTEMP_NORMAL
 	/// Minimum temperature we can set.
@@ -599,7 +598,7 @@
 			temperature_setting = clamp(value + T0C, min_temp, max_temp)
 
 /obj/item/mod/module/thermal_regulator/on_active_process(seconds_per_tick)
-	mod.wearer.adjust_bodytemperature(get_temp_change_amount((temperature_setting - mod.wearer.bodytemperature), 0.08 * seconds_per_tick))
+	mod.wearer.adjust_bodytemperature(get_temp_change_amount((temperature_setting - mod.wearer.bodytemperature), BODYTEMP_SUIT_CHANGE_RATE * seconds_per_tick))
 
 ///DNA Lock - Prevents people without the set DNA from activating the suit.
 /obj/item/mod/module/dna_lock
@@ -613,6 +612,7 @@
 	use_energy_cost = DEFAULT_CHARGE_DRAIN * 3
 	incompatible_modules = list(/obj/item/mod/module/dna_lock, /obj/item/mod/module/eradication_lock)
 	cooldown_time = 0.5 SECONDS
+	custom_materials = list(/datum/material/diamond = SMALL_MATERIAL_AMOUNT * 5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5)
 	/// The DNA we lock with.
 	var/dna = null
 
@@ -689,6 +689,7 @@
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
 	incompatible_modules = list(/obj/item/mod/module/plasma_stabilizer)
 	required_slots = list(ITEM_SLOT_HEAD)
+	custom_materials = list(/datum/material/plasma = SMALL_MATERIAL_AMOUNT * 5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5)
 
 /obj/item/mod/module/plasma_stabilizer/generate_worn_overlay(obj/item/source, mutable_appearance/standing)
 	. = ..()
@@ -760,6 +761,7 @@
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
 	incompatible_modules = list(/obj/item/mod/module/signlang_radio)
 	required_slots = list(ITEM_SLOT_GLOVES)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 7.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 5)
 
 /obj/item/mod/module/signlang_radio/on_part_activation()
 	ADD_TRAIT(mod.wearer, TRAIT_CAN_SIGN_ON_COMMS, REF(src))
@@ -774,6 +776,7 @@
 	icon_state = "joint_torsion"
 	complexity = 1
 	required_slots = list(ITEM_SLOT_FEET)
+	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT * 5, /datum/material/gold = SMALL_MATERIAL_AMOUNT * 2.5, /datum/material/titanium = SMALL_MATERIAL_AMOUNT)
 	var/power_per_step = DEFAULT_CHARGE_DRAIN * 0.45
 
 /obj/item/mod/module/joint_torsion/on_part_activation()
@@ -817,6 +820,7 @@
 	overlay_state_inactive = "module_recycler"
 	overlay_state_active = "module_recycler"
 	required_slots = list(ITEM_SLOT_BACK|ITEM_SLOT_BELT)
+	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/plastic = SMALL_MATERIAL_AMOUNT * 2)
 	/// A multiplier of the amount of material extracted from the item
 	var/efficiency = 1
 	/// Items that will be collected
@@ -836,7 +840,7 @@
 	. = ..()
 
 	if(!length(accepted_mats))
-		accepted_mats = SSmaterials.materials_by_category[MAT_CATEGORY_SILO]
+		accepted_mats = SSmaterials.get_materials_by_flag(MATERIAL_SILO_STORED)
 
 	container = new ( \
 		src, \
@@ -953,6 +957,7 @@
 	overlay_state_inactive = "fishing_glove"
 	incompatible_modules = list(/obj/item/mod/module/fishing_glove)
 	required_slots = list(ITEM_SLOT_GLOVES)
+	custom_materials = list(/datum/material/titanium = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/glass = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/iron = HALF_SHEET_MATERIAL_AMOUNT, /datum/material/plastic = HALF_SHEET_MATERIAL_AMOUNT)
 	var/obj/item/fishing_rod/equipped
 
 /obj/item/mod/module/fishing_glove/Initialize(mapload)
@@ -1040,6 +1045,4 @@
 /obj/item/mod/module/shock_absorber/proc/mob_batoned(datum/source)
 	SIGNAL_HANDLER
 	drain_power(use_energy_cost)
-	var/datum/effect_system/lightning_spread/sparks = new /datum/effect_system/lightning_spread
-	sparks.set_up(number = 5, cardinals_only = TRUE, location = mod.wearer.loc)
-	sparks.start()
+	do_sparks(5, TRUE, mod.wearer.loc)

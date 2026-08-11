@@ -36,6 +36,12 @@
 	icon_state = "bsing"
 	equip_delay_other = 5 SECONDS
 
+/obj/item/clothing/shoes/singerr
+	name = "red performer's boots"
+	desc = "These boots were made for dancing."
+	icon_state = "rsing"
+	equip_delay_other = 5 SECONDS
+
 /obj/item/clothing/shoes/bronze
 	name = "bronze boots"
 	desc = "A giant, clunky pair of shoes crudely made out of bronze. Why would anyone wear these?"
@@ -87,7 +93,7 @@
 	AddElement(/datum/element/gags_recolorable)
 	update_icon(UPDATE_OVERLAYS)
 
-/obj/item/clothing/shoes/glow/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
+/obj/item/clothing/shoes/glow/worn_overlays(mutable_appearance/standing, isinhands, icon_file, bodyshape = NONE)
 	. = ..()
 	if(!isinhands)
 		. += emissive_appearance(DEFAULT_SHOES_FILE, "glow_shoes_emissive", src, alpha = src.alpha)

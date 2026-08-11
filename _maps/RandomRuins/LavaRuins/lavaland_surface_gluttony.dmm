@@ -275,7 +275,7 @@
 /area/lavaland/surface/outdoors)
 "DH" = (
 /obj/structure/headpike/bone,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "Eq" = (
 /obj/structure/stone_tile/surrounding_tile/burnt,
@@ -293,7 +293,7 @@
 /obj/structure/stone_tile/block/burnt{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "Ie" = (
 /obj/structure/stone_tile/surrounding_tile/burnt{
@@ -344,7 +344,7 @@
 /obj/structure/stone_tile/surrounding/cracked{
 	dir = 1
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "LT" = (
 /obj/effect/decal/cleanable/blood/footprints,
@@ -361,7 +361,7 @@
 /obj/structure/stone_tile/block/burnt{
 	dir = 8
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "Ok" = (
 /obj/structure/stone_tile/center/burnt,
@@ -374,7 +374,7 @@
 /obj/structure/stone_tile/surrounding_tile/burnt{
 	dir = 8
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "Ol" = (
 /obj/effect/decal/cleanable/blood/footprints{
@@ -433,7 +433,7 @@
 /obj/structure/stone_tile/surrounding_tile/cracked{
 	dir = 1
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "Sr" = (
 /obj/structure/stone_tile/block/burnt{
@@ -477,7 +477,7 @@
 /turf/open/indestructible/necropolis,
 /area/ruin/powered/gluttony)
 "WR" = (
-/turf/closed/mineral/volcanic/lava_land_surface,
+/turf/closed/mineral/volcanic/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "XY" = (
 /obj/effect/decal/cleanable/blood/footprints,
@@ -500,7 +500,7 @@
 /turf/open/indestructible/necropolis,
 /area/ruin/powered/gluttony)
 "Zu" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "Zx" = (
 /obj/structure/stone_tile/surrounding/cracked,

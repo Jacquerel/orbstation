@@ -65,7 +65,7 @@
 	pixel_y = 1;
 	anchored = 1
 	},
-/obj/item/food/grown/watermelon{
+/obj/item/food/grown/melonlike/watermelon{
 	offset_at_init = 0;
 	pixel_z = 17;
 	anchored = 1
@@ -213,6 +213,10 @@
 /turf/open/floor/iron/dark/airless{
 	icon_state = "bus"
 	},
+/area/ruin/space)
+"dK" = (
+/obj/item/clothing/head/costume/paper_hat/savior,
+/turf/open/misc/asteroid/airless,
 /area/ruin/space)
 "hZ" = (
 /obj/effect/decal/cleanable/blood/gibs/robot_debris/old,
@@ -501,7 +505,7 @@ ab
 yY
 yY
 yY
-yY
+dK
 OD
 yY
 Ne

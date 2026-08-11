@@ -3,10 +3,10 @@
 /turf/template_noop,
 /area/template_noop)
 "b" = (
-/turf/closed/mineral/volcanic/lava_land_surface,
-/area/lavaland/surface/outdoors)
+/turf/closed/mineral/volcanic/lava_land_surface/biome_replace,
+/area/template_noop)
 "c" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "d" = (
 /obj/structure/stone_tile/block{
@@ -15,7 +15,7 @@
 /obj/structure/stone_tile/block{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "e" = (
 /obj/structure/stone_tile/block{
@@ -24,7 +24,7 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "f" = (
 /obj/structure/stone_tile/block{
@@ -33,19 +33,19 @@
 /obj/structure/stone_tile/block/cracked{
 	dir = 8
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "g" = (
 /obj/structure/stone_tile{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "h" = (
 /obj/structure/stone_tile{
 	dir = 1
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "i" = (
 /obj/structure/stone_tile{
@@ -55,7 +55,7 @@
 	dir = 1
 	},
 /obj/structure/stone_tile/cracked,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "j" = (
 /obj/structure/stone_tile,
@@ -65,7 +65,7 @@
 /obj/structure/stone_tile/cracked{
 	dir = 8
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "k" = (
 /obj/structure/stone_tile/cracked,
@@ -75,7 +75,7 @@
 /obj/structure/stone_tile{
 	dir = 1
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "l" = (
 /obj/structure/stone_tile{
@@ -85,7 +85,7 @@
 /obj/structure/stone_tile/cracked{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "m" = (
 /obj/structure/stone_tile{
@@ -95,23 +95,27 @@
 	dir = 8
 	},
 /obj/structure/stone_tile/cracked,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "n" = (
+/obj/structure/stone_tile/surrounding/cracked{
+	dir = 6
+	},
+/obj/structure/stone_tile/center,
 /obj/structure/stone_tile/block{
 	dir = 8
 	},
 /obj/structure/stone_tile/block{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/hunter,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/mob/living/basic/boss/blood_drunk_miner/hunter,
+/turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 "o" = (
 /obj/structure/stone_tile/cracked{
 	dir = 4
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "p" = (
 /obj/structure/stone_tile{
@@ -121,7 +125,7 @@
 	dir = 8
 	},
 /obj/structure/stone_tile,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "q" = (
 /obj/structure/stone_tile{
@@ -131,7 +135,7 @@
 /obj/structure/stone_tile{
 	dir = 8
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "r" = (
 /obj/structure/stone_tile{
@@ -141,28 +145,55 @@
 	dir = 8
 	},
 /obj/structure/stone_tile,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "s" = (
 /obj/structure/stone_tile/surrounding_tile/cracked,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "t" = (
-/obj/structure/stone_tile/block/cracked,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "u" = (
 /obj/structure/stone_tile/surrounding_tile{
 	dir = 8
 	},
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors)
 "v" = (
-/obj/structure/stone_tile/surrounding/cracked{
-	dir = 6
+/obj/structure/stone_tile/block/cracked,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"E" = (
+/obj/structure/stone_tile/block{
+	dir = 4
 	},
-/obj/structure/stone_tile/center,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"T" = (
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/lavaland/surface/outdoors)
+"Z" = (
+/obj/structure/stone_tile/burnt{
+	dir = 1
+	},
+/obj/structure/stone_tile,
+/turf/open/lava/smooth/lava_land_surface,
 /area/lavaland/surface/outdoors)
 
 (1,1,1) = {"
@@ -174,11 +205,11 @@ a
 a
 a
 a
-b
-b
-b
-b
-b
+a
+a
+a
+a
+a
 a
 a
 a
@@ -195,7 +226,7 @@ b
 b
 c
 c
-b
+a
 b
 b
 a
@@ -238,7 +269,7 @@ b
 b
 "}
 (5,1,1) = {"
-b
+a
 c
 c
 c
@@ -248,7 +279,7 @@ c
 g
 i
 c
-c
+T
 h
 s
 c
@@ -256,14 +287,14 @@ c
 b
 "}
 (6,1,1) = {"
-b
-d
+a
+t
 e
 e
-d
-f
-d
-f
+t
+E
+t
+E
 e
 d
 n
@@ -274,7 +305,7 @@ c
 b
 "}
 (7,1,1) = {"
-b
+a
 c
 c
 c
@@ -284,7 +315,7 @@ c
 h
 j
 c
-c
+Z
 o
 u
 c
@@ -292,7 +323,7 @@ b
 b
 "}
 (8,1,1) = {"
-b
+a
 b
 b
 c
@@ -335,13 +366,13 @@ b
 b
 b
 b
-b
+a
 c
 c
 c
 c
-b
-b
+a
+a
 a
 a
 "}
@@ -351,15 +382,15 @@ a
 a
 a
 a
-b
-b
-b
-b
-b
-b
-b
-b
-b
+a
+a
+a
+a
+a
+a
+a
+a
+a
 a
 a
 "}

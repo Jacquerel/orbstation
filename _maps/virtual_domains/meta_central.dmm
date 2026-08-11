@@ -218,7 +218,7 @@
 	dir = 4
 	},
 /obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/ai_module/malf,
+/obj/item/ai_module/law/malf,
 /turf/open/floor/iron,
 /area/virtual_domain)
 "bR" = (
@@ -3010,7 +3010,7 @@
 "zg" = (
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
 /turf/open/floor/plating,

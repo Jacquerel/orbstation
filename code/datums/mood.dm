@@ -36,8 +36,6 @@
 	var/sanity_level = SANITY_LEVEL_NEUTRAL
 	/// Is the owner being punished for low mood? if so, how much?
 	var/insanity_effect = 0
-	/// The screen object for the current mood level
-	var/atom/movable/screen/mood/mood_screen_object
 
 	/// List of mood events currently active on this datum
 	var/list/mood_events = list()
@@ -273,16 +271,17 @@
 	mood = 0
 	shown_mood = 0
 
-	for(var/category in mood_events)
-		var/datum/mood_event/the_event = mood_events[category]
-		var/event_mood = the_event.mood_change
-		event_mood *= max((event_mood > 0) ? positive_mood_modifier : negative_mood_modifier, 0)
-		mood += event_mood
-		if (!the_event.hidden)
-			shown_mood += event_mood
+	if (!HAS_TRAIT(mob_parent, TRAIT_APATHETIC))
+		for(var/category in mood_events)
+			var/datum/mood_event/the_event = mood_events[category]
+			var/event_mood = the_event.mood_change
+			event_mood *= max((event_mood > 0) ? positive_mood_modifier : negative_mood_modifier, 0)
+			mood += event_mood
+			if (!the_event.hidden)
+				shown_mood += event_mood
 
-	mood *= max(mood_modifier, 0)
-	shown_mood *= max(mood_modifier, 0)
+		mood *= max(mood_modifier, 0)
+		shown_mood *= max(mood_modifier, 0)
 
 	switch(mood)
 		if (-INFINITY to MOOD_SAD4)
@@ -309,7 +308,11 @@
 
 /// Updates the mob's mood icon
 /datum/mood/proc/update_mood_icon()
-	if (!(mob_parent.client || mob_parent.hud_used) || isnull(mood_screen_object))
+	if (!mob_parent.client || !mob_parent.hud_used)
+		return
+
+	var/atom/movable/screen/mood/mood_screen_object = mob_parent.hud_used.screen_objects[HUD_MOB_MOOD]
+	if (!istype(mood_screen_object))
 		return
 
 	mood_screen_object.cut_overlays()
@@ -357,9 +360,8 @@
 	SIGNAL_HANDLER
 
 	var/datum/hud/hud = mob_parent.hud_used
-	mood_screen_object = new
+	var/atom/movable/screen/mood/mood_screen_object = hud.add_screen_object(/atom/movable/screen/mood, HUD_MOB_MOOD, HUD_GROUP_INFO, update_screen = TRUE)
 	mood_screen_object.color = "#4b96c4"
-	hud.infodisplay += mood_screen_object
 	RegisterSignal(hud, COMSIG_QDELETING, PROC_REF(unmodify_hud))
 	RegisterSignal(mood_screen_object, COMSIG_SCREEN_ELEMENT_CLICK, PROC_REF(hud_click))
 
@@ -367,12 +369,17 @@
 /datum/mood/proc/unmodify_hud(datum/source)
 	SIGNAL_HANDLER
 
+	var/datum/hud/hud = mob_parent.hud_used
+	if (!hud)
+		return
+
+	var/atom/movable/screen/mood/mood_screen_object = hud.screen_objects[HUD_MOB_MOOD]
 	if(!mood_screen_object)
 		return
-	var/datum/hud/hud = mob_parent.hud_used
-	if(hud?.infodisplay)
-		hud.infodisplay -= mood_screen_object
+
 	QDEL_NULL(mood_screen_object)
+	if (!QDELETED(hud))
+		hud.show_hud(hud.hud_version)
 	UnregisterSignal(hud, COMSIG_QDELETING)
 
 /// Handles clicking on the mood HUD object
@@ -381,7 +388,7 @@
 
 	if(user != mob_parent)
 		return
-	if(user.stat >= UNCONSCIOUS)
+	if(IS_UNCONSCIOUS(user))
 		return
 	print_mood(user)
 
@@ -425,41 +432,44 @@
 			if(81 to INFINITY)
 				msg += "[span_boldwarning("I'm completely wasted.")]<br>"
 
-	msg += span_notice("My current stress: ") //Long term - ORBSTATION EDIT (sanity -> stress)
-	switch(sanity)
-		if(SANITY_GREAT to INFINITY)
-			msg += "[span_boldnicegreen("My mind feels like a temple!")]<br>"
-		if(SANITY_NEUTRAL to SANITY_GREAT)
-			msg += "[span_nicegreen("I have been feeling great lately!")]<br>"
-		if(SANITY_DISTURBED to SANITY_NEUTRAL)
-			msg += "[span_nicegreen("I have felt quite decent lately.")]<br>"
-		if(SANITY_UNSTABLE to SANITY_DISTURBED)
-			msg += "[span_warning("I'm feeling a little bit unhinged...")]<br>"
-		if(SANITY_CRAZY to SANITY_UNSTABLE)
-			msg += "[span_warning("I'm freaking out!!")]<br>"
-		if(SANITY_INSANE to SANITY_CRAZY)
-			msg += "[span_boldwarning("AHAHAHAHAHAHAHAHAHAH!!")]<br>"
+	if (HAS_TRAIT(mob_parent, TRAIT_APATHETIC))
+		msg += span_notice("My mood: [span_grey("I don't feel anything.")]<br>")
+	else
+		msg += span_notice("My current stress: ") //Long term - ORBSTATION EDIT (sanity -> stress)
+		switch(sanity)
+			if(SANITY_GREAT to INFINITY)
+				msg += "[span_boldnicegreen("My mind feels like a temple!")]<br>"
+			if(SANITY_NEUTRAL to SANITY_GREAT)
+				msg += "[span_nicegreen("I have been feeling great lately!")]<br>"
+			if(SANITY_DISTURBED to SANITY_NEUTRAL)
+				msg += "[span_nicegreen("I have felt quite decent lately.")]<br>"
+			if(SANITY_UNSTABLE to SANITY_DISTURBED)
+				msg += "[span_warning("I'm feeling a little bit unhinged...")]<br>"
+			if(SANITY_CRAZY to SANITY_UNSTABLE)
+				msg += "[span_warning("I'm freaking out!!")]<br>"
+			if(SANITY_INSANE to SANITY_CRAZY)
+				msg += "[span_boldwarning("AHAHAHAHAHAHAHAHAHAH!!")]<br>"
 
-	msg += span_notice("My current mood: ") //Short term
-	switch(mood_level)
-		if(MOOD_LEVEL_SAD4)
-			msg += "[span_boldwarning("I wish I was dead!")]<br>"
-		if(MOOD_LEVEL_SAD3)
-			msg += "[span_boldwarning("I feel terrible...")]<br>"
-		if(MOOD_LEVEL_SAD2)
-			msg += "[span_boldwarning("I feel very upset.")]<br>"
-		if(MOOD_LEVEL_SAD1)
-			msg += "[span_warning("I'm a bit sad.")]<br>"
-		if(MOOD_LEVEL_NEUTRAL)
-			msg += "[span_grey("I'm alright.")]<br>"
-		if(MOOD_LEVEL_HAPPY1)
-			msg += "[span_nicegreen("I feel pretty okay.")]<br>"
-		if(MOOD_LEVEL_HAPPY2)
-			msg += "[span_boldnicegreen("I feel pretty good.")]<br>"
-		if(MOOD_LEVEL_HAPPY3)
-			msg += "[span_boldnicegreen("I feel amazing!")]<br>"
-		if(MOOD_LEVEL_HAPPY4)
-			msg += "[span_boldnicegreen("I love life!")]<br>"
+		msg += span_notice("My current mood: ") //Short term
+		switch(mood_level)
+			if(MOOD_LEVEL_SAD4)
+				msg += "[span_boldwarning("I wish I was dead!")]<br>"
+			if(MOOD_LEVEL_SAD3)
+				msg += "[span_boldwarning("I feel terrible...")]<br>"
+			if(MOOD_LEVEL_SAD2)
+				msg += "[span_boldwarning("I feel very upset.")]<br>"
+			if(MOOD_LEVEL_SAD1)
+				msg += "[span_warning("I'm a bit sad.")]<br>"
+			if(MOOD_LEVEL_NEUTRAL)
+				msg += "[span_grey("I'm alright.")]<br>"
+			if(MOOD_LEVEL_HAPPY1)
+				msg += "[span_nicegreen("I feel pretty okay.")]<br>"
+			if(MOOD_LEVEL_HAPPY2)
+				msg += "[span_boldnicegreen("I feel pretty good.")]<br>"
+			if(MOOD_LEVEL_HAPPY3)
+				msg += "[span_boldnicegreen("I feel amazing!")]<br>"
+			if(MOOD_LEVEL_HAPPY4)
+				msg += "[span_boldnicegreen("I love life!")]<br>"
 
 	var/list/additional_lines = list()
 	SEND_SIGNAL(user, COMSIG_CARBON_MOOD_CHECK, additional_lines)
@@ -486,6 +496,9 @@
 					msg += "[span_boldnicegreen(event.description)]<br>"
 	else
 		msg += "&bull; [span_grey("I don't have much of a reaction to anything right now.")]<br>"
+
+	if(LAZYLEN(mob_parent.personalities))
+		msg += span_notice("You know yourself to be [mob_parent.get_parsonality_string()].<br>")
 
 	if(LAZYLEN(mob_parent.quirks))
 		msg += span_notice("You have these quirks: [mob_parent.get_quirk_string(FALSE, CAT_QUIRK_ALL)].")
@@ -575,6 +588,9 @@
 
 	if (amount > maximum)
 		amount = min(amount, maximum)
+
+	if (HAS_TRAIT(mob_parent, TRAIT_APATHETIC))
+		amount = SANITY_NEUTRAL
 
 	if(amount == sanity) //Prevents stuff from flicking around.
 		return

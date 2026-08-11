@@ -187,6 +187,25 @@
 /obj/structure/sign/poster/contraband/pwr_game,
 /turf/closed/wall,
 /area/ruin/space/ancientstation/charlie/hall)
+"bc" = (
+/obj/structure/window/reinforced/spawner/directional/west,
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/table,
+/obj/machinery/door/window/brigdoor/right/directional/east,
+/obj/item/ai_module/law/core/full/asimov{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/ai_module/law/supplied/freeform{
+	pixel_y = -4;
+	pixel_x = -4
+	},
+/obj/item/ai_module/law/supplied/freeform{
+	pixel_y = -2
+	},
+/turf/open/floor/iron/dark,
+/area/ruin/space/ancientstation/delta/ai)
 "be" = (
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -523,6 +542,14 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table,
 /obj/machinery/door/window/brigdoor/right/directional/east,
+/obj/item/ai_module/law/core/full/damaged,
+/obj/item/ai_module/law/core/full/maintain{
+	pixel_y = 3;
+	pixel_x = 2
+	},
+/obj/item/ai_module/law/core/freeformcore{
+	pixel_y = -4
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/delta/ai)
 "cA" = (
@@ -3359,6 +3386,14 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/alien/weeds,
 /obj/machinery/light/small/broken/directional/west,
+/obj/item/stack/cable_coil{
+	pixel_y = -2;
+	pixel_x = -2
+	},
+/obj/item/stock_parts/subspace/amplifier{
+	pixel_x = -8;
+	pixel_y = 4
+	},
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/delta/ai)
 "pD" = (
@@ -5104,7 +5139,7 @@
 /obj/machinery/shower/directional/west{
 	has_water_reclaimer = 0
 	},
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/ruin/space/ancientstation/delta/biolab)
 "BS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5952,6 +5987,8 @@
 /obj/effect/decal/cleanable/blood/gibs/robot_debris,
 /obj/structure/alien/weeds,
 /obj/structure/alien/egg/burst,
+/obj/item/stock_parts/subspace/transmitter,
+/obj/item/circuitboard/machine/ai_law_rack,
 /turf/open/floor/iron/dark,
 /area/ruin/space/ancientstation/delta/ai)
 "HQ" = (
@@ -14366,7 +14403,7 @@ Wb
 NS
 dT
 nG
-cz
+bc
 cz
 ad
 ad

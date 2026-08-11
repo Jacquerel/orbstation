@@ -8,6 +8,26 @@
 	item_flags = null
 	force = 7
 
+/obj/item/aicard/syndie/update_icon_state()
+	icon_state = base_icon_state
+	return ..()
+
+/obj/item/aicard/syndie/update_overlays()
+	..()
+	. = list()
+
+	if(!AI)
+		return
+
+	var/face_state = "[base_icon_state][AI.stat == DEAD ? "-404" : "-full"]"
+	. += mutable_appearance(icon, face_state)
+	. += emissive_appearance(icon, face_state, src, alpha = src.alpha)
+
+	var/indicator_state = "[base_icon_state][AI.control_disabled ? "-off" : "-on"]"
+	. += mutable_appearance(icon, indicator_state)
+	. += emissive_appearance(icon, indicator_state, src, alpha = src.alpha)
+
+
 /obj/item/aicard/syndie/loaded
 	/// Set to true while we're waiting for ghosts to sign up
 	var/finding_candidate = FALSE
@@ -52,27 +72,36 @@
 		return
 
 	// pick ghost, create AI and transfer
-	var/mob/living/silicon/ai/weak_syndie/new_ai = new /mob/living/silicon/ai/weak_syndie(null, new /datum/ai_laws/syndicate_override, ghost)
+	var/mob/living/silicon/ai/weak_syndie/new_ai = new(null, ghost, /datum/ai_laws/syndicate_override)
 	// create and apply syndie datum
 	var/datum/antagonist/nukeop/nuke_datum = new()
 	nuke_datum.send_to_spawnpoint = FALSE
+	nuke_datum.give_bonus_tc = FALSE
 	new_ai.mind.add_antag_datum(nuke_datum, op_datum.nuke_team)
 	LAZYADD(new_ai.mind.special_roles, "Syndicate AI")
-	new_ai.faction |= ROLE_SYNDICATE
+	new_ai.add_faction(ROLE_SYNDICATE)
+
 	// Make it look evil!!!
 	new_ai.hologram_appearance = mutable_appearance('icons/mob/silicon/ai.dmi',"xeno_queen") //good enough
-	new_ai.icon_state = resolve_ai_icon("hades")
+
+	new_ai.set_core_display_icon("hades")
+
 	// Hide PDA from messenger
 	var/datum/computer_file/program/messenger/msg = locate() in new_ai.modularInterface.stored_files
 	if(msg)
 		msg.invisible = TRUE
 
 	// Transfer the AI from the core we created into the card, then delete the core
-	capture_ai(new_ai, user)
+	new_ai.transfer_ai(AI_TRANS_TO_CARD, user, null, src)
+	update_appearance()
+
 	var/obj/structure/ai_core/detritus = locate() in get_turf(src)
 	qdel(detritus)
-	AI.set_control_disabled(FALSE)
-	AI.radio_enabled = TRUE
+
+	if(AI)
+		AI.set_control_disabled(FALSE)
+		AI.radio_enabled = TRUE
+
 	do_sparks(4, TRUE, src)
 	playsound(src, 'sound/machines/chime.ogg', 25, TRUE)
 	return

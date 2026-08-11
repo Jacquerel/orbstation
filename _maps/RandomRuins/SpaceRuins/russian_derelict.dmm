@@ -4057,7 +4057,11 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/ai_module/core/full/drone,
+/obj/item/ai_module/law/core/full/drone,
+/obj/item/circuitboard/machine/ai_law_rack/core{
+	pixel_y = 5;
+	pixel_x = -4
+	},
 /turf/open/floor/circuit/red/off,
 /area/ruin/space/ks13/ai/corridor)
 "DL" = (
@@ -5609,6 +5613,7 @@
 	pixel_y = 6
 	},
 /obj/item/circuitboard/machine/protolathe/offstation,
+/obj/item/circuitboard/machine/ai_law_rack,
 /turf/open/floor/circuit/red/off,
 /area/ruin/space/ks13/ai/corridor)
 "LM" = (

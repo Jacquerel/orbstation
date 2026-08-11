@@ -5,3 +5,4 @@
 #define OOC_CHANNEL "OOC"
 #define ADMIN_CHANNEL "Admin"
 #define LOOC_CHANNEL "LOOC" //Orbstation
+#define PRAY_CHANNEL "Pray"

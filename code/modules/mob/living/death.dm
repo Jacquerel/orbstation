@@ -23,7 +23,14 @@
 	spill_organs(drop_bitflags)
 
 	if(drop_bitflags & DROP_BODYPARTS)
-		spread_bodyparts(drop_bitflags)
+		spread_bodyparts(drop_bitflags, gibbed = TRUE)
+
+	// failsafe for if we fuck up and leave our brain behind. (other organs are replaceable so we can ignore them.)
+	var/obj/item/organ/brain/brain = get_organ_slot(ORGAN_SLOT_BRAIN)
+	if((drop_bitflags & DROP_BRAIN) && !isnull(brain))
+		stack_trace("gib invoked with drop_brain() had their brain after spilling organs and bodyparts, meaning both failed!")
+		brain.Remove(src)
+		brain.forceMove(drop_location())
 
 	SEND_SIGNAL(src, COMSIG_LIVING_GIBBED, drop_bitflags)
 	qdel(src)
@@ -76,7 +83,7 @@
  * drop_bitflags: (see code/__DEFINES/blood.dm)
  * * DROP_BRAIN - Detaches the head from the mob and launches it away from the body
 **/
-/mob/living/proc/spread_bodyparts(drop_bitflags=NONE)
+/mob/living/proc/spread_bodyparts(drop_bitflags = NONE, gibbed = FALSE)
 	return
 
 /// Length of the animation in dust_animation.dmi
@@ -91,19 +98,20 @@
  * * drop_items - Should the mob drop their items before dusting?
  * * force - Should this mob be FORCABLY dusted?
 */
-/atom/movable/proc/dust(just_ash, drop_items, force)
+/atom/movable/proc/dust(just_ash, drop_items, give_moodlet, force)
 	dust_animation()
 	// since this is sometimes called in the middle of movement, allow half a second for movement to finish, ghosting to happen and animation to play.
 	// Looks much nicer and doesn't cause multiple runtimes.
 	QDEL_IN(src, DUST_ANIMATION_TIME)
 
-/mob/living/dust(just_ash, drop_items, force)
+/mob/living/dust(just_ash, drop_items, give_moodlet = TRUE, force)
 	..()
 	if(body_position == STANDING_UP)
 		// keep us upright so the animation fits.
 		ADD_TRAIT(src, TRAIT_FORCED_STANDING, TRAIT_GENERIC)
 
-	send_death_moodlets(dusted = TRUE)
+	if(give_moodlet)
+		send_death_moodlets(dusted = TRUE)
 
 	if(drop_items)
 		unequip_everything()
@@ -179,9 +187,13 @@
 		return
 
 	for(var/mob/living/nearby in viewers(src))
-		if(nearby.stat >= UNCONSCIOUS || nearby.is_blind())
+		if(nearby == src || IS_UNCONSCIOUS(nearby) || nearby.is_blind())
 			continue
 		nearby.add_mood_event("saw_death", /datum/mood_event/conditional/see_death, src, dusted, gibbed)
+		nearby.mind?.witnessed_death(src)
+
+	if(!gibbed && !dusted)
+		mind?.experienced_death()
 
 /mob/living/silicon/send_death_moodlets(dusted = FALSE, gibbed = FALSE)
 	return // You are a machine (Future todo, roboticists feel sad though)
@@ -220,7 +232,7 @@
 
 	set_stat(DEAD)
 	timeofdeath = world.time
-	station_timestamp_timeofdeath = station_time_timestamp()
+	station_timestamp_timeofdeath = round_timestamp()
 	var/turf/death_turf = get_turf(src)
 	var/area/death_area = get_area(src)
 	// Display a death message if the mob is a player mob (has an active mind)

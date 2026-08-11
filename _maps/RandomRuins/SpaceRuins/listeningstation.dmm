@@ -738,6 +738,10 @@
 /obj/effect/mob_spawn/corpse/human/syndicatecommando/lessenedgear,
 /turf/open/misc/asteroid/airless,
 /area/ruin/space)
+"Oe" = (
+/obj/machinery/computer/slot_machine/syndicate,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/listeningstation)
 "Om" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/cable,
@@ -1346,7 +1350,7 @@ FV
 ca
 BX
 dW
-We
+Oe
 JB
 vI
 vI

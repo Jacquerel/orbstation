@@ -1,8 +1,34 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"a" = (
+"aa" = (
 /turf/closed/mineral/strong/wasteland,
 /area/lavaland/surface/outdoors)
-"f" = (
+"ab" = (
+/obj/structure/stone_tile/block/burnt,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"ac" = (
+/obj/structure/stone_tile/burnt{
+	dir = 1
+	},
+/obj/structure/stone_tile/burnt{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/mob/living/basic/mining/goliath,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"ad" = (
+/obj/structure/flora/rock,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"ae" = (
+/obj/structure/statue/bone/rib,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"af" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/clothing/head/costume/crown{
 	pixel_x = 15;
@@ -12,27 +38,46 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"g" = (
+"ag" = (
 /obj/structure/water_source/puddle,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"h" = (
+"ah" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/shield/buckler,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"j" = (
+"ai" = (
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/item/spear/bonespear{
+	pixel_x = 13;
+	pixel_y = 12
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aj" = (
 /turf/template_noop,
 /area/template_noop)
-"m" = (
+"ak" = (
+/obj/structure/stone_tile/burnt,
+/obj/structure/stone_tile/burnt{
+	dir = 4
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"al" = (
+/mob/living/basic/mining/goliath,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"am" = (
 /obj/effect/decal/cleanable/shreds,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"n" = (
+"an" = (
 /obj/structure/stone_tile/block/burnt,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"o" = (
+"ao" = (
 /obj/structure/stone_tile/burnt{
 	dir = 1
 	},
@@ -43,39 +88,97 @@
 /mob/living/basic/mining/goliath,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"p" = (
+"ap" = (
 /obj/item/stack/rods{
 	pixel_x = 10
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"q" = (
+"aq" = (
 /obj/structure/flora/rock,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"s" = (
+"ar" = (
+/obj/structure/chair/wood/wings{
+	color = "#ffff00"
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"as" = (
 /mob/living/basic/mining/goliath,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"t" = (
+"at" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"u" = (
+"au" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"x" = (
+"av" = (
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aw" = (
+/obj/structure/statue/bone/rib{
+	dir = 1
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"ax" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"D" = (
+"ay" = (
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/item/shovel/spade,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"az" = (
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/item/stack/rods{
+	pixel_y = -12;
+	pixel_x = 2
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aA" = (
+/obj/effect/decal/cleanable/blood/gibs/old,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aB" = (
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/item/clothing/head/costume/crown{
+	pixel_x = 15;
+	pixel_y = 6;
+	desc = "A crown that was fit for a king, looks like it didn't get them very far.";
+	name = "dented crown"
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aC" = (
+/obj/effect/decal/cleanable/blood/drip,
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/obj/structure/statue/bone/rib,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aD" = (
 /obj/structure/statue/bone/rib{
 	name = "colossal tailbone"
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"F" = (
+"aE" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aF" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/structure/stone_tile/cracked{
 	dir = 1
@@ -83,33 +186,42 @@
 /obj/structure/statue/bone/rib,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"G" = (
+"aG" = (
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"H" = (
+"aH" = (
 /obj/structure/firepit,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"I" = (
+"aI" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/stack/sheet/animalhide/goliath_hide,
 /obj/item/flashlight/flare/torch,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"J" = (
+"aJ" = (
 /obj/structure/flora/ash/cap_shroom,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"K" = (
+"aK" = (
 /obj/structure/closet/crate/wooden,
 /obj/item/stack/sheet/sinew,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"M" = (
+"aL" = (
+/obj/structure/flora/ash/cap_shroom,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aM" = (
 /obj/structure/statue/bone/skull,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"O" = (
+"aN" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/sinew,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aO" = (
 /obj/structure/statue/bone/rib{
 	dir = 1
 	},
@@ -118,18 +230,25 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"P" = (
+"aP" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/shovel/spade,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"S" = (
+"aQ" = (
+/obj/structure/firepit,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aR" = (
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aS" = (
 /obj/structure/chair/wood/wings{
 	color = "#ffff00"
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"T" = (
+"aT" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/spear/bonespear{
 	pixel_x = 13;
@@ -137,14 +256,14 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"U" = (
+"aU" = (
 /obj/structure/statue/bone/rib,
 /obj/structure/stone_tile/cracked{
 	dir = 1
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"V" = (
+"aV" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/stack/rods{
 	pixel_x = -1;
@@ -152,14 +271,18 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"X" = (
+"aW" = (
+/obj/effect/decal/cleanable/shreds,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"aX" = (
 /obj/structure/stone_tile/burnt,
 /obj/structure/stone_tile/burnt{
 	dir = 4
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
-"Y" = (
+"aY" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /obj/item/stack/rods{
 	pixel_y = -12;
@@ -167,292 +290,327 @@
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/lavaland/surface/outdoors)
+"aZ" = (
+/obj/structure/statue/bone/rib{
+	name = "colossal tailbone"
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"hk" = (
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/item/stack/rods{
+	pixel_x = -1;
+	pixel_y = -7
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"nh" = (
+/obj/structure/statue/bone/skull,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"IY" = (
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/item/shield/buckler,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"Mv" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/stack/sheet/animalhide/goliath_hide,
+/obj/item/flashlight/flare/torch,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
+"VJ" = (
+/obj/item/stack/rods{
+	pixel_x = 10
+	},
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors)
 
 (1,1,1) = {"
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
 "}
 (2,1,1) = {"
-j
-j
-a
-j
-j
-j
-j
-j
-j
-j
-j
-j
-a
-j
-j
-j
+aj
+aj
+aa
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aa
+aj
+aj
+aj
 "}
 (3,1,1) = {"
-j
-a
-a
-a
-j
-j
-J
-G
-G
-G
-j
-j
-a
-a
-a
-j
+aj
+aa
+aa
+aa
+aj
+aj
+aL
+aR
+aR
+aR
+aj
+aj
+aa
+aa
+aa
+aj
 "}
 (4,1,1) = {"
-j
-j
-a
-a
-G
-K
-G
-u
-T
-x
-J
-a
-a
-a
-j
-j
+aj
+aj
+aa
+aa
+aR
+aN
+aR
+aE
+ai
+av
+aL
+aa
+aa
+aa
+aj
+aj
 "}
 (5,1,1) = {"
-j
-j
-j
-J
-I
-G
-G
-q
-x
-G
-s
-g
-a
-G
-j
-j
+aj
+aj
+aj
+aL
+Mv
+aR
+aR
+ad
+av
+aR
+al
+ag
+aa
+aR
+aj
+aj
 "}
 (6,1,1) = {"
-j
-j
-j
-G
-s
-x
-x
-G
-x
-G
-x
-G
-G
-D
-j
-j
+aj
+aj
+aj
+aR
+al
+av
+av
+aR
+av
+aR
+av
+aR
+aR
+aZ
+aj
+aj
 "}
 (7,1,1) = {"
-j
-j
-V
-q
-G
-p
-t
-J
-G
-q
-J
-O
-q
-G
-j
-j
+aj
+aj
+hk
+ad
+aR
+VJ
+aA
+aL
+aR
+ad
+aL
+aw
+ad
+aR
+aj
+aj
 "}
 (8,1,1) = {"
-j
-j
-m
-u
-G
-q
-f
-O
-J
-O
-G
-n
-J
-x
-j
-j
+aj
+aj
+aW
+aE
+aR
+ad
+aB
+aw
+aL
+aw
+aR
+ab
+aL
+av
+aj
+aj
 "}
 (9,1,1) = {"
-j
-j
-G
-x
-G
-M
-S
-n
-o
-n
-X
-F
-u
-G
-j
-j
+aj
+aj
+aR
+av
+aR
+nh
+ar
+ab
+ac
+ab
+ak
+aC
+aE
+aR
+aj
+aj
 "}
 (10,1,1) = {"
-j
-j
-J
-G
-G
-u
-J
-U
-G
-U
-J
-G
-G
-G
-j
-j
+aj
+aj
+aL
+aR
+aR
+aE
+aL
+ae
+aR
+ae
+aL
+aR
+aR
+aR
+aj
+aj
 "}
 (11,1,1) = {"
-j
-j
-j
-q
-h
-G
-G
-G
-q
-G
-G
-J
-m
-q
-j
-j
+aj
+aj
+aj
+ad
+IY
+aR
+aR
+aR
+ad
+aR
+aR
+aL
+aW
+ad
+aj
+aj
 "}
 (12,1,1) = {"
-j
-j
-j
-G
-G
-x
-H
-x
-G
-G
-q
-Y
-G
-a
-j
-j
+aj
+aj
+aj
+aR
+aR
+av
+aQ
+av
+aR
+aR
+ad
+az
+aR
+aa
+aj
+aj
 "}
 (13,1,1) = {"
-j
-j
-a
-G
-J
-G
-G
-P
-G
-u
-G
-a
-a
-a
-a
-j
+aj
+aj
+aa
+aR
+aL
+aR
+aR
+ay
+aR
+aE
+aR
+aa
+aa
+aa
+aa
+aj
 "}
 (14,1,1) = {"
-j
-a
-a
-a
-j
-j
-G
-G
-q
-G
-j
-j
-a
-a
-j
-j
+aj
+aa
+aa
+aa
+aj
+aj
+aR
+aR
+ad
+aR
+aj
+aj
+aa
+aa
+aj
+aj
 "}
 (15,1,1) = {"
-j
-a
-a
-j
-j
-j
-j
-j
-j
-j
-j
-a
-a
-a
-j
-j
+aj
+aa
+aa
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aa
+aa
+aa
+aj
+aj
 "}
 (16,1,1) = {"
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
 "}

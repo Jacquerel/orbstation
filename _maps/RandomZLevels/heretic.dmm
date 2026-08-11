@@ -6,7 +6,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ah" = (
@@ -44,15 +44,6 @@
 	},
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
-"ao" = (
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack{
-	pixel_y = 9;
-	pixel_x = 15;
-	anchored = 1;
-	name = "Sam Site Missle rack"
-	},
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "ap" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/stripes/corner{
@@ -61,7 +52,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "aq" = (
@@ -105,7 +96,7 @@
 /obj/effect/turf_decal/tile/purple/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ay" = (
@@ -145,7 +136,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "aK" = (
 /obj/structure/chair/comfy/shuttle,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "aL" = (
 /obj/structure/fluff/tram_rail{
@@ -167,7 +158,7 @@
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "aO" = (
@@ -212,7 +203,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/dark_green/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ba" = (
@@ -223,7 +214,7 @@
 /obj/machinery/computer/records/security{
 	dir = 4
 	},
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "bf" = (
 /obj/effect/turf_decal/siding/wood{
@@ -268,10 +259,6 @@
 "bB" = (
 /turf/closed/mineral/ash_rock,
 /area/awaymission/beach/heretic)
-"bD" = (
-/obj/effect/blessing/invisible,
-/turf/open/floor/plating,
-/area/awaymission/caves/heretic_laboratory_clean)
 "bG" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 4
@@ -298,7 +285,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "bP" = (
@@ -321,9 +308,17 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory)
+"bV" = (
+/obj/structure/fluff/sat_dish{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "bW" = (
 /obj/machinery/light/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "bZ" = (
@@ -365,7 +360,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "cp" = (
@@ -390,7 +385,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "cs" = (
@@ -421,8 +416,8 @@
 /obj/structure/table,
 /obj/item/healthanalyzer,
 /obj/item/healthanalyzer,
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "cz" = (
@@ -458,7 +453,7 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "cO" = (
@@ -498,7 +493,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "cX" = (
@@ -529,7 +524,7 @@
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "di" = (
@@ -537,7 +532,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "dk" = (
@@ -561,7 +556,7 @@
 /obj/machinery/door/airlock/security{
 	name = "Armory"
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "do" = (
@@ -574,12 +569,12 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/awaymission/caves/heretic_laboratory)
 "ds" = (
 /obj/machinery/light/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "du" = (
@@ -602,7 +597,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "dA" = (
@@ -625,7 +620,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "dF" = (
@@ -646,7 +641,7 @@
 "dH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/awaymission/caves/heretic_laboratory)
 "dI" = (
@@ -698,7 +693,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "eg" = (
@@ -724,12 +719,12 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ej" = (
 /mob/living/basic/heretic_summon/stalker,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ek" = (
@@ -804,12 +799,12 @@
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "eA" = (
 /obj/structure/bookcase/random,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "eB" = (
@@ -831,7 +826,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "eH" = (
@@ -860,7 +855,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "eQ" = (
@@ -896,7 +891,7 @@
 "fa" = (
 /obj/machinery/recharge_station,
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "fb" = (
@@ -911,7 +906,7 @@
 /obj/effect/turf_decal/tile/dark{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "fg" = (
@@ -933,7 +928,7 @@
 /obj/effect/turf_decal/tile/dark/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "fk" = (
@@ -948,7 +943,7 @@
 /area/awaymission/caves/heretic_laboratory_clean)
 "fn" = (
 /obj/machinery/light/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "fo" = (
@@ -975,7 +970,7 @@
 /area/awaymission/beach/heretic)
 "fv" = (
 /obj/machinery/light/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "fw" = (
@@ -1058,11 +1053,11 @@
 /area/awaymission/beach/heretic)
 "fK" = (
 /obj/structure/table,
-/obj/item/stack/sticky_tape{
+/obj/item/stack/medical/wrap/sticky_tape{
 	pixel_x = 6;
 	pixel_y = 5
 	},
-/obj/item/stack/sticky_tape{
+/obj/item/stack/medical/wrap/sticky_tape{
 	pixel_x = -6;
 	pixel_y = 5
 	},
@@ -1100,7 +1095,7 @@
 "fS" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "fW" = (
@@ -1125,8 +1120,7 @@
 /obj/structure/transport/linear/tram,
 /obj/structure/thermoplastic/light,
 /obj/machinery/computer/tram_controls/heretic_tram_computer{
-	icon_state = "tram_alt_controls";
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/engine,
 /area/awaymission/caves/heretic_laboratory)
@@ -1144,7 +1138,7 @@
 "gf" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/dark_green/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "gg" = (
@@ -1172,6 +1166,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/no_tele_turf,
 /turf/closed/indestructible/reinforced,
 /area/awaymission/caves/heretic_laboratory_clean)
 "gm" = (
@@ -1182,7 +1177,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/dark_green/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "gp" = (
@@ -1267,7 +1262,7 @@
 "gC" = (
 /obj/structure/table,
 /obj/machinery/recharger,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "gF" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
@@ -1286,7 +1281,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/dark_green/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "gN" = (
@@ -1307,14 +1302,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/dark_green/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "gT" = (
 /obj/machinery/computer/crew{
 	dir = 4
 	},
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "gU" = (
 /obj/machinery/conveyor/auto{
@@ -1392,12 +1387,12 @@
 	},
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/stripes/corner,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ho" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /obj/item/stack/medical/mesh,
 /obj/effect/turf_decal/siding{
 	dir = 6
@@ -1441,7 +1436,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "hu" = (
@@ -1510,7 +1505,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "hM" = (
 /obj/machinery/door/airlock{
@@ -1528,6 +1523,10 @@
 	dir = 6
 	},
 /turf/open/misc/grass/jungle/station,
+/area/awaymission/beach/heretic)
+"hT" = (
+/obj/effect/turf_decal/trimline/yellow/filled/end,
+/turf/open/floor/iron/large,
 /area/awaymission/beach/heretic)
 "hU" = (
 /obj/machinery/autolathe,
@@ -1547,7 +1546,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "hX" = (
@@ -1573,7 +1572,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "ic" = (
 /obj/machinery/suit_storage_unit/open,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "id" = (
@@ -1642,10 +1641,6 @@
 /obj/machinery/light/floor,
 /turf/closed/wall/mineral/titanium,
 /area/awaymission/beach/heretic)
-"iw" = (
-/obj/effect/turf_decal/trimline/red/filled/end,
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "ix" = (
 /obj/structure/window/spawner/directional/west,
 /turf/open/floor/iron/white,
@@ -1705,6 +1700,11 @@
 /obj/structure/window/reinforced/survival_pod/spawner/directional/north,
 /turf/open/misc/asteroid,
 /area/awaymission/caves/heretic_laboratory)
+"iM" = (
+/obj/machinery/deployable_turret/naval_cannon,
+/obj/effect/turf_decal/trimline/yellow/filled/arrow_cw,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "iO" = (
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 1
@@ -1744,7 +1744,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "iZ" = (
@@ -1818,7 +1818,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ju" = (
@@ -1847,7 +1847,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "jF" = (
@@ -1862,12 +1862,16 @@
 /obj/effect/mob_spawn/corpse/human,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory_clean)
+"jI" = (
+/obj/effect/turf_decal/trimline/yellow/filled/arrow_ccw,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "jJ" = (
 /obj/structure/table,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "jK" = (
@@ -1882,7 +1886,7 @@
 /obj/effect/turf_decal/tile/dark/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "jP" = (
@@ -1939,7 +1943,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "kc" = (
@@ -2022,7 +2026,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ku" = (
@@ -2031,7 +2035,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "kw" = (
@@ -2043,7 +2047,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "kz" = (
@@ -2102,7 +2106,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "kQ" = (
@@ -2119,7 +2123,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "kV" = (
@@ -2136,17 +2140,18 @@
 /area/awaymission/beach/heretic)
 "kX" = (
 /obj/structure/sign/poster/abductor/ayy_recruitment/directional/south,
+/obj/effect/mapping_helpers/no_tele_turf,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "kY" = (
 /obj/machinery/light/directional/north,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "la" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ld" = (
@@ -2167,7 +2172,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "lh" = (
@@ -2186,7 +2191,7 @@
 /obj/item/ammo_box/magazine/lahtimagazine{
 	anchored = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "lm" = (
@@ -2201,7 +2206,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "lu" = (
 /turf/open/misc/asteroid,
-/area/awaymission/caves/heretic_laboratory_clean)
+/area/awaymission/inaccessible)
 "lv" = (
 /obj/effect/spawner/random/structure/grille,
 /turf/open/floor/plating,
@@ -2256,7 +2261,7 @@
 /obj/structure/rack,
 /obj/item/gun/energy/disabler/smg,
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "lW" = (
@@ -2306,6 +2311,9 @@
 /obj/item/organ/heart/gland,
 /turf/open/floor/iron/large,
 /area/awaymission/caves/heretic_laboratory_clean)
+"mf" = (
+/turf/closed/mineral/ash_rock,
+/area/awaymission/inaccessible)
 "mg" = (
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/machinery/light/directional/south,
@@ -2329,7 +2337,7 @@
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "mm" = (
@@ -2356,7 +2364,7 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "mt" = (
@@ -2373,7 +2381,7 @@
 "mA" = (
 /obj/machinery/light/directional/east,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "mC" = (
@@ -2466,7 +2474,7 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/medkit/toxin,
 /obj/item/storage/medkit/toxin,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "na" = (
 /obj/structure/flora/bush/jungle/a/style_random,
@@ -2513,7 +2521,7 @@
 /area/awaymission/beach/heretic)
 "no" = (
 /mob/living/basic/bot/cleanbot,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "np" = (
@@ -2542,7 +2550,7 @@
 /obj/structure/window/spawner/directional/east,
 /obj/structure/window/spawner/directional/west,
 /obj/structure/flora/bush/jungle/c/style_random,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/misc/grass/jungle,
 /area/awaymission/caves/heretic_laboratory)
 "nD" = (
@@ -2571,7 +2579,7 @@
 /obj/effect/turf_decal/tile/dark/half{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "nI" = (
@@ -2661,7 +2669,7 @@
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ob" = (
@@ -2692,7 +2700,7 @@
 "of" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "og" = (
@@ -2704,7 +2712,7 @@
 	pixel_x = 17;
 	pixel_y = 0
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "oi" = (
@@ -2726,7 +2734,7 @@
 "ok" = (
 /obj/structure/table,
 /obj/item/book/bible,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "ol" = (
@@ -2763,7 +2771,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "os" = (
@@ -2780,7 +2788,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ov" = (
@@ -2796,7 +2804,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "oC" = (
@@ -2824,7 +2832,7 @@
 /obj/effect/turf_decal/tile/dark{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "oN" = (
@@ -2850,7 +2858,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "oS" = (
@@ -2872,7 +2880,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "oW" = (
@@ -3054,14 +3062,14 @@
 /obj/effect/turf_decal/tile/dark_green/anticorner/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "pF" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/medkit,
 /obj/item/storage/medkit,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "pH" = (
 /obj/structure/fluff/tram_rail/anchor,
@@ -3070,7 +3078,7 @@
 /turf/open/floor/engine,
 /area/awaymission/caves/heretic_laboratory)
 "pM" = (
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/awaymission/caves/heretic_laboratory)
 "pN" = (
@@ -3125,7 +3133,7 @@
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/stripes/corner,
 /obj/effect/turf_decal/tile/bar,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "qg" = (
@@ -3211,7 +3219,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "qF" = (
 /obj/structure/table,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "qG" = (
@@ -3226,7 +3234,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "qH" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "qI" = (
@@ -3267,7 +3275,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "qT" = (
@@ -3298,14 +3306,14 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ra" = (
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "rc" = (
@@ -3320,7 +3328,7 @@
 /obj/structure/window/spawner/directional/west,
 /obj/structure/window/spawner/directional/south,
 /obj/structure/flora/bush/jungle/c/style_random,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/misc/grass/jungle,
 /area/awaymission/caves/heretic_laboratory)
 "rh" = (
@@ -3353,7 +3361,7 @@
 /obj/item/kirbyplants/fern,
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/green/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "rp" = (
@@ -3363,14 +3371,14 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "rr" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /obj/structure/sign/poster/contraband/blood_geometer/directional/north,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
@@ -3394,7 +3402,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/blue/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "rA" = (
@@ -3407,7 +3415,7 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/medkit/brute,
 /obj/item/storage/medkit/brute,
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "rC" = (
 /obj/structure/chair/wood{
@@ -3421,7 +3429,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "rF" = (
@@ -3435,7 +3443,7 @@
 /area/awaymission/beach/heretic)
 "rH" = (
 /obj/effect/turf_decal/tile/green/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "rK" = (
@@ -3459,6 +3467,16 @@
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron/large,
 /area/awaymission/caves/heretic_laboratory)
+"rQ" = (
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack{
+	pixel_y = 9;
+	pixel_x = 15;
+	anchored = 1;
+	name = "SAM site missile rack"
+	},
+/obj/effect/turf_decal/trimline/red/arrow_cw,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "rR" = (
 /obj/effect/turf_decal/siding/blue{
 	dir = 4
@@ -3503,7 +3521,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "sa" = (
@@ -3546,7 +3564,7 @@
 /turf/open/floor/black,
 /area/awaymission/caves/heretic_laboratory_clean)
 "se" = (
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "sf" = (
 /obj/machinery/vending/donksofttoyvendor,
@@ -3602,7 +3620,7 @@
 "st" = (
 /obj/machinery/vending/wardrobe/sec_wardrobe,
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "sw" = (
@@ -3635,7 +3653,7 @@
 /obj/structure/bed/double{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "sC" = (
@@ -3702,6 +3720,16 @@
 	},
 /obj/effect/blessing,
 /obj/structure/sign/poster/contraband/arc_slimes/directional/west,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/structure/chair/stool/bar/directional/north,
+/obj/effect/turf_decal/tile/green/half/contrasted{
+	dir = 8
+	},
+/obj/structure/sign/poster/contraband/free_tonto/directional/west,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "sS" = (
@@ -3721,7 +3749,7 @@
 	dir = 1
 	},
 /obj/item/radio/intercom/mi13/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ta" = (
@@ -3763,14 +3791,14 @@
 "th" = (
 /obj/structure/bookcase/random,
 /obj/machinery/light/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "ti" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/light/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "tj" = (
@@ -3781,7 +3809,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "tm" = (
@@ -3807,7 +3835,7 @@
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "ty" = (
@@ -3847,7 +3875,7 @@
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "tH" = (
@@ -3857,7 +3885,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "tJ" = (
@@ -3881,7 +3909,7 @@
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory_clean)
 "tO" = (
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "tP" = (
@@ -3962,6 +3990,13 @@
 	},
 /turf/open/floor/wood,
 /area/awaymission/beach/heretic)
+"uo" = (
+/obj/structure/ladder{
+	name = "busted ladder hatch";
+	desc = "A sturdy metal ladder that used to lead to the bottom part of the ship. It's completely broken and the hatch is welded shut."
+	},
+/turf/open/floor/plating,
+/area/awaymission/caves/heretic_laboratory_clean)
 "up" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
@@ -3980,7 +4015,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/blue/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "us" = (
@@ -4058,7 +4093,7 @@
 "uM" = (
 /obj/structure/table/glass,
 /obj/item/storage/medkit/regular,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/siding{
 	dir = 10
@@ -4123,7 +4158,7 @@
 	dir = 4
 	},
 /obj/item/radio/intercom/mi13/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "va" = (
@@ -4145,7 +4180,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "vd" = (
@@ -4161,7 +4196,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/mapping_helpers/airlock/locked,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "vj" = (
@@ -4171,7 +4206,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "vl" = (
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "vm" = (
@@ -4252,13 +4287,13 @@
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "vD" = (
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "vE" = (
 /obj/structure/table,
 /obj/item/ammo_box/magazine/m7mm,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "vF" = (
@@ -4268,15 +4303,6 @@
 /obj/structure/thermoplastic/light,
 /turf/open/floor/engine,
 /area/awaymission/caves/heretic_laboratory)
-"vI" = (
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack{
-	pixel_y = 8;
-	pixel_x = -15;
-	anchored = 1;
-	name = "Sam Site Missle rack"
-	},
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "vK" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/asphalt,
@@ -4340,7 +4366,7 @@
 	},
 /obj/effect/turf_decal/stripes/corner,
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "vY" = (
@@ -4421,7 +4447,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "wz" = (
@@ -4448,7 +4474,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "wF" = (
 /obj/machinery/suit_storage_unit,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "wG" = (
 /obj/machinery/light/directional/north,
@@ -4461,7 +4487,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "wH" = (
@@ -4544,14 +4570,14 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "wW" = (
 /obj/effect/turf_decal/tile/dark_green/half{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "wY" = (
@@ -4588,8 +4614,7 @@
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory_clean)
 "xc" = (
-/obj/effect/blessing/invisible,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory_clean)
 "xd" = (
@@ -4647,7 +4672,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "xu" = (
@@ -4765,7 +4790,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "xW" = (
@@ -4813,7 +4838,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "yj" = (
@@ -4824,7 +4849,7 @@
 "yk" = (
 /obj/structure/curtain/cloth/fancy/mechanical/start_closed,
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "yo" = (
 /obj/structure/disposalpipe/segment,
@@ -4839,7 +4864,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "yu" = (
@@ -4849,7 +4874,7 @@
 /turf/open/misc/asteroid,
 /area/awaymission/caves/heretic_laboratory)
 "yv" = (
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "yw" = (
@@ -4886,7 +4911,7 @@
 "yB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/awaymission/caves/heretic_laboratory)
 "yD" = (
@@ -4958,7 +4983,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "yS" = (
@@ -4989,12 +5014,11 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "yZ" = (
 /obj/machinery/door/airlock/hatch,
-/obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
@@ -5028,7 +5052,7 @@
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "zk" = (
@@ -5091,7 +5115,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "zO" = (
@@ -5118,7 +5142,7 @@
 /area/awaymission/caves/heretic_laboratory_clean)
 "zU" = (
 /obj/structure/bookcase/random,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "zV" = (
@@ -5142,7 +5166,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ac" = (
@@ -5204,7 +5228,6 @@
 /area/awaymission/caves/heretic_laboratory)
 "Av" = (
 /obj/machinery/door/airlock/hatch,
-/obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -5306,7 +5329,7 @@
 "AW" = (
 /obj/machinery/vending/medical,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "AZ" = (
@@ -5323,7 +5346,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Be" = (
 /obj/machinery/gateway,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "Bf" = (
 /obj/item/clothing/head/collectable/welding,
@@ -5373,7 +5396,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Bn" = (
 /obj/structure/table,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Bo" = (
@@ -5383,7 +5406,7 @@
 /obj/effect/turf_decal/tile/purple/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Bq" = (
@@ -5418,12 +5441,12 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "BA" = (
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "BE" = (
@@ -5438,7 +5461,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "BI" = (
@@ -5447,12 +5470,12 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 6
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/catwalk_floor/iron_dark,
 /area/awaymission/caves/heretic_laboratory)
 "BL" = (
 /obj/structure/table,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "BM" = (
@@ -5464,7 +5487,7 @@
 /turf/open/floor/engine,
 /area/awaymission/caves/heretic_laboratory)
 "BV" = (
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "BW" = (
 /obj/machinery/door/airlock/highsecurity{
@@ -5496,7 +5519,7 @@
 /obj/structure/bed/double,
 /obj/effect/spawner/random/bedsheet/double,
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ce" = (
@@ -5514,7 +5537,7 @@
 "Cj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ck" = (
@@ -5523,6 +5546,10 @@
 	},
 /turf/open/floor/iron/white/smooth_large,
 /area/awaymission/caves/heretic_laboratory)
+"Cl" = (
+/obj/effect/mapping_helpers/no_tele_turf,
+/turf/closed/indestructible/reinforced,
+/area/awaymission/caves/heretic_laboratory_clean)
 "Cn" = (
 /obj/effect/turf_decal/tile/yellow/half/contrasted{
 	dir = 1
@@ -5598,7 +5625,7 @@
 "CE" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/effect/spawner/random/heretic_gateway,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "CI" = (
@@ -5624,12 +5651,12 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "CO" = (
 /mob/living/basic/bot/medbot/mysterious,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "CP" = (
@@ -5697,19 +5724,19 @@
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Dm" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/armory/disablers,
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Do" = (
 /obj/item/radio/intercom/mi13/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Dp" = (
@@ -5748,7 +5775,7 @@
 /area/awaymission/beach/heretic)
 "Dz" = (
 /obj/structure/table/glass,
-/obj/item/stack/medical/gauze,
+/obj/item/stack/medical/wrap/gauze,
 /obj/item/stack/medical/mesh,
 /obj/item/stack/medical/suture,
 /obj/effect/turf_decal/siding{
@@ -5766,7 +5793,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/line,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "DJ" = (
@@ -5785,11 +5812,28 @@
 /obj/effect/spawner/random/trash/moisture_trap,
 /turf/open/floor/plating/airless,
 /area/awaymission/caves/heretic_laboratory_clean)
+"DO" = (
+/obj/effect/turf_decal/trimline/yellow/filled,
+/obj/structure/rack,
+/obj/item/ammo_casing/mm40{
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/obj/item/ammo_casing/mm40{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/item/ammo_casing/mm40{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "DQ" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "DR" = (
@@ -5807,7 +5851,7 @@
 /obj/effect/turf_decal/tile/dark_green/anticorner/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "DX" = (
@@ -5840,7 +5884,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "Eg" = (
@@ -5851,7 +5895,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Eh" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ei" = (
@@ -5881,7 +5925,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Es" = (
@@ -5904,7 +5948,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ew" = (
@@ -5949,12 +5993,6 @@
 /obj/effect/spawner/random/food_or_drink/seed_rare,
 /turf/open/misc/grass/jungle/station,
 /area/awaymission/beach/heretic)
-"EH" = (
-/obj/machinery/computer/shuttle/ferry/request{
-	dir = 4
-	},
-/turf/open/floor/pod/light,
-/area/awaymission/beach/heretic)
 "EI" = (
 /turf/open/water/beach,
 /area/awaymission/caves/heretic_laboratory_clean)
@@ -5977,16 +6015,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/caves/heretic_laboratory)
-"EP" = (
-/obj/machinery/deployable_turret/hmg,
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/stripes{
-	dir = 1
-	},
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "EQ" = (
 /obj/machinery/cryo_cell{
 	dir = 8
@@ -6011,11 +6039,11 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "EV" = (
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory_clean)
 "EX" = (
@@ -6097,7 +6125,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Fr" = (
@@ -6121,7 +6149,7 @@
 	pixel_y = 6
 	},
 /obj/structure/bed/double,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Fw" = (
@@ -6142,7 +6170,7 @@
 	dir = 8
 	},
 /turf/open/misc/asteroid,
-/area/awaymission/caves/heretic_laboratory_clean)
+/area/awaymission/inaccessible)
 "Fz" = (
 /obj/machinery/door/airlock{
 	name = "Kitchen"
@@ -6162,7 +6190,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "FM" = (
@@ -6305,6 +6333,9 @@
 	},
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory)
+"GA" = (
+/turf/closed/indestructible/rock,
+/area/awaymission/inaccessible)
 "GC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -6312,7 +6343,7 @@
 /area/awaymission/caves/heretic_laboratory_clean)
 "GD" = (
 /obj/structure/rack,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "GG" = (
 /obj/structure/bed/double,
@@ -6320,7 +6351,7 @@
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "GH" = (
@@ -6339,7 +6370,7 @@
 	id = "crematoriumchapel";
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory_clean)
 "GL" = (
@@ -6376,19 +6407,9 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/mi13/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
-"GR" = (
-/obj/effect/turf_decal/trimline/red/arrow_cw,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack{
-	pixel_y = 9;
-	pixel_x = 15;
-	anchored = 1;
-	name = "Sam Site Missle rack"
-	},
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "GT" = (
 /obj/machinery/light/floor,
 /obj/structure/closet/crate/freezer,
@@ -6415,7 +6436,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "GX" = (
 /obj/machinery/light/directional/south,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Hb" = (
@@ -6514,7 +6535,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Hv" = (
@@ -6575,7 +6596,7 @@
 /obj/item/fake_items/lahti_l39{
 	pixel_x = 16
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "HQ" = (
@@ -6685,7 +6706,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Iq" = (
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ir" = (
@@ -6705,6 +6726,10 @@
 	},
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
+"Is" = (
+/obj/effect/turf_decal/trimline/yellow/line,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "Iv" = (
 /obj/structure/table/wood,
 /obj/structure/bedsheetbin/empty{
@@ -6716,11 +6741,16 @@
 /obj/structure/closet/crate/grave,
 /turf/open/misc/dirt/jungle,
 /area/awaymission/beach/heretic)
+"Ix" = (
+/obj/machinery/deployable_turret/naval_cannon,
+/obj/effect/turf_decal/trimline/yellow/filled,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "Iy" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Iz" = (
@@ -6747,7 +6777,7 @@
 "IC" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "IF" = (
@@ -6761,7 +6791,7 @@
 /obj/structure/window/spawner/directional/east,
 /obj/structure/window/spawner/directional/west,
 /obj/structure/flora/bush/jungle/c/style_random,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/misc/grass/jungle,
 /area/awaymission/caves/heretic_laboratory)
 "II" = (
@@ -6800,7 +6830,7 @@
 /obj/structure/bed/double,
 /obj/effect/spawner/random/bedsheet/double,
 /obj/effect/turf_decal/tile/dark_green/anticorner/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "IS" = (
@@ -6811,7 +6841,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "IV" = (
@@ -6841,7 +6871,7 @@
 "Jd" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Jf" = (
@@ -6868,13 +6898,21 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /mob/living/basic/faithless,
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Jn" = (
 /obj/structure/sign/poster/contraband/double_rainbow/directional/east,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
+"Jo" = (
+/obj/structure/fluff/sat_dish{
+	dir = 4;
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "Jp" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 1
@@ -6900,7 +6938,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "Jy" = (
 /obj/effect/mob_spawn/corpse/human/old_pirate_captain,
@@ -6945,7 +6983,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "JK" = (
@@ -6955,7 +6993,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "JL" = (
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "JM" = (
@@ -7041,7 +7079,7 @@
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Kg" = (
@@ -7071,7 +7109,7 @@
 /obj/item/storage/toolbox/emergency,
 /obj/item/clothing/head/utility/welding,
 /obj/item/clothing/head/utility/welding,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "Km" = (
 /obj/machinery/light/directional/east,
@@ -7113,7 +7151,7 @@
 	dir = 4
 	},
 /obj/structure/sign/poster/contraband/clown/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Kx" = (
@@ -7134,7 +7172,7 @@
 "KA" = (
 /obj/structure/table,
 /obj/item/fake_items/l6_saw,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "KB" = (
@@ -7142,7 +7180,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "KC" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "KD" = (
@@ -7190,13 +7228,13 @@
 /obj/item/ammo_box/magazine/lahtimagazine{
 	anchored = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "KM" = (
 /obj/machinery/door/airlock/hatch,
 /obj/structure/holosign/barrier/atmos/sturdy,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory_clean)
 "KO" = (
@@ -7223,7 +7261,7 @@
 "La" = (
 /obj/effect/baseturf_helper/beach/sand,
 /turf/closed/indestructible/rock,
-/area/awaymission/caves/heretic_laboratory_clean)
+/area/awaymission/inaccessible)
 "Lb" = (
 /obj/structure/table,
 /obj/machinery/light/floor,
@@ -7256,7 +7294,7 @@
 "Lk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Ll" = (
@@ -7264,12 +7302,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ln" = (
 /obj/machinery/door/airlock/titanium,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "Lo" = (
 /obj/item/paper_bin,
@@ -7279,12 +7317,12 @@
 /area/awaymission/caves/heretic_laboratory)
 "Ls" = (
 /obj/machinery/light/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Lu" = (
 /obj/structure/rack,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Lv" = (
@@ -7319,13 +7357,17 @@
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "LE" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/misc/grass/jungle/station,
 /area/awaymission/beach/heretic)
+"LH" = (
+/obj/effect/mapping_helpers/no_tele_turf,
+/turf/open/floor/plating,
+/area/awaymission/caves/heretic_laboratory)
 "LI" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
@@ -7353,16 +7395,27 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "LS" = (
 /obj/effect/spawner/random/trash/bin,
 /turf/open/misc/dirt/jungle,
 /area/awaymission/beach/heretic)
+"LV" = (
+/obj/structure/fluff{
+	icon = 'icons/mob/simple/hivebot.dmi';
+	icon_state = "def_radar-off";
+	name = "radio dish component";
+	desc = "Remarkable Nanotrasen technology. This does... something to make the radio dish work.";
+	pixel_y = 0;
+	pixel_x = 0
+	},
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "LX" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "Ma" = (
@@ -7388,7 +7441,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/tile/bar/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Mf" = (
@@ -7420,7 +7473,7 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/mi13/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Mn" = (
@@ -7490,7 +7543,7 @@
 /obj/structure/table,
 /obj/machinery/light/directional/east,
 /obj/item/ammo_box/magazine/m7mm,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "MD" = (
@@ -7566,7 +7619,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Nm" = (
@@ -7617,6 +7670,9 @@
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
+"Nx" = (
+/turf/closed/indestructible/reinforced/titanium,
+/area/awaymission/inaccessible)
 "Ny" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -7624,7 +7680,7 @@
 /obj/effect/turf_decal/tile/dark/half{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Nz" = (
@@ -7658,7 +7714,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "NO" = (
@@ -7677,7 +7733,7 @@
 /obj/effect/turf_decal/tile/green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "NU" = (
@@ -7771,7 +7827,7 @@
 /area/awaymission/beach/heretic)
 "Oy" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Oz" = (
@@ -7800,7 +7856,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "OG" = (
@@ -7809,12 +7865,17 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
+"OH" = (
+/obj/effect/mapping_helpers/no_tele_turf,
+/obj/effect/mapping_helpers/no_tele_turf,
+/turf/closed/indestructible/reinforced,
+/area/awaymission/caves/heretic_laboratory)
 "OI" = (
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "OJ" = (
@@ -7848,7 +7909,7 @@
 /obj/effect/decal/cleanable/blood/tracks/xeno,
 /obj/item/organ/tail/xeno,
 /obj/item/stack/sheet/animalhide/xeno,
-/obj/item/stack/sheet/xenochitin,
+/obj/item/stack/sheet/animalhide/xeno,
 /obj/effect/decal/cleanable/blood/gibs/xeno/larva/body,
 /obj/effect/decal/remains/xeno,
 /obj/effect/light_emitter,
@@ -7857,7 +7918,7 @@
 "OP" = (
 /obj/machinery/light/directional/north,
 /obj/structure/chair/comfy/shuttle,
-/turf/open/floor/pod/dark,
+/turf/open/floor/mineral/plastitanium/pod/dark,
 /area/awaymission/beach/heretic)
 "OQ" = (
 /obj/machinery/vending/boozeomat,
@@ -7907,7 +7968,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Ph" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "Pj" = (
 /obj/machinery/light/directional/south,
@@ -7921,7 +7982,7 @@
 /obj/effect/turf_decal/tile/yellow/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Pp" = (
@@ -7935,12 +7996,12 @@
 /obj/effect/turf_decal/tile/purple/half{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Pu" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Pw" = (
@@ -8000,7 +8061,7 @@
 "PK" = (
 /obj/machinery/door/airlock/titanium,
 /obj/effect/mapping_helpers/airlock/locked,
-/turf/open/floor/pod/light,
+/turf/open/floor/mineral/plastitanium/pod/light,
 /area/awaymission/beach/heretic)
 "PN" = (
 /obj/structure/window/spawner/directional/south,
@@ -8013,7 +8074,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "PP" = (
@@ -8120,7 +8181,7 @@
 "Qp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Qr" = (
@@ -8140,7 +8201,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Qz" = (
@@ -8186,6 +8247,10 @@
 /obj/structure/table/wood,
 /turf/open/floor/carpet/green,
 /area/awaymission/beach/heretic)
+"QL" = (
+/obj/effect/mapping_helpers/no_tele_turf,
+/turf/closed/indestructible/reinforced,
+/area/awaymission/caves/heretic_laboratory)
 "QM" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
@@ -8218,7 +8283,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "QU" = (
@@ -8264,12 +8329,18 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/engine,
 /area/awaymission/caves/heretic_laboratory_clean)
+"Ri" = (
+/obj/effect/turf_decal/trimline/red/filled/end{
+	dir = 1
+	},
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "Rj" = (
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Rl" = (
@@ -8351,12 +8422,12 @@
 /obj/effect/turf_decal/tile/bar/anticorner/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "RG" = (
 /obj/machinery/vending/sustenance,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "RH" = (
@@ -8392,7 +8463,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "RR" = (
@@ -8424,7 +8495,7 @@
 /obj/effect/turf_decal/tile/dark_green/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "RW" = (
@@ -8504,7 +8575,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Sp" = (
@@ -8512,7 +8583,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "Sq" = (
@@ -8549,7 +8620,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "SA" = (
@@ -8560,7 +8631,7 @@
 /obj/machinery/light/floor,
 /obj/machinery/light/directional/east,
 /obj/structure/bed/double,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "SB" = (
@@ -8629,7 +8700,7 @@
 /area/awaymission/beach/heretic)
 "Ta" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Tb" = (
@@ -8651,7 +8722,7 @@
 "Th" = (
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/effect/mapping_helpers/damaged_window,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/plating,
 /area/awaymission/caves/heretic_laboratory)
 "Ti" = (
@@ -8667,7 +8738,7 @@
 	dir = 1
 	},
 /obj/structure/door_assembly/door_assembly_highsecurity,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Tk" = (
@@ -8711,8 +8782,12 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/carpet/green,
 /area/awaymission/caves/heretic_laboratory)
+"Ts" = (
+/obj/effect/turf_decal/trimline/yellow/filled,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "Tw" = (
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Tx" = (
@@ -8724,7 +8799,7 @@
 /obj/structure/bed/double{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "TB" = (
@@ -8779,7 +8854,7 @@
 /obj/effect/turf_decal/tile/dark_red/anticorner/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "TQ" = (
@@ -8799,11 +8874,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green/visible{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/no_tele_turf,
 /turf/closed/indestructible/reinforced,
 /area/awaymission/caves/heretic_laboratory)
 "TZ" = (
 /obj/machinery/light/directional/east,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Ua" = (
@@ -8831,7 +8907,7 @@
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Um" = (
@@ -8861,12 +8937,22 @@
 /obj/machinery/camera/xray/directional/north,
 /turf/open/floor/carpet/royalblack,
 /area/awaymission/beach/heretic)
+"Uv" = (
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack{
+	pixel_y = 8;
+	pixel_x = -15;
+	anchored = 1;
+	name = "SAM site missile rack"
+	},
+/obj/effect/turf_decal/trimline/red/arrow_ccw,
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "Ux" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /mob/living/basic/migo,
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "UA" = (
@@ -8877,7 +8963,7 @@
 "UB" = (
 /obj/item/radio/intercom/mi13/directional/north,
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "UC" = (
@@ -8913,7 +8999,7 @@
 "UJ" = (
 /obj/machinery/vending/security,
 /obj/effect/turf_decal/tile/dark/opposingcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "UK" = (
@@ -8944,7 +9030,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "UQ" = (
@@ -9012,7 +9098,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Vy" = (
@@ -9084,7 +9170,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "VT" = (
@@ -9130,7 +9216,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Wc" = (
@@ -9176,7 +9262,7 @@
 /area/awaymission/beach/heretic)
 "Wu" = (
 /obj/effect/turf_decal/tile/dark_green/half/contrasted,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Ww" = (
@@ -9223,16 +9309,6 @@
 	},
 /turf/open/floor/engine,
 /area/awaymission/caves/heretic_laboratory)
-"Wz" = (
-/obj/effect/turf_decal/trimline/red/arrow_ccw,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack{
-	pixel_y = 8;
-	pixel_x = -15;
-	anchored = 1;
-	name = "Sam Site Missle rack"
-	},
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "WA" = (
 /obj/machinery/door/airlock/hatch,
 /obj/effect/mapping_helpers/airlock/access/all/service,
@@ -9272,7 +9348,7 @@
 "WM" = (
 /obj/item/kirbyplants/organic/plant10,
 /obj/effect/turf_decal/tile/green,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "WO" = (
@@ -9337,7 +9413,7 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Xg" = (
@@ -9388,7 +9464,7 @@
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Xs" = (
@@ -9399,7 +9475,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Xt" = (
 /obj/machinery/light/directional/west,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Xu" = (
@@ -9428,7 +9504,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "XB" = (
@@ -9453,16 +9529,32 @@
 /obj/effect/turf_decal/tile/dark{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
+"XH" = (
+/obj/structure/rack,
+/obj/item/ammo_casing/mm40{
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/obj/item/ammo_casing/mm40{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/item/ammo_casing/mm40{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/turf/open/floor/iron/large,
+/area/awaymission/beach/heretic)
 "XI" = (
 /obj/machinery/disposal/bin,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
 /obj/machinery/camera/directional/east{
-	network = list("ss13","medbay");
+	network = list("heretic_gate");
 	c_tag = "Medical - Surgery B"
 	},
 /obj/structure/disposalpipe/trunk{
@@ -9484,7 +9576,7 @@
 /area/awaymission/caves/heretic_laboratory_clean)
 "XP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "XS" = (
@@ -9627,7 +9719,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/dark_green/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "YL" = (
@@ -9668,7 +9760,7 @@
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "YR" = (
@@ -9685,7 +9777,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "YU" = (
 /obj/effect/turf_decal/tile/bar/fourcorners,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "YW" = (
@@ -9704,7 +9796,7 @@
 /obj/effect/turf_decal/tile/dark_green/anticorner/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Za" = (
@@ -9746,7 +9838,7 @@
 /obj/effect/turf_decal/tile/bar/half/contrasted{
 	dir = 4
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "Zi" = (
@@ -9770,7 +9862,7 @@
 /obj/effect/turf_decal/tile/purple/half{
 	dir = 8
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/small,
 /area/awaymission/caves/heretic_laboratory)
 "Zo" = (
@@ -9801,7 +9893,7 @@
 /area/awaymission/caves/heretic_laboratory)
 "Zx" = (
 /obj/structure/dresser,
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron,
 /area/awaymission/caves/heretic_laboratory_clean)
 "Zy" = (
@@ -9845,15 +9937,11 @@
 /obj/effect/mapping_helpers/airlock/access/all/away/general,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
-"ZP" = (
-/obj/effect/turf_decal/trimline/red/filled,
-/turf/open/floor/iron/large,
-/area/awaymission/beach/heretic)
 "ZU" = (
 /obj/effect/turf_decal/tile/blue/half/contrasted{
 	dir = 1
 	},
-/obj/effect/blessing/invisible,
+/obj/effect/mapping_helpers/blessing/invisible,
 /turf/open/floor/iron/dark,
 /area/awaymission/caves/heretic_laboratory)
 "ZV" = (
@@ -9878,265 +9966,265 @@
 /area/awaymission/caves/heretic_laboratory)
 
 (1,1,1) = {"
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
 "}
 (2,1,1) = {"
-Lh
-Dj
+GA
+GA
 Dj
 Dj
 Dj
@@ -10204,135 +10292,6 @@ Dj
 Dj
 Dj
 Dj
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
 Lh
 Lh
 Lh
@@ -10388,11 +10347,140 @@ Lh
 Lh
 Lh
 Lh
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
 La
-Lh
+GA
 "}
 (3,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -10567,89 +10655,89 @@ xl
 xl
 xl
 xl
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-xl
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Cl
 KB
 KB
 KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (4,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -10825,88 +10913,88 @@ OC
 yV
 tN
 xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
 xl
 Eg
 NO
 gY
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
-KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
+QL
+QL
+QL
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (5,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -11033,52 +11121,52 @@ Sv
 xl
 fC
 xl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
 xl
 xl
 xl
 xl
 xl
 xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
 xl
 yb
 yV
@@ -11094,76 +11182,76 @@ xl
 JT
 kF
 gU
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 mE
 mE
 Mz
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (6,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -11289,55 +11377,55 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-xl
-xl
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Cl
+Cl
 KB
 KB
 KB
@@ -11352,75 +11440,75 @@ nh
 od
 Yd
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
 KB
 xQ
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (7,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -11546,56 +11634,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 rA
 yX
 yX
@@ -11625,59 +11713,59 @@ Xd
 cX
 UX
 du
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (8,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -11803,56 +11891,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 nb
 zh
 YG
 nb
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 ay
@@ -11882,59 +11970,59 @@ KB
 Yr
 yo
 pf
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (9,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -12060,56 +12148,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 ay
@@ -12139,59 +12227,59 @@ KB
 KB
 iJ
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (10,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -12317,56 +12405,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 KB
@@ -12404,51 +12492,51 @@ KB
 ov
 up
 sk
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (11,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -12574,56 +12662,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 nb
 zh
 YG
 nb
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -12661,51 +12749,51 @@ KB
 XU
 mY
 Vj
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (12,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -12831,56 +12919,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -12918,51 +13006,51 @@ KB
 Og
 CI
 mg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (13,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -13088,56 +13176,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -13175,51 +13263,51 @@ KB
 dU
 Ck
 Vj
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (14,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -13345,56 +13433,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 nb
 iL
 Dk
 nb
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -13432,51 +13520,51 @@ KB
 XI
 uh
 Dt
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (15,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -13602,56 +13690,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 Fw
 MP
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -13689,51 +13777,51 @@ KB
 KB
 MD
 KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (16,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -13859,56 +13947,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 hg
 Fw
 ER
 hg
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -13946,51 +14034,51 @@ qB
 qB
 HW
 yJ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (17,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -14116,56 +14204,56 @@ Sv
 Sv
 xl
 fC
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
-KB
-KB
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
+QL
+QL
+QL
 KB
 nb
 Oh
 yu
 nb
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 sx
 KB
 Sv
@@ -14203,51 +14291,51 @@ Xu
 Xu
 Xu
 Xu
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (18,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -14373,34 +14461,34 @@ Sv
 Sv
 xl
 cz
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 lB
 iz
 RW
@@ -14409,19 +14497,19 @@ hg
 aL
 sc
 hg
-KB
-Sv
-Sv
-Sv
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
+mf
+mf
+mf
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
 KB
 JU
 KB
@@ -14460,51 +14548,51 @@ Xu
 Xu
 Km
 vS
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (19,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -14631,33 +14719,33 @@ xl
 xl
 TQ
 xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-Sv
-Sv
-Sv
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-Sv
-KB
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+mf
+mf
+mf
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+mf
+QL
 Cn
 mo
 aV
@@ -14666,11 +14754,11 @@ hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 gN
 ye
 CB
@@ -14717,51 +14805,51 @@ KB
 KB
 KB
 KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (20,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -14902,19 +14990,19 @@ vu
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+QL
 jK
 cL
 VW
 cL
 jK
-KB
-Sv
-KB
+QL
+mf
+QL
 cw
 As
 YL
@@ -14923,11 +15011,11 @@ nb
 zh
 YG
 nb
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 eT
 um
 df
@@ -14974,51 +15062,51 @@ Xu
 if
 vN
 Md
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (21,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -15159,19 +15247,19 @@ vu
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+QL
 IV
 XL
 IV
 XL
 IV
-KB
-Sv
-KB
+QL
+mf
+QL
 fK
 mo
 mo
@@ -15180,11 +15268,11 @@ hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 QF
 um
 lE
@@ -15231,51 +15319,51 @@ Vb
 Vb
 qG
 Qj
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (22,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -15416,19 +15504,19 @@ vu
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+QL
 If
 If
 If
 If
 If
-KB
-Sv
-KB
+QL
+mf
+QL
 Fb
 mo
 mo
@@ -15437,11 +15525,11 @@ hg
 WV
 GW
 hg
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 QF
 um
 AO
@@ -15488,51 +15576,51 @@ Xu
 Xu
 Xu
 XB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (23,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -15673,19 +15761,19 @@ wi
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+QL
 Ol
 If
 If
 If
 Ol
-KB
-Sv
-KB
+QL
+mf
+QL
 EX
 mo
 mo
@@ -15694,11 +15782,11 @@ nb
 zh
 YG
 nb
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 QF
 um
 mV
@@ -15745,51 +15833,51 @@ Xu
 Xu
 Xu
 EO
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (24,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -15930,18 +16018,18 @@ Az
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-KB
+Cl
+mf
+mf
+mf
+QL
 KB
 KB
 QZ
 KB
 KB
 KB
-KB
+QL
 KB
 KB
 QZ
@@ -15952,9 +16040,9 @@ Um
 II
 KB
 KB
-KB
-KB
-KB
+QL
+QL
+QL
 KB
 yW
 wt
@@ -16002,51 +16090,51 @@ Xu
 Xu
 Xu
 xv
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (25,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -16188,9 +16276,9 @@ vu
 vu
 vu
 xl
-KB
-KB
-KB
+QL
+QL
+QL
 KB
 gt
 KB
@@ -16259,51 +16347,51 @@ Hr
 Hr
 Wi
 Qj
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (26,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -16516,51 +16604,51 @@ Xu
 QN
 vN
 nN
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (27,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -16766,58 +16854,58 @@ DT
 Xu
 Xu
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (28,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -17022,59 +17110,59 @@ QA
 Xu
 Xu
 Xu
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (29,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -17279,59 +17367,59 @@ Xu
 Xu
 Xu
 Xu
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (30,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -17473,9 +17561,9 @@ vu
 vu
 vu
 xl
-KB
-KB
-KB
+QL
+QL
+QL
 DR
 Cs
 wP
@@ -17536,59 +17624,59 @@ Km
 Xu
 Xu
 vS
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (31,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -17729,10 +17817,10 @@ Az
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
+Cl
+mf
+mf
+mf
 TV
 ip
 Zs
@@ -17783,69 +17871,69 @@ xQ
 xQ
 Pj
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (32,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -17986,10 +18074,10 @@ Az
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
+Cl
+mf
+mf
+mf
 TV
 KB
 Rt
@@ -18039,70 +18127,70 @@ mq
 xQ
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (33,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -18243,10 +18331,10 @@ wi
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
+Cl
+mf
+mf
+mf
 TV
 KB
 ql
@@ -18296,70 +18384,70 @@ mq
 xQ
 xQ
 UX
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (34,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -18500,10 +18588,10 @@ PD
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
+Cl
+mf
+mf
+mf
 TV
 KB
 ay
@@ -18553,70 +18641,70 @@ gq
 xQ
 KB
 KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (35,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -18757,19 +18845,19 @@ PD
 vu
 zk
 vu
-xl
-Sv
-Sv
-Sv
+Cl
+mf
+mf
+mf
 TV
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
 KB
 ay
 SB
@@ -18811,69 +18899,69 @@ xl
 xl
 xl
 xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
 gj
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (36,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -19014,20 +19102,20 @@ PD
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
+Cl
+mf
+mf
+mf
 Fy
 lu
 lu
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 Fk
 KB
 tL
@@ -19117,20 +19205,20 @@ Yv
 Yv
 Yv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (37,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -19271,19 +19359,19 @@ PD
 zk
 vu
 vu
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
-KB
-KB
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
+QL
+QL
 KB
 KB
 KB
@@ -19374,20 +19462,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (38,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -19528,16 +19616,16 @@ PD
 vu
 vu
 vu
-xl
-Sv
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
+Cl
+mf
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
 KB
 gB
 Za
@@ -19631,20 +19719,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (39,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -19785,9 +19873,9 @@ PD
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 vu
 vu
 dI
@@ -19888,20 +19976,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (40,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -20042,9 +20130,9 @@ wi
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 vu
 vu
 Gd
@@ -20145,20 +20233,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (41,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -20299,9 +20387,9 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 vu
 vu
 lW
@@ -20402,20 +20490,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (42,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -20556,9 +20644,9 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 vu
 vu
 vu
@@ -20659,20 +20747,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (43,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -20813,9 +20901,9 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 Or
 Ka
 Ka
@@ -20916,20 +21004,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (44,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -21070,9 +21158,9 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 hs
 hs
 eq
@@ -21173,20 +21261,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (45,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -21327,9 +21415,9 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 hs
 Pl
 hs
@@ -21430,20 +21518,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (46,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -21584,11 +21672,11 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
-xl
-xl
+Cl
+mf
+Cl
+Cl
+Cl
 xl
 Si
 xl
@@ -21687,20 +21775,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (47,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -21841,12 +21929,12 @@ Az
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-Sv
-xl
+Cl
+mf
+mf
+mf
+mf
+Cl
 mo
 Tn
 Yh
@@ -21944,20 +22032,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (48,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -22098,12 +22186,12 @@ Az
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-Sv
-xl
+Cl
+mf
+mf
+mf
+mf
+Cl
 mo
 TB
 sK
@@ -22201,20 +22289,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (49,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -22355,11 +22443,11 @@ Az
 vu
 vu
 vu
-xl
-Sv
-xl
-xl
-xl
+Cl
+mf
+Cl
+Cl
+Cl
 xl
 bn
 xl
@@ -22458,20 +22546,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (50,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -22612,9 +22700,9 @@ wi
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 EV
 ds
 EV
@@ -22715,20 +22803,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (51,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -22869,9 +22957,9 @@ vu
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 EV
 EV
 Bn
@@ -22972,20 +23060,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (52,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -23126,9 +23214,9 @@ vu
 vu
 vu
 vu
-xl
-Sv
-xl
+Cl
+mf
+Cl
 KM
 Ka
 Ka
@@ -23229,20 +23317,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (53,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -23383,15 +23471,15 @@ vu
 vu
 vu
 vu
-xl
-Sv
-xl
-bD
-bD
-bD
-bD
-bD
-bD
+Cl
+mf
+Cl
+xc
+xc
+xc
+xc
+xc
+xc
 xc
 xl
 xl
@@ -23486,20 +23574,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (54,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -23630,26 +23718,26 @@ vu
 vu
 vu
 xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-Sv
-xl
-bD
-bD
-bD
-bD
-bD
-bD
-bD
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+mf
+Cl
+xc
+xc
+xc
+xc
+xc
+xc
+xc
 xl
 FY
 FY
@@ -23743,20 +23831,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (55,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -23886,27 +23974,27 @@ vu
 vu
 vu
 vu
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-xl
-Sv
-xl
-bD
-bD
-bD
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Cl
+mf
+Cl
+xc
+xc
+xc
 GK
-bD
-bD
-bD
+xc
+xc
+xc
 xl
 FY
 FY
@@ -24000,20 +24088,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (56,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -24143,19 +24231,19 @@ vu
 vu
 vu
 vu
-xl
-Sv
-Sv
+Cl
+mf
+mf
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
 KB
 KB
 KB
@@ -24257,20 +24345,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (57,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -24400,10 +24488,10 @@ Hl
 Hl
 vu
 vu
-xl
-Sv
-Sv
-KB
+Cl
+mf
+mf
+QL
 ej
 tO
 tO
@@ -24514,20 +24602,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (58,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -24658,9 +24746,9 @@ KB
 KB
 HR
 KB
-KB
-Sv
-KB
+QL
+mf
+QL
 tO
 Lk
 Lk
@@ -24771,20 +24859,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (59,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -24915,9 +25003,9 @@ KB
 RU
 bq
 bq
-KB
-Sv
-KB
+QL
+mf
+QL
 tO
 Lk
 tO
@@ -25028,20 +25116,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (60,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -25172,9 +25260,9 @@ KB
 bq
 bq
 bq
-KB
-Sv
-KB
+QL
+mf
+QL
 tO
 Lk
 tO
@@ -25285,20 +25373,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (61,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -25429,9 +25517,9 @@ HR
 bq
 bq
 Br
-KB
-Sv
-KB
+QL
+mf
+QL
 tO
 Lk
 tO
@@ -25465,11 +25553,11 @@ KB
 KB
 OG
 KB
-KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
+QL
 KB
 KB
 eg
@@ -25542,20 +25630,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (62,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -25686,9 +25774,9 @@ KB
 bq
 bq
 bq
-KB
-Sv
-KB
+QL
+mf
+QL
 tO
 Lk
 tO
@@ -25721,13 +25809,13 @@ Sv
 Sv
 KB
 OG
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+QL
 vB
 ZX
 vB
@@ -25799,20 +25887,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-Sv
-MV
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+mf
+Nx
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (63,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -25944,7 +26032,7 @@ KB
 KB
 KB
 KB
-KB
+QL
 KB
 KB
 Kg
@@ -25978,13 +26066,13 @@ KB
 KB
 KB
 OG
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+QL
 Xx
 ZX
 Zv
@@ -26056,20 +26144,20 @@ Jv
 Jv
 Jv
 Yv
-xl
-Sv
-MV
-MV
-Sv
-Sv
-Sv
-Sv
-Sv
-Lh
-Lh
+Cl
+mf
+Nx
+Nx
+mf
+mf
+mf
+mf
+mf
+GA
+GA
 "}
 (64,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -26235,20 +26323,20 @@ Qp
 Qp
 fI
 OG
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+QL
 vO
 ZX
 Ra
 KB
-xl
-xl
-xl
+Cl
+Cl
+Cl
 xl
 WF
 dO
@@ -26314,19 +26402,19 @@ Jv
 Jv
 Yv
 xl
-MV
-MV
-MV
-MV
-MV
-MV
-MV
-MV
-Lh
-Lh
+Nx
+Nx
+Nx
+Nx
+Nx
+Nx
+Nx
+Nx
+GA
+GA
 "}
 (65,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -26491,22 +26579,22 @@ Lk
 Lk
 tO
 KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+OH
+mf
+mf
+mf
+mf
+mf
+QL
 Xx
 ZX
 Zv
-KB
-lm
-lm
-lm
-xl
+QL
+mf
+mf
+mf
+Cl
 hs
 hs
 hs
@@ -26580,10 +26668,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (66,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -26747,23 +26835,23 @@ tO
 tO
 Lk
 tO
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 vB
 ZX
 vB
-KB
-lm
-lm
-lm
-xl
+QL
+mf
+mf
+mf
+Cl
 hs
 ij
 Nu
@@ -26837,10 +26925,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (67,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -27005,21 +27093,21 @@ kY
 Lk
 tO
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
+QL
+QL
+QL
 KB
 KB
 pP
 KB
 KB
-KB
-KB
-KB
+QL
+QL
+QL
 KB
 KB
 KB
@@ -27094,10 +27182,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (68,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -27351,10 +27439,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (69,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -27608,10 +27696,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (70,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -27865,10 +27953,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (71,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -28122,10 +28210,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (72,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -28379,10 +28467,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (73,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -28636,10 +28724,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (74,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -28893,10 +28981,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (75,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -29150,10 +29238,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (76,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -29407,10 +29495,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (77,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -29664,10 +29752,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (78,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -29921,10 +30009,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (79,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -30178,10 +30266,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (80,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -30435,10 +30523,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (81,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -30692,10 +30780,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (82,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -30843,15 +30931,15 @@ KB
 KB
 KB
 KB
+QL
 KB
 KB
 KB
+QL
 KB
 KB
 KB
-KB
-KB
-KB
+QL
 KB
 KB
 KB
@@ -30949,10 +31037,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (83,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -31206,10 +31294,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (84,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -31463,10 +31551,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (85,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -31720,10 +31808,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (86,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -31977,10 +32065,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (87,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -32234,10 +32322,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (88,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -32491,10 +32579,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (89,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -32748,10 +32836,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (90,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -33005,10 +33093,10 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 "}
 (91,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -33262,10 +33350,10 @@ bB
 bB
 bB
 bB
-Dj
+GA
 "}
 (92,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -33519,10 +33607,10 @@ vK
 CS
 Iz
 Dj
-Dj
+GA
 "}
 (93,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -33713,31 +33801,31 @@ wz
 cL
 aw
 xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
-xl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
+Cl
 xl
 xl
 xl
@@ -33776,10 +33864,10 @@ CS
 jo
 zK
 Dj
-Dj
+GA
 "}
 (94,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -33927,15 +34015,15 @@ KB
 KB
 KB
 KB
+QL
 KB
 KB
 KB
+QL
 KB
 KB
 KB
-KB
-KB
-KB
+QL
 KB
 KB
 KB
@@ -33969,33 +34057,33 @@ KB
 wz
 cL
 aw
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Nx
 Sv
 Sv
 Sv
@@ -34033,10 +34121,10 @@ CS
 SM
 rG
 Dj
-Dj
+GA
 "}
 (95,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -34227,32 +34315,32 @@ vb
 BU
 mN
 KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
-MV
+QL
+QL
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Nx
+Nx
 MV
 Sv
 Sv
@@ -34290,10 +34378,10 @@ vK
 zr
 WR
 Dj
-Dj
+GA
 "}
 (96,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -34486,30 +34574,30 @@ aw
 gd
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
-MV
-MV
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Nx
+Nx
+Nx
 MV
 MV
 Sv
@@ -34547,10 +34635,10 @@ lz
 CS
 uf
 Dj
-Dj
+GA
 "}
 (97,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -34743,30 +34831,30 @@ aw
 gd
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Nx
 Sv
 Sv
 Sv
@@ -34804,10 +34892,10 @@ vK
 FQ
 WR
 Dj
-Dj
+GA
 "}
 (98,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -35000,30 +35088,30 @@ aw
 Es
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Nx
 Sv
 Sv
 Sv
@@ -35039,7 +35127,7 @@ Lh
 Lh
 Lh
 Lh
-Lh
+GA
 Lh
 Lh
 Lh
@@ -35061,10 +35149,10 @@ SM
 pC
 Zd
 Dj
-Dj
+GA
 "}
 (99,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -35257,30 +35345,30 @@ JG
 ev
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+mf
+Nx
 Sv
 Sv
 Sv
@@ -35298,8 +35386,8 @@ bB
 bB
 Lh
 Lh
-Lh
-Lh
+GA
+GA
 Lh
 Lh
 Dj
@@ -35318,10 +35406,10 @@ vK
 uK
 zK
 Dj
-Dj
+GA
 "}
 (100,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -35515,34 +35603,34 @@ gd
 xQ
 xQ
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-MV
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+mf
+mf
+mf
+mf
+mf
+Nx
 Sv
 Sv
 Sv
 Lh
-Lh
+GA
 Lh
 bB
 bB
@@ -35575,10 +35663,10 @@ CS
 vK
 rG
 Dj
-Dj
+GA
 "}
 (101,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -35788,13 +35876,13 @@ HX
 KB
 Ag
 HX
-KB
-Sv
-Sv
-Lh
-Lh
-Lh
-Lh
+QL
+mf
+mf
+GA
+GA
+GA
+GA
 Lh
 Lh
 Lh
@@ -35832,10 +35920,10 @@ CS
 CS
 bB
 bB
-Dj
+GA
 "}
 (102,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -36045,15 +36133,15 @@ tM
 KB
 pd
 tM
-KB
-Sv
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
+QL
+mf
+GA
+GA
+GA
+GA
+GA
+GA
+GA
 Lh
 bB
 bB
@@ -36089,10 +36177,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (103,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -36253,10 +36341,10 @@ IP
 IP
 IP
 KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
 KB
 KB
 KB
@@ -36303,9 +36391,9 @@ KB
 LL
 Hb
 KB
-Lh
-Lh
-Lh
+GA
+GA
+GA
 Lh
 Lh
 Lh
@@ -36346,10 +36434,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (104,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -36509,11 +36597,11 @@ KB
 IP
 me
 IP
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 mk
 Vx
 eP
@@ -36560,8 +36648,8 @@ KB
 KB
 uJ
 KB
-Lh
-Lh
+GA
+GA
 Lh
 bB
 bB
@@ -36603,10 +36691,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (105,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -36766,11 +36854,11 @@ KB
 IP
 IP
 IP
-KB
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+QL
 yh
 vD
 Zh
@@ -36817,8 +36905,8 @@ mo
 mo
 mo
 KB
-Lh
-Lh
+GA
+GA
 Lh
 bB
 te
@@ -36860,10 +36948,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (106,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -37021,13 +37109,13 @@ KB
 KB
 KB
 KB
-KB
-KB
-KB
-Sv
-Sv
-Sv
-KB
+QL
+QL
+QL
+mf
+mf
+mf
+QL
 le
 BA
 Jm
@@ -37074,8 +37162,8 @@ Jt
 mo
 mo
 KB
-Lh
-Lh
+GA
+GA
 Lh
 bB
 te
@@ -37117,10 +37205,10 @@ FP
 CS
 bB
 Lh
-Lh
+GA
 "}
 (107,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -37277,14 +37365,14 @@ Gi
 KB
 AJ
 Gi
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 yh
 vD
 vc
@@ -37324,14 +37412,14 @@ KB
 KB
 KB
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
-Lh
+QL
+QL
+QL
+QL
+QL
+QL
+QL
+GA
 Lh
 bB
 bB
@@ -37374,10 +37462,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (108,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -37534,14 +37622,14 @@ Xu
 KB
 Ve
 Km
-KB
-Sv
-Sv
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+mf
+mf
+QL
 LD
 kx
 kx
@@ -37580,12 +37668,12 @@ aA
 JY
 KR
 KR
-KB
-ay
-ay
-ay
-ay
-ay
+QL
+LH
+LH
+LH
+LH
+LH
 kX
 KB
 Lh
@@ -37631,10 +37719,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (109,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -37792,12 +37880,12 @@ KB
 wa
 KB
 KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
+QL
+QL
 KB
 KB
 KB
@@ -37838,13 +37926,13 @@ mo
 mo
 mo
 KB
-KB
-KB
-KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
+QL
+QL
+QL
 Lh
 bB
 nT
@@ -37888,10 +37976,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (110,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -38101,7 +38189,7 @@ tZ
 ay
 ay
 KB
-Lh
+GA
 Lh
 bB
 nT
@@ -38145,10 +38233,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (111,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -38358,7 +38446,7 @@ ay
 ay
 ay
 KB
-Lh
+GA
 Lh
 bB
 HM
@@ -38402,10 +38490,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (112,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -38615,7 +38703,7 @@ KB
 ay
 IL
 KB
-Lh
+GA
 Lh
 bB
 Am
@@ -38659,10 +38747,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (113,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -38872,7 +38960,7 @@ KB
 ay
 ay
 KB
-Lh
+GA
 Lh
 bB
 nT
@@ -38916,10 +39004,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (114,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -39129,7 +39217,7 @@ KB
 ay
 ay
 KB
-Lh
+GA
 Lh
 bB
 LE
@@ -39173,10 +39261,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (115,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -39430,10 +39518,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (116,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -39687,10 +39775,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (117,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -39944,10 +40032,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (118,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -40201,10 +40289,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (119,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -40458,10 +40546,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (120,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -40655,10 +40743,10 @@ gd
 xQ
 xQ
 KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
 KB
 Hl
 Hl
@@ -40715,10 +40803,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (121,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -40911,12 +40999,12 @@ aw
 gd
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+QL
 cy
 xQ
 xQ
@@ -40924,7 +41012,7 @@ xQ
 xQ
 Xo
 KB
-Lh
+GA
 Lh
 bB
 Ql
@@ -40972,10 +41060,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (122,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -41168,12 +41256,12 @@ aw
 Es
 xQ
 xQ
-KB
-Sv
-Sv
-Sv
-Sv
-KB
+QL
+mf
+mf
+mf
+mf
+QL
 YA
 xQ
 xQ
@@ -41181,7 +41269,7 @@ xQ
 xQ
 Tk
 KB
-Lh
+GA
 Lh
 bB
 Ql
@@ -41229,10 +41317,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (123,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -41426,10 +41514,10 @@ KB
 KB
 KB
 KB
-KB
-KB
-KB
-KB
+QL
+QL
+QL
+QL
 KB
 sJ
 OK
@@ -41438,7 +41526,7 @@ Lw
 RY
 Ww
 KB
-Lh
+GA
 Lh
 bB
 Ql
@@ -41486,10 +41574,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (124,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -41695,7 +41783,7 @@ KB
 KB
 KB
 KB
-Lh
+GA
 Lh
 bB
 Ql
@@ -41743,10 +41831,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (125,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -42000,10 +42088,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (126,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -42219,7 +42307,7 @@ wf
 wf
 wf
 bb
-EH
+BV
 gT
 wf
 wf
@@ -42257,10 +42345,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (127,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -42514,10 +42602,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (128,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -42771,10 +42859,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (129,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -43028,10 +43116,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (130,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -43285,10 +43373,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (131,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -43542,10 +43630,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (132,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -43799,10 +43887,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (133,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -44056,10 +44144,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (134,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -44313,10 +44401,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (135,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -44570,10 +44658,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (136,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -44827,10 +44915,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (137,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -45084,10 +45172,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (138,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -45341,10 +45429,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (139,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -45598,10 +45686,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (140,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -45855,10 +45943,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (141,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -46112,10 +46200,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (142,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -46369,10 +46457,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (143,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -46608,7 +46696,7 @@ bB
 Lh
 Lh
 Lh
-Lh
+GA
 Lh
 bB
 CS
@@ -46626,10 +46714,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (144,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -46836,9 +46924,9 @@ Sv
 Sv
 Sv
 Lh
-Lh
-Lh
-Lh
+GA
+GA
+GA
 Lh
 bB
 te
@@ -46863,9 +46951,9 @@ nT
 bB
 bB
 Lh
-Lh
-Lh
-Lh
+GA
+GA
+GA
 Lh
 bB
 CS
@@ -46883,10 +46971,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (145,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -47094,8 +47182,8 @@ Sv
 Sv
 Sv
 Lh
-Lh
-Lh
+GA
+GA
 Lh
 bB
 te
@@ -47119,10 +47207,10 @@ nT
 LE
 bB
 Lh
-Lh
-Lh
-Lh
-Lh
+GA
+GA
+GA
+GA
 Lh
 bB
 CS
@@ -47140,10 +47228,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (146,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -47351,8 +47439,8 @@ Sv
 Sv
 Sv
 Lh
-Lh
-Lh
+GA
+GA
 Lh
 bB
 te
@@ -47376,10 +47464,10 @@ Am
 nT
 bB
 Lh
-Lh
-Lh
-Lh
-Lh
+GA
+GA
+GA
+GA
 Lh
 bB
 CS
@@ -47397,10 +47485,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (147,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -47609,7 +47697,7 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 Lh
 bB
 te
@@ -47633,10 +47721,10 @@ nT
 nT
 bB
 Lh
+GA
+GA
 Lh
-Lh
-Lh
-Lh
+GA
 Lh
 bB
 CS
@@ -47654,10 +47742,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (148,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -47866,7 +47954,7 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 Lh
 bB
 te
@@ -47890,7 +47978,7 @@ nT
 nT
 bB
 Lh
-Lh
+GA
 Lh
 Sv
 Lh
@@ -47911,10 +47999,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (149,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -48123,7 +48211,7 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 Lh
 bB
 te
@@ -48147,7 +48235,7 @@ nT
 bB
 bB
 Lh
-Lh
+GA
 Lh
 Sv
 Lh
@@ -48168,10 +48256,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (150,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -48380,7 +48468,7 @@ Sv
 Sv
 Sv
 Lh
-Lh
+GA
 Lh
 bB
 te
@@ -48403,7 +48491,7 @@ nT
 LE
 bB
 Lh
-Lh
+GA
 Lh
 Sv
 Sv
@@ -48425,10 +48513,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (151,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -48660,7 +48748,7 @@ nT
 bB
 bB
 Lh
-Lh
+GA
 Lh
 Sv
 Sv
@@ -48682,10 +48770,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (152,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -48916,7 +49004,7 @@ bB
 bB
 bB
 Lh
-Lh
+GA
 Lh
 Sv
 Sv
@@ -48939,10 +49027,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (153,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -49196,10 +49284,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (154,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -49427,7 +49515,7 @@ Lh
 Lh
 Lh
 Lh
-Lh
+GA
 Lh
 Sv
 Sv
@@ -49453,10 +49541,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (155,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -49710,10 +49798,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (156,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -49967,10 +50055,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (157,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -50224,10 +50312,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (158,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -50481,10 +50569,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (159,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -50519,9 +50607,9 @@ nI
 nI
 SY
 hY
-hY
-hY
-hY
+Ri
+xH
+xH
 xl
 xl
 xl
@@ -50538,12 +50626,12 @@ xl
 xl
 xl
 BY
-xH
-xH
-ZP
-iw
-hY
-hY
+DO
+Ts
+Ts
+Ts
+Ix
+hT
 oo
 oo
 kI
@@ -50738,10 +50826,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (160,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -50776,8 +50864,8 @@ nI
 nI
 pB
 hY
-hY
-hY
+rQ
+bV
 hY
 xl
 Kx
@@ -50795,11 +50883,11 @@ IP
 kw
 ZM
 BY
+XH
 hY
 hY
-ao
-GR
 hY
+jI
 hY
 hY
 hY
@@ -50995,10 +51083,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (161,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -51032,16 +51120,16 @@ nI
 nI
 nI
 nI
-EP
-hY
-hY
+SY
+Gh
+Mj
 hY
 xl
 nL
 vu
 gi
 vu
-vu
+uo
 pr
 xl
 md
@@ -51052,16 +51140,16 @@ IP
 Yy
 KO
 BY
-hY
-hY
-Gh
-Mj
+XH
 hY
 hY
 hY
+Is
 hY
 hY
 hY
+hY
+LV
 nR
 nI
 nI
@@ -51252,10 +51340,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (162,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -51290,8 +51378,8 @@ nI
 nI
 Hi
 hY
-hY
-hY
+Uv
+Jo
 hY
 xl
 Ew
@@ -51309,11 +51397,11 @@ IP
 FF
 Kk
 BY
+XH
 hY
 hY
-vI
-Wz
 hY
+iM
 hY
 hY
 hY
@@ -51509,10 +51597,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (163,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -51547,9 +51635,9 @@ nI
 nI
 SY
 hY
-hY
-hY
-hY
+Ri
+xH
+xH
 xl
 xl
 xl
@@ -51566,12 +51654,12 @@ xl
 xl
 xl
 BY
-xH
-xH
-ZP
-iw
-hY
-hY
+DO
+Ts
+Ts
+Ts
+Ts
+hT
 VQ
 VQ
 CC
@@ -51766,10 +51854,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (164,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -52023,10 +52111,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (165,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -52280,10 +52368,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (166,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -52537,10 +52625,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (167,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -52794,10 +52882,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (168,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -53051,10 +53139,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (169,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -53308,10 +53396,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (170,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -53565,10 +53653,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (171,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -53822,10 +53910,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (172,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -54079,10 +54167,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (173,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -54336,10 +54424,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (174,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -54593,10 +54681,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (175,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -54850,10 +54938,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (176,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -55107,10 +55195,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (177,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -55364,10 +55452,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (178,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -55621,10 +55709,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (179,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -55878,10 +55966,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (180,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -56135,10 +56223,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (181,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -56392,10 +56480,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (182,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -56649,10 +56737,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (183,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -56906,10 +56994,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (184,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -57163,10 +57251,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (185,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -57420,10 +57508,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (186,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -57677,10 +57765,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (187,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -57934,10 +58022,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (188,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -58191,10 +58279,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (189,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -58448,10 +58536,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (190,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -58705,10 +58793,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (191,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -58962,10 +59050,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (192,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -59219,10 +59307,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (193,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -59476,10 +59564,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (194,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -59733,10 +59821,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (195,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -59990,10 +60078,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (196,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -60247,10 +60335,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (197,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -60504,10 +60592,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (198,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -60761,10 +60849,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (199,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -61018,10 +61106,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (200,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -61275,10 +61363,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (201,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -61532,10 +61620,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (202,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -61789,10 +61877,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (203,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -62046,10 +62134,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (204,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -62303,10 +62391,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (205,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -62560,10 +62648,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (206,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -62817,10 +62905,10 @@ FP
 CS
 bB
 Lh
-Lh
+GA
 "}
 (207,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -63074,10 +63162,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (208,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -63331,10 +63419,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (209,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -63588,10 +63676,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (210,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -63845,10 +63933,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (211,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -64102,10 +64190,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (212,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -64359,10 +64447,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (213,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -64616,10 +64704,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (214,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -64873,10 +64961,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (215,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -65130,10 +65218,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (216,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -65387,10 +65475,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (217,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -65644,10 +65732,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (218,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -65901,10 +65989,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (219,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -66158,10 +66246,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (220,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -66415,10 +66503,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (221,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -66672,10 +66760,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (222,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -66929,10 +67017,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (223,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -67186,10 +67274,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (224,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -67443,10 +67531,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (225,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -67700,10 +67788,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (226,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -67957,10 +68045,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (227,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -68214,10 +68302,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (228,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -68471,10 +68559,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (229,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -68728,10 +68816,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (230,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -68985,10 +69073,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (231,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -69242,10 +69330,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (232,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -69499,10 +69587,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (233,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -69756,10 +69844,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (234,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -70013,10 +70101,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (235,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -70270,10 +70358,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (236,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -70527,10 +70615,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (237,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -70784,10 +70872,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (238,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -71041,10 +71129,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (239,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -71298,10 +71386,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (240,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -71555,10 +71643,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (241,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -71812,10 +71900,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (242,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -72069,10 +72157,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (243,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -72326,10 +72414,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (244,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -72583,10 +72671,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (245,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -72840,10 +72928,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (246,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -73097,10 +73185,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (247,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -73354,10 +73442,10 @@ lz
 CS
 bB
 Lh
-Lh
+GA
 "}
 (248,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -73611,10 +73699,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (249,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -73868,10 +73956,10 @@ CS
 CS
 bB
 Lh
-Lh
+GA
 "}
 (250,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -74125,10 +74213,10 @@ pC
 CS
 bB
 Lh
-Lh
+GA
 "}
 (251,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -74382,10 +74470,10 @@ FP
 SM
 bB
 Lh
-Lh
+GA
 "}
 (252,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -74639,10 +74727,10 @@ tm
 gu
 bB
 Lh
-Lh
+GA
 "}
 (253,1,1) = {"
-Lh
+GA
 Dj
 nI
 nI
@@ -74895,12 +74983,12 @@ Dj
 Dj
 Dj
 Dj
-Lh
-Lh
+GA
+GA
 "}
 (254,1,1) = {"
-Lh
-Dj
+GA
+GA
 Dj
 Dj
 Dj
@@ -74967,23 +75055,6 @@ Dj
 Dj
 Dj
 Dj
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
 Lh
 Lh
 Lh
@@ -75154,261 +75225,278 @@ Lh
 Lh
 Lh
 Lh
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
 "}
 (255,1,1) = {"
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
-Lh
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
+GA
 "}

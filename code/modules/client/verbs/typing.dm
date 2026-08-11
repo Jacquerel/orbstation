@@ -11,7 +11,7 @@
 	if (!typing_indicators) //check pref
 		return
 	//ORBSTATION: LOOC is visible
-	if (length(href_list["verb"]) < 1 || !(LOWER_TEXT(href_list["verb"]) in IC_VERBS) || !(LOWER_TEXT(href_list["verb"]) in VISIBLE_OOC_VERBS)  || text2num(href_list["argument_length"]) < 1)
+	if (length(href_list["verb"]) < 1 || !(LOWER_TEXT(href_list["verb"]) in IC_VERBS) || !(LOWER_TEXT(href_list["verb"]) in VISIBLE_OOC_VERBS)  || text2num(href_list["argument_length"]) < 2)
 		if (commandbar_typing)
 			commandbar_typing = FALSE
 			stop_typing()
@@ -35,7 +35,7 @@
 	if(!typing_indicators)
 		return FALSE
 	/// Special exemptions
-	if(isabductor(mob))
+	if(HAS_MIND_TRAIT(mob, TRAIT_HIDE_THINKING_INDICATOR))
 		return FALSE
 	ADD_TRAIT(mob, TRAIT_THINKING_IN_CHARACTER, CURRENTLY_TYPING_TRAIT)
 	mob.create_thinking_indicator()

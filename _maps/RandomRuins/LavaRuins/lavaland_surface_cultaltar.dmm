@@ -15,11 +15,11 @@
 /area/ruin/unpowered/cultaltar)
 "e" = (
 /obj/effect/decal/remains/human,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/cultaltar)
 "f" = (
 /obj/structure/destructible/cult/pylon,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/cultaltar)
 "g" = (
 /obj/effect/decal/cleanable/blood/old,
@@ -55,6 +55,11 @@
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered/cultaltar)
+"n" = (
+/turf/open/floor/engine/cult{
+	initial_gas_mix = "LAVALAND_ATMOS"
+	},
+/area/template_noop)
 "o" = (
 /obj/effect/rune/narsie{
 	color = "#ff0000";
@@ -81,9 +86,15 @@
 	initial_gas_mix = "LAVALAND_ATMOS"
 	},
 /area/ruin/unpowered/cultaltar)
-"s" = (
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+"r" = (
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/unpowered/cultaltar)
+"s" = (
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/template_noop)
+"C" = (
+/turf/open/lava/smooth/lava_land_surface,
+/area/template_noop)
 
 (1,1,1) = {"
 a
@@ -106,7 +117,7 @@ a
 a
 d
 e
-c
+C
 s
 c
 b
@@ -114,7 +125,7 @@ b
 b
 c
 s
-c
+C
 s
 d
 a
@@ -123,7 +134,7 @@ a
 a
 e
 f
-s
+r
 d
 c
 c
@@ -138,7 +149,7 @@ a
 "}
 (4,1,1) = {"
 a
-c
+C
 s
 c
 c
@@ -150,7 +161,7 @@ c
 c
 c
 e
-c
+C
 a
 "}
 (5,1,1) = {"
@@ -172,7 +183,7 @@ a
 "}
 (6,1,1) = {"
 a
-c
+C
 c
 c
 b
@@ -183,12 +194,12 @@ k
 b
 b
 c
-c
-c
+C
+C
 a
 "}
 (7,1,1) = {"
-b
+n
 b
 c
 c
@@ -200,12 +211,12 @@ b
 l
 b
 c
-c
+C
 b
 b
 "}
 (8,1,1) = {"
-c
+C
 b
 g
 b
@@ -219,7 +230,7 @@ b
 b
 g
 b
-c
+C
 "}
 (9,1,1) = {"
 b
@@ -240,7 +251,7 @@ b
 "}
 (10,1,1) = {"
 a
-c
+C
 c
 c
 g
@@ -252,7 +263,7 @@ b
 b
 c
 c
-c
+C
 a
 "}
 (11,1,1) = {"
@@ -269,13 +280,13 @@ b
 c
 c
 d
-s
+r
 a
 "}
 (12,1,1) = {"
 a
-c
-s
+C
+r
 c
 c
 c
@@ -293,7 +304,7 @@ a
 a
 e
 f
-s
+r
 d
 c
 c
@@ -303,23 +314,23 @@ c
 d
 e
 f
-s
+r
 a
 "}
 (14,1,1) = {"
 a
 d
 e
-c
-s
-c
+C
+r
+C
 b
 b
 b
-c
+C
 s
-c
-s
+C
+r
 d
 a
 "}
@@ -331,7 +342,7 @@ a
 a
 a
 b
-c
+C
 b
 a
 a

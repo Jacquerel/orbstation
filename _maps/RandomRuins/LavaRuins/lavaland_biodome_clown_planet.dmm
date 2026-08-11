@@ -86,6 +86,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/ruin/powered/clownplanet)
+"aM" = (
+/obj/effect/mapping_helpers/no_lava,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/lavaland/surface/outdoors/explored)
 "aP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -441,7 +445,7 @@
 	name = "stealth banana peel"
 	},
 /obj/effect/mapping_helpers/no_lava,
-/turf/open/misc/asteroid/basalt/lava_land_surface,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/lavaland/surface/outdoors/explored)
 "jw" = (
 /obj/structure/disposalpipe/segment{
@@ -532,6 +536,11 @@
 	},
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /turf/open/indestructible/permalube,
+/area/ruin/powered/clownplanet)
+"pZ" = (
+/obj/machinery/light/directional/west,
+/obj/effect/mapping_helpers/no_lava,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
 /area/ruin/powered/clownplanet)
 "rP" = (
 /obj/structure/disposalpipe/segment{
@@ -698,6 +707,11 @@
 /obj/effect/turf_decal/tile/yellow/fourcorners,
 /turf/open/indestructible/permalube,
 /area/ruin/powered/clownplanet)
+"UC" = (
+/obj/machinery/light/directional/east,
+/obj/effect/mapping_helpers/no_lava,
+/turf/open/misc/asteroid/basalt/lava_land_surface/biome_replace,
+/area/ruin/powered/clownplanet)
 "WO" = (
 /obj/item/bikehorn,
 /obj/structure/disposalpipe/segment{
@@ -739,11 +753,11 @@ aa
 aa
 aa
 aa
-QT
-QT
-QT
-QT
-QT
+aM
+aM
+aM
+aM
+aM
 aa
 aa
 aa
@@ -772,11 +786,11 @@ cc
 cc
 cc
 cc
-Or
-QT
+UC
+aM
 gX
-QT
-QT
+aM
+aM
 gX
 Or
 cc
@@ -1724,11 +1738,11 @@ cc
 cc
 cc
 cc
-Zg
-QT
+pZ
+aM
 gX
-QT
-QT
+aM
+aM
 gX
 Zg
 cc
@@ -1759,11 +1773,11 @@ aa
 aa
 aa
 aa
-QT
-QT
-QT
-QT
-QT
+aM
+aM
+aM
+aM
+aM
 aa
 aa
 aa

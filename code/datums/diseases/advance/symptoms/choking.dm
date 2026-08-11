@@ -11,16 +11,17 @@
 	name = "Choking"
 	desc = "The virus causes inflammation of the host's air conduits, leading to intermittent choking."
 	illness = "Pneumatic Tubes"
-	stealth = -3
-	resistance = -2
-	stage_speed = -2
-	transmittable = -2
+	stealth = -1
+	resistance = 0
+	stage_speed = -1
+	transmittable = -1
 	level = 3
 	severity = 3
 	base_message_chance = 15
-	symptom_delay_min = 10
-	symptom_delay_max = 30
+	symptom_delay = 20
 	required_organ = ORGAN_SLOT_LUNGS
+	symptom_cure = /datum/reagent/medicine/c2/tirimol
+	cure_color = "orange"
 	threshold_descs = list(
 		"Stage Speed 8" = "Causes choking more frequently.",
 		"Stealth 4" = "The symptom remains hidden until active."
@@ -31,8 +32,7 @@
 	if(!.)
 		return
 	if(A.totalStageSpeed() >= 8)
-		symptom_delay_min = 7
-		symptom_delay_max = 24
+		symptom_delay = 15.5
 	if(A.totalStealth() >= 4)
 		suppress_warning = TRUE
 
@@ -89,15 +89,16 @@ Bonus
 	desc = "The virus causes shrinking of the host's lungs, causing severe asphyxiation. May also lead to heart attacks."
 	illness = "Iron Lungs"
 	stealth = -2
-	resistance = -0
+	resistance = 0
 	stage_speed = -1
 	transmittable = -2
 	level = 7
 	severity = 6
 	base_message_chance = 15
-	symptom_delay_min = 14
-	symptom_delay_max = 30
+	symptom_delay = 22
 	required_organ = ORGAN_SLOT_LUNGS
+	symptom_cure = /datum/reagent/toxin/bonehurtingjuice // It'll be funny I swear
+	cure_color = "orange" // The only level 7 symptom without a red color
 	threshold_descs = list(
 		"Stage Speed 8" = "Additionally synthesizes pancuronium and sodium thiopental inside the host.",
 		"Transmission 8" = "Doubles the damage caused by the symptom."

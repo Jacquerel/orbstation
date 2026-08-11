@@ -20,6 +20,7 @@
 #define GORE (1<<19)
 #define STONE (1<<20)
 #define CUCUMBER (1<<21)
+#define EGG (1<<22)
 
 DEFINE_BITFIELD(foodtypes, list(
 	"MEAT" = MEAT,
@@ -44,6 +45,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"GORE" = GORE,
 	"STONE" = STONE,
 	"CUCUMBER" = CUCUMBER,
+	"EGG" = EGG,
 ))
 
 /// A list of food type names, in order of their flags
@@ -70,6 +72,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"GORE", \
 	"STONE", \
 	"CUCUMBER", \
+	"EGG", \
 )
 
 /// IC meaning (more or less) for food flags
@@ -96,6 +99,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Gore", \
 	"Rocks", \
 	"Cucumbers", \
+	"Eggs", \
 )
 
 /// Food types assigned to all podperson organs
@@ -132,7 +136,7 @@ GLOBAL_ALIST_INIT(food_quality_description, alist(
 	FOOD_QUALITY_VERYGOOD = "very good",
 	FOOD_QUALITY_FANTASTIC = "fantastic",
 	FOOD_QUALITY_AMAZING = "amazing",
-	FOOD_QUALITY_TOP = "godlike",
+	FOOD_QUALITY_TOP = "divine",
 ))
 
 /// Weighted lists of crafted food buffs randomly given according to crafting_complexity unless the food has a specific buff
