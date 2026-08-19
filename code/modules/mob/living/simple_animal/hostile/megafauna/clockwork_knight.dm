@@ -54,3 +54,11 @@ I'd rather there be something than the clockwork ruin be entirely empty though s
 	icon_state = "clockwork_alloy"
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 0
+
+
+/obj/effect/grinding_gear
+	name = "grinding gear"
+	icon = 'icons/effects/64x64.dmi'
+	icon_state = "gear"
+	pixel_x = -16
+	pixel_y = -16
