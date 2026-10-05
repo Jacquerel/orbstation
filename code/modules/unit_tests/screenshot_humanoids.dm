@@ -50,7 +50,7 @@
 		golem.set_species(/datum/species/golem)
 		golem.apply_status_effect(effect_type)
 		test_screenshot("[/datum/species/golem]-[effect_type]", get_flat_icon_for_all_directions(golem))
-	testable_species -= /datum/species/golem
+	// We don't remove it from the list because we still want a normal screenshot
 
 	// The rest of the species
 	for (var/datum/species/species_type as anything in testable_species)
