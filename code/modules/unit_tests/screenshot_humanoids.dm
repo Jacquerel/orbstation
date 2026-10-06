@@ -43,8 +43,8 @@
 		test_screenshot("[slime_type]", get_flat_icon_for_all_directions(slime))
 		testable_species -= slime_type
 
-	for (var/effect_type in subtypesof(/datum/status_effect/golem))
-		if (!effect_type:overlay_state_prefix)
+	for (var/datum/status_effect/golem/effect_type as anything in subtypesof(/datum/status_effect/golem))
+		if (!effect_type::overlay_state_prefix)
 			continue
 		var/mob/living/carbon/human/golem = allocate(/mob/living/carbon/human/dummy/consistent)
 		golem.set_species(/datum/species/golem)
